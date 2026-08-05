@@ -1,0 +1,1 @@
+Get-Process | Where-Object { $_.Path -and ($_.Path -like "*Program Files*" -or $_.Path -like "*AppData*" -or $_.Path -like "*System32*notepad*" -or $_.Path -like "*System32*cmd*") -and $_.ProcessName -notmatch "svchost|conhost|system|runtime|service|search|shell|taskhost|explorer|TextInputHost|LockApp" } | Select-Object ProcessName, MainWindowTitle | ConvertTo-Json
