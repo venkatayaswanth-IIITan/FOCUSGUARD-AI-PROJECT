@@ -5,6 +5,7 @@ from windows_tracker import WindowsTracker
 from idle_detector import IdleDetector
 from api_client import AgentSocketClient
 from config import POLL_INTERVAL
+from ml_predictor import ProductivityPredictor
 
 logger = logging.getLogger("FocusGuardAgent.ActivityMonitor")
 
@@ -20,6 +21,12 @@ class ActivityMonitor:
         self.current_app = None  # { process_name, app_name, window_title, start_time }
         self.idle_start_time = None
 
+        # ML productivity predictor (loads trained model from ai/models/)
+        self.predictor = ProductivityPredictor()
+
+        # Session-level counters for ML feature computation
+        self.session_switch_count = 0
+
         # Bind remote commands from Socket.IO client
         self.api_client.on_start_monitoring_cb = self.start_monitoring
         self.api_client.on_stop_monitoring_cb = self.stop_monitoring
@@ -31,6 +38,7 @@ class ActivityMonitor:
         self.current_session_id = data.get("sessionId") if data else None
         self.current_app = None
         self.idle_start_time = None
+        self.session_switch_count = 0  # reset switch counter for new session
 
         # Instantly poll initial foreground window
         self._check_activity()
@@ -92,12 +100,25 @@ class ActivityMonitor:
                     "start_time": now_iso
                 }
                 logger.info(f"Initial application detected: {app_name} ({process_name})")
-                self.api_client.send_activity_update(self.current_app)
+
+                # ML prediction for initial app (0 seconds so far)
+                productivity = self.predictor.predict(
+                    app_name=app_name,
+                    duration_minutes=0.0,
+                    switch_tabs=self.session_switch_count,
+                )
+                logger.info(f"ML prediction: {app_name} -> {productivity['label']} ({productivity['confidence']}% confidence)")
+
+                self.api_client.send_activity_update({
+                    **self.current_app,
+                    "productivity": productivity,
+                })
 
             elif self.current_app["process_name"] != process_name or self.current_app["app_name"] != app_name:
                 # Foreground context switch occurred
                 start_dt = datetime.fromisoformat(self.current_app["start_time"])
                 duration = max(1, int((now_utc - start_dt).total_seconds()))
+                duration_minutes = round(duration / 60.0, 2)
 
                 logger.info(f"Context switch detected: {self.current_app['app_name']} -> {app_name} (Duration: {duration}s)")
 
@@ -113,6 +134,9 @@ class ActivityMonitor:
                     "is_final": False
                 })
 
+                # Increment switch counter
+                self.session_switch_count += 1
+
                 # Start new application session
                 self.current_app = {
                     "process_name": process_name,
@@ -120,13 +144,38 @@ class ActivityMonitor:
                     "window_title": window_title,
                     "start_time": now_iso
                 }
-                self.api_client.send_activity_update(self.current_app)
+
+                # ML prediction for new app
+                productivity = self.predictor.predict(
+                    app_name=app_name,
+                    duration_minutes=0.0,
+                    switch_tabs=self.session_switch_count,
+                )
+                logger.info(f"ML prediction: {app_name} -> {productivity['label']} ({productivity['confidence']}% confidence)")
+
+                self.api_client.send_activity_update({
+                    **self.current_app,
+                    "productivity": productivity,
+                })
 
             else:
-                # Same app, periodic heartbeats / update window title if changed
+                # Same app — heartbeat: recalculate duration for fresh ML prediction
                 if self.current_app.get("window_title") != window_title:
                     self.current_app["window_title"] = window_title
-                self.api_client.send_activity_update(self.current_app)
+
+                start_dt = datetime.fromisoformat(self.current_app["start_time"])
+                duration_minutes = round((now_utc - start_dt).total_seconds() / 60.0, 2)
+
+                productivity = self.predictor.predict(
+                    app_name=app_name,
+                    duration_minutes=duration_minutes,
+                    switch_tabs=self.session_switch_count,
+                )
+
+                self.api_client.send_activity_update({
+                    **self.current_app,
+                    "productivity": productivity,
+                })
 
         # 2. Idle Detection Check
         idle_info = self.idle_detector.check_idle_state()

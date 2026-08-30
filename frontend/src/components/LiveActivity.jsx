@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
-import { Play, Square, AlertCircle, Radio, Clock, Monitor } from "lucide-react";
+import { Play, Square, AlertCircle, Radio, Clock, Monitor, Brain, TrendingUp, TrendingDown } from "lucide-react";
 
 function formatTimer(seconds) {
   const secs = Number(seconds || 0);
@@ -21,6 +21,7 @@ function LiveActivity({
   onStatsUpdate,
   onAgentStatusChange,
   onNotification,
+  onCurrentAppChange, // called whenever the displayed current app changes
   activeSession,
 }) {
   const [socket, setSocket] = useState(null);
@@ -28,10 +29,33 @@ function LiveActivity({
   const [isMonitoring, setIsMonitoring] = useState(Boolean(activeSession));
   const [currentApp, setCurrentApp] = useState(null);
   const [liveSeconds, setLiveSeconds] = useState(0);
+  const [sessionSeconds, setSessionSeconds] = useState(0);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setIsMonitoring(Boolean(activeSession));
+  }, [activeSession]);
+
+  // Bubble currentApp up to Dashboard whenever it changes
+  useEffect(() => {
+    if (onCurrentAppChange) onCurrentAppChange(currentApp);
+  }, [currentApp]);
+
+  // ── SESSION-LEVEL ELAPSED TIMER ──────────────────────────────────────
+  // Gives immediate visual feedback even before the first activity event
+  // arrives from the Python monitoring agent.
+  useEffect(() => {
+    if (!activeSession?.started_at) {
+      setSessionSeconds(0);
+      return;
+    }
+    const sessionStart = new Date(activeSession.started_at).getTime();
+    const tick = () => {
+      setSessionSeconds(Math.max(0, Math.floor((Date.now() - sessionStart) / 1000)));
+    };
+    tick();
+    const interval = setInterval(tick, 1000);
+    return () => clearInterval(interval);
   }, [activeSession]);
 
   // Initialize Socket.IO connection
@@ -97,8 +121,13 @@ function LiveActivity({
     });
 
     socketInstance.on("activity:changed", (data) => {
+      // Update stats (switches, app usage, etc.)
       if (data?.stats && onStatsUpdate) {
         onStatsUpdate(data.stats);
+      }
+      // Also update displayed current app to the newly switched-to app
+      if (data?.currentAppData) {
+        setCurrentApp(data.currentAppData);
       }
       if (onNotification && data?.currentApp) {
         onNotification({
@@ -355,7 +384,7 @@ function LiveActivity({
           <Monitor size={30} />
         </div>
 
-        <div>
+        <div style={{ flex: 1 }}>
           <span className="muted">Currently Active Application</span>
           <h2>{currentApp?.app_name || "Detecting foreground application..."}</h2>
           {currentApp?.process_name && (
@@ -366,20 +395,67 @@ function LiveActivity({
           ) : (
             <p className="muted">Window title collection OFF</p>
           )}
+
+          {/* ── ML PRODUCTIVITY BADGE ───────────────────────────────────── */}
+          {currentApp?.productivity ? (
+            <div className={`mlProductivityBadge ${currentApp.productivity.productive ? "mlProductive" : "mlDistraction"}`}>
+              <div className="mlBadgeHeader">
+                <Brain size={14} />
+                <span className="mlBadgeTitle">ML Productivity Detection</span>
+                <span className="mlModelTag">{currentApp.productivity.model}</span>
+              </div>
+              <div className="mlBadgeBody">
+                <div className={`mlLabel ${currentApp.productivity.productive ? "labelGreen" : "labelRed"}`}>
+                  {currentApp.productivity.productive
+                    ? <TrendingUp  size={15} />
+                    : <TrendingDown size={15} />}
+                  {currentApp.productivity.label}
+                </div>
+                <div className="mlConfidence">
+                  <span>Confidence</span>
+                  <div className="mlConfBar">
+                    <div
+                      className={`mlConfFill ${currentApp.productivity.productive ? "fillGreen" : "fillRed"}`}
+                      style={{ width: `${currentApp.productivity.confidence}%` }}
+                    />
+                  </div>
+                  <strong>{currentApp.productivity.confidence}%</strong>
+                </div>
+              </div>
+            </div>
+          ) : (
+            isMonitoring && (
+              <div className="mlProductivityBadge mlPending">
+                <Brain size={14} />
+                <span style={{ marginLeft: 6, fontSize: "0.8rem" }}>ML model analysing...</span>
+              </div>
+            )
+          )}
         </div>
       </div>
 
       <div className="liveTimer">
-        <div>
-          <span>Current App Duration</span>
-          <p className="timerSubtitle">
-            Started: {currentApp?.start_time ? new Date(currentApp.start_time).toLocaleTimeString() : "Just now"}
-          </p>
-        </div>
+        {currentApp?.start_time ? (
+          <div>
+            <span>Current App Duration</span>
+            <p className="timerSubtitle">
+              Started: {new Date(currentApp.start_time).toLocaleTimeString()}
+            </p>
+          </div>
+        ) : (
+          <div>
+            <span>Session Duration</span>
+            <p className="timerSubtitle">
+              Started: {activeSession?.started_at ? new Date(activeSession.started_at).toLocaleTimeString() : "Just now"}
+            </p>
+          </div>
+        )}
 
         <div className="liveCounterDisplay">
           <Clock size={16} />
-          <span className="timerDigits">{formatTimer(liveSeconds)}</span>
+          <span className="timerDigits">
+            {currentApp?.start_time ? formatTimer(liveSeconds) : formatTimer(sessionSeconds)}
+          </span>
           <strong className="statusGreen">LIVE</strong>
         </div>
       </div>

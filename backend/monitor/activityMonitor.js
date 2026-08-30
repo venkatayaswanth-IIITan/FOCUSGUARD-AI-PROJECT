@@ -1,6 +1,21 @@
 const getActiveWindowsApp = require("./winApps");
 const { io } = require("socket.io-client");
-require("dotenv").config({ path: "../.env" });
+const path = require("path");
+const fs = require("fs");
+
+const possibleEnvPaths = [
+  path.resolve(__dirname, "../../.env"),
+  path.resolve(__dirname, "../.env"),
+  path.resolve(process.cwd(), ".env"),
+  path.resolve(process.cwd(), "../.env")
+];
+
+for (const envPath of possibleEnvPaths) {
+  if (fs.existsSync(envPath)) {
+    require("dotenv").config({ path: envPath });
+    break;
+  }
+}
 
 const API_URL = process.env.API_URL || "http://localhost:5000";
 

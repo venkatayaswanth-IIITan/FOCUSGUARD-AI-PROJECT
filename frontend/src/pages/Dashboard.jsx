@@ -1,33 +1,28 @@
 import { useEffect, useState } from "react";
-import { Clock, Code2, RefreshCcw, Layers, Zap, PauseCircle } from "lucide-react";
-
 import Sidebar from "../components/Sidebar";
-import StatCard from "../components/StatCard";
-import LiveActivity from "../components/LiveActivity";
-import AppUsage from "../components/AppUsage";
-import RecentActivity from "../components/RecentActivity";
+import DashboardOverview from "../components/DashboardOverview";
+import ActivityView from "../components/ActivityView";
 import SessionAnalytics from "../components/SessionAnalytics";
-import NotificationsCenter from "../components/NotificationsCenter";
-import ProfileMenu from "../components/ProfileMenu";
-import ThemeToggle from "../components/ThemeToggle";
+
+import FocusSessionsView from "../components/FocusSessionsView";
+import DistractionsView from "../components/DistractionsView";
+import RecentTelemetryView from "../components/RecentTelemetryView";
+import GoalsView from "../components/GoalsView";
+import ReportsView from "../components/ReportsView";
+import AnalyticsView from "../components/AnalyticsView";
+import AIInsightsView from "../components/AIInsightsView";
+import SettingsView from "../components/SettingsView";
+import PersonalFocusBot from "../components/PersonalFocusBot";
 
 import "./dashboard.css";
 
+
 const API = "http://localhost:5000/api/monitoring";
 
-function formatDuration(seconds) {
-  const secs = Number(seconds || 0);
-  const hours = Math.floor(secs / 3600);
-  const minutes = Math.floor((secs % 3600) / 60);
-  const remainingSecs = secs % 60;
-
-  if (hours > 0) return `${hours}h ${minutes}m`;
-  if (minutes > 0) return `${minutes}m ${remainingSecs}s`;
-  return `${remainingSecs}s`;
-}
-
 function Dashboard() {
+  const [activeTab, setActiveTab] = useState("dashboard");
   const [activeSession, setActiveSession] = useState(null);
+  const [liveCurrentApp, setLiveCurrentApp] = useState(null);
   const [sessionStats, setSessionStats] = useState({
     monitoredDuration: 0,
     activeTime: 0,
@@ -52,7 +47,34 @@ function Dashboard() {
   ]);
   const [loading, setLoading] = useState(true);
 
-  // Handle incoming real-time notifications from Socket.IO events
+  // Initialize Theme and Visual Preferences (Default: Dark Obsidian Glassmorphism)
+  useEffect(() => {
+    localStorage.setItem("theme", "dark");
+    const accent = localStorage.getItem("focusguard_accent") || "blue";
+    const glass = localStorage.getItem("focusguard_glass") !== "false";
+    const compact = localStorage.getItem("focusguard_compact") === "true";
+
+    document.documentElement.setAttribute("data-theme", "dark");
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
+    document.documentElement.setAttribute("data-accent", accent);
+    document.documentElement.setAttribute("data-glass", String(glass));
+    document.documentElement.setAttribute("data-compact", String(compact));
+  }, []);
+
+  // Local monitoring timer
+  useEffect(() => {
+    if (!activeSession) return;
+    const sessionStart = new Date(activeSession.started_at).getTime();
+    const tick = () => {
+      const elapsed = Math.max(0, Math.floor((Date.now() - sessionStart) / 1000));
+      setSessionStats((prev) => ({ ...prev, monitoredDuration: elapsed }));
+    };
+    tick();
+    const interval = setInterval(tick, 1000);
+    return () => clearInterval(interval);
+  }, [activeSession]);
+
   const handleNewNotification = (newNotif) => {
     setNotifications((prev) => [newNotif, ...prev.slice(0, 29)]);
   };
@@ -71,7 +93,6 @@ function Dashboard() {
     );
   };
 
-  // Fetch current session state from backend (for page load & browser refresh)
   async function fetchSessionData() {
     const token = localStorage.getItem("token");
     try {
@@ -86,18 +107,6 @@ function Dashboard() {
           if (data.stats) {
             setSessionStats(data.stats);
           }
-        } else {
-          setActiveSession(null);
-          setSessionStats({
-            monitoredDuration: 0,
-            activeTime: 0,
-            idleTime: 0,
-            uniqueApps: 0,
-            totalSwitches: 0,
-            longestSessionSeconds: 0,
-            appUsage: [],
-            recentActivity: [],
-          });
         }
       }
     } catch (error) {
@@ -119,14 +128,61 @@ function Dashboard() {
 
   const handleSessionStop = (analytics) => {
     setActiveSession(null);
+    setLiveCurrentApp(null);
     setCompletedAnalytics(analytics);
     fetchSessionData();
   };
 
-  const handleStatsUpdate = (stats) => {
-    if (stats) {
-      setSessionStats(stats);
+  const handleManualStartSession = async () => {
+    const token = localStorage.getItem("token");
+    try {
+      const res = await fetch(`${API}/start`, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (res.ok) {
+        const data = await res.json();
+        handleSessionStart(data.session);
+      }
+    } catch (err) {
+      console.error("Manual start session error:", err);
     }
+  };
+
+  const handleManualStopSession = async () => {
+    const token = localStorage.getItem("token");
+    try {
+      const res = await fetch(`${API}/stop`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ currentApp: liveCurrentApp }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        handleSessionStop(data.analytics);
+      }
+    } catch (err) {
+      console.error("Manual stop session error:", err);
+    }
+  };
+
+  const handleStatsUpdate = (stats, currentApp = null) => {
+    if (stats) {
+      setSessionStats((prev) => ({
+        ...stats,
+        monitoredDuration: prev.monitoredDuration,
+      }));
+    }
+    if (currentApp) {
+      setLiveCurrentApp(currentApp);
+    }
+  };
+
+  const handleCurrentAppChange = (app) => {
+    setLiveCurrentApp(app);
   };
 
   const handleAgentStatusChange = (connected) => {
@@ -135,112 +191,80 @@ function Dashboard() {
 
   return (
     <div className="dashboardLayout">
-      <Sidebar />
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
 
       <main className="mainContent">
-        <header className="topbar">
-          <div>
-            <span className="pageLabel">FOCUSGUARD AI — WINDOWS MONITORING</span>
-            <h1>Real User Activity System</h1>
-            <p>Foreground application tracking & win32 idle detection (No mock or simulated data).</p>
-          </div>
-
-          <div className="topActions">
-            <div className={`agentStatusBadge ${isAgentConnected ? "connected" : "disconnected"}`}>
-              <span className="statusDot" />
-              {isAgentConnected ? "🟢 Windows Monitor Connected" : "🔴 Windows Monitor Disconnected"}
-            </div>
-
-            <div className={`monitorChip ${activeSession ? "active" : "inactive"}`}>
-              <span className="statusDot" />
-              {activeSession ? "🟢 Monitoring Active" : "⚪ Monitoring Off"}
-            </div>
-
-            {/* THEME TOGGLE (LIGHT / DARK) */}
-            <ThemeToggle />
-
-            {/* NOTIFICATIONS CENTER (TOP RIGHT CORNER) */}
-            <NotificationsCenter
-              notifications={notifications}
-              onClear={handleClearNotifications}
-              onMarkRead={handleMarkNotificationsRead}
-              onItemClick={handleMarkItemRead}
-            />
-
-            {/* USER PROFILE SECTION (TOP RIGHT CORNER) */}
-            <ProfileMenu isAgentConnected={isAgentConnected} />
-          </div>
-        </header>
-
         {loading ? (
-          <div className="loading">Connecting to FocusGuard session manager...</div>
+          <div className="loading" style={{ padding: "40px" }}>
+            Connecting to FocusGuard session manager...
+          </div>
         ) : (
           <>
-            {/* 6 REAL METRICS CARDS */}
-            <section className="statsGrid">
-              <StatCard
-                icon={<Clock size={21} />}
-                title="Monitoring Time"
-                value={formatDuration(sessionStats.monitoredDuration)}
-                subtitle={activeSession ? "Total time since session start" : "No active session"}
+            {/* VIEW 1: MAIN DASHBOARD OVERVIEW */}
+            {activeTab === "dashboard" && (
+              <DashboardOverview onNavigateTab={setActiveTab} />
+            )}
+
+            {/* VIEW 2: ACTIVITY (live telemetry + heatmap + top apps) */}
+            {activeTab === "live" && (
+              <ActivityView
+                activeSession={activeSession}
+                onSessionStart={handleSessionStart}
+                onSessionStop={handleSessionStop}
+                onStatsUpdate={handleStatsUpdate}
+                onAgentStatusChange={handleAgentStatusChange}
+                onNotification={handleNewNotification}
+                onCurrentAppChange={handleCurrentAppChange}
               />
+            )}
 
-              <StatCard
-                icon={<Zap size={21} />}
-                title="Active Time"
-                value={formatDuration(sessionStats.activeTime)}
-                subtitle="Non-idle interaction time"
+            {/* VIEW: RECENTLY (Full telemetry records & timeline) */}
+            {activeTab === "recently" && (
+              <RecentTelemetryView
+                sessionStats={sessionStats}
+                liveCurrentApp={liveCurrentApp}
+                activeSession={activeSession}
               />
+            )}
 
-              <StatCard
-                icon={<PauseCircle size={21} />}
-                title="Idle Time"
-                value={formatDuration(sessionStats.idleTime)}
-                subtitle="Detected user inactivity"
+            {/* VIEW 3: FOCUS SESSIONS (Pomodoro + streak + sessions table) */}
+            {activeTab === "sessions" && (
+              <FocusSessionsView
+                activeSession={activeSession}
+                onStartSession={handleManualStartSession}
+                onStopSession={handleManualStopSession}
               />
+            )}
 
-              <StatCard
-                icon={<Code2 size={21} />}
-                title="Apps Used"
-                value={sessionStats.uniqueApps}
-                subtitle="Distinct applications detected"
-              />
+            {/* VIEW 4: DISTRACTIONS */}
+            {activeTab === "distractions" && (
+              <DistractionsView />
+            )}
 
-              <StatCard
-                icon={<RefreshCcw size={21} />}
-                title="Task Switches"
-                value={sessionStats.totalSwitches}
-                subtitle="Foreground context switches"
-              />
+            {/* VIEW 5: ANALYTICS */}
+            {activeTab === "analytics" && (
+              <AnalyticsView sessionStats={sessionStats} />
+            )}
 
-              <StatCard
-                icon={<Layers size={21} />}
-                title="Longest Session"
-                value={formatDuration(sessionStats.longestSessionSeconds)}
-                subtitle="Max continuous application duration"
-              />
-            </section>
+            {/* VIEW 6: AI INSIGHTS */}
+            {activeTab === "insights" && (
+              <AIInsightsView />
+            )}
 
-            {/* LIVE FOREGROUND APPLICATION CARD */}
-            <LiveActivity
-              activeSession={activeSession}
-              onSessionStart={handleSessionStart}
-              onSessionStop={handleSessionStop}
-              onStatsUpdate={handleStatsUpdate}
-              onAgentStatusChange={handleAgentStatusChange}
-              onNotification={handleNewNotification}
-            />
+            {/* VIEW 7: REPORTS */}
+            {activeTab === "reports" && (
+              <ReportsView />
+            )}
 
-            {/* LIVE APPLICATION USAGE LIST & PROGRESS BARS */}
-            <section className="dashboardGrid">
-              <AppUsage
-                activities={sessionStats.appUsage}
-                totalActiveTime={sessionStats.activeTime}
-              />
-            </section>
+            {/* VIEW 8: GOALS */}
+            {activeTab === "goals" && (
+              <GoalsView />
+            )}
 
-            {/* RECENT ACTIVITY LOG TABLE */}
-            <RecentActivity activities={sessionStats.recentActivity} />
+            {/* VIEW 9: SETTINGS */}
+            {activeTab === "settings" && (
+              <SettingsView />
+            )}
 
             {/* COMPLETED SESSION ANALYTICS MODAL */}
             {completedAnalytics && (
@@ -249,6 +273,9 @@ function Dashboard() {
                 onClose={() => setCompletedAnalytics(null)}
               />
             )}
+
+            {/* PERSONAL FOCUS ASSISTANT / CHATBOT FOR USER DOUBTS */}
+            <PersonalFocusBot />
           </>
         )}
       </main>

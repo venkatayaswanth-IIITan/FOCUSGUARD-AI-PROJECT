@@ -4,59 +4,58 @@ const jwt = require("jsonwebtoken");
 
 const register = async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { username, email, password, full_name, role } = req.body;
 
     // Check empty fields
     if (!username || !email || !password) {
       return res.status(400).json({
-        message: "All fields are required",
+        message: "Username, email, and password are required",
       });
     }
 
-    // Password validation
-    const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
-
-    if (!passwordRegex.test(password)) {
+    if (password.length < 6) {
       return res.status(400).json({
-        message:
-          "Password must contain at least 8 characters, 1 uppercase, 1 lowercase, 1 number and 1 special character",
+        message: "Password must be at least 6 characters long",
       });
     }
 
     // Check username
     const usernameExists = await pool.query(
-      "SELECT id FROM users WHERE username = $1",
-      [username]
+      "SELECT id FROM users WHERE LOWER(username) = LOWER($1)",
+      [username.trim()]
     );
 
     if (usernameExists.rows.length > 0) {
       return res.status(400).json({
-        message: "Username already exists",
+        message: "Username already exists. Please pick another one.",
       });
     }
 
     // Check email
     const emailExists = await pool.query(
-      "SELECT id FROM users WHERE email = $1",
-      [email]
+      "SELECT id FROM users WHERE LOWER(email) = LOWER($1)",
+      [email.trim()]
     );
 
     if (emailExists.rows.length > 0) {
       return res.status(400).json({
-        message: "Email already registered",
+        message: "Email already registered. Please login instead.",
       });
     }
+
+    // Format full_name
+    const displayName = full_name?.trim() || username.trim();
+    const userRole = role?.trim() || "Coding & Software Engineering";
 
     // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Insert user
     const result = await pool.query(
-      `INSERT INTO users (username, email, password)
-       VALUES ($1, $2, $3)
-       RETURNING id, username, email`,
-      [username, email, hashedPassword]
+      `INSERT INTO users (username, email, password, full_name, role)
+       VALUES ($1, $2, $3, $4, $5)
+       RETURNING id, username, email, full_name, role`,
+      [username.trim(), email.trim(), hashedPassword, displayName, userRole]
     );
 
     return res.status(201).json({
@@ -65,32 +64,33 @@ const register = async (req, res) => {
     });
 
   } catch (error) {
-    console.error(error);
+    console.error("Registration error:", error);
 
     return res.status(500).json({
-      message: "Server error",
+      message: error.message || "Server error during registration",
     });
   }
 };
 
 const login = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { email, username, password } = req.body;
+    const loginInput = (email || username || "").trim();
 
-    if (!email || !password) {
+    if (!loginInput || !password) {
       return res.status(400).json({
-        message: "All fields are required",
+        message: "Email/Username and password are required",
       });
     }
 
     const result = await pool.query(
-      "SELECT * FROM users WHERE email = $1",
-      [email]
+      "SELECT * FROM users WHERE LOWER(email) = LOWER($1) OR LOWER(username) = LOWER($1)",
+      [loginInput]
     );
 
     if (result.rows.length === 0) {
       return res.status(401).json({
-        message: "Invalid email or password",
+        message: "Invalid email/username or password",
       });
     }
 
@@ -103,7 +103,7 @@ const login = async (req, res) => {
 
     if (!validPassword) {
       return res.status(401).json({
-        message: "Invalid email or password",
+        message: "Invalid email/username or password",
       });
     }
 
@@ -111,6 +111,7 @@ const login = async (req, res) => {
       {
         id: user.id,
         email: user.email,
+        username: user.username,
       },
       process.env.JWT_SECRET || "focusguard_secret_key",
       {
@@ -125,13 +126,15 @@ const login = async (req, res) => {
         id: user.id,
         username: user.username,
         email: user.email,
+        full_name: user.full_name || user.username,
+        role: user.role || "Coding & Software Engineering",
       },
     });
   } catch (error) {
-    console.error(error);
+    console.error("Login error:", error);
 
     return res.status(500).json({
-      message: "Server error",
+      message: error.message || "Server error during login",
     });
   }
 };

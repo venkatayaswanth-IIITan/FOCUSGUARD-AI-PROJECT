@@ -1,0 +1,9855 @@
+FocusGuard AI — RAG Knowledge Base
+This document is generated from the uploaded activity_logs.csv dataset. It summarizes which activities are Productive and Non-Productive and provides activity-level records suitable for a RAG chatbot.
+Dataset: 1057 activity records | Productive: 703 | Non-Productive: 354 | Other/Neutral: 0
+How to interpret the data
+productivity_status is the primary label. Productive activities include learning, research, coding, office work, and similar focused tasks in this dataset. Non-Productive activities include social media,
+entertainment, and similar distraction categories. The chatbot should answer from the dataset rather than inventing classifications.
+Category Summary
+Category
+Productivity Status
+Records
+Coding
+Productive
+264
+Social Media
+Non-Productive
+177
+Office
+Productive
+176
+Research
+Productive
+175
+Communication
+Non-Productive
+89
+Entertainment
+Non-Productive
+88
+Learning
+Productive
+88
+Website/Domain Summary
+Domain
+Status
+Records
+facebook.com
+Non-Productive
+89
+chat.openai.com
+Productive
+88
+codechef.com
+Productive
+88
+github.com
+Productive
+88
+linkedin.com
+Productive
+88
+twitter.com
+Non-Productive
+88
+udemy.com
+Productive
+88
+stackoverflow.com
+Productive
+87
+
+Activity Records for RAG Retrieval
+Each row below is a source record. A RAG chatbot can retrieve these records to answer questions such as: 'Was Udemy productive?', 'How much time was spent on social media?', 'Which activities were
+non-productive?', or 'What category was this website assigned?'
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+1
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4680
+https://udemy.com
+Learning
+Productive
+3
+2
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2520
+https://stackoverflow.com
+Research
+Productive
+3
+3
+1
+PowerPoint
+PowerPoint - Workspace
+900
+-
+Office
+Productive
+1
+4
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2220
+https://twitter.com
+Social Media
+Non-Productive
+2
+5
+1
+Discord
+Discord - Workspace
+4560
+-
+Communication
+Non-Productive
+1
+6
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2280
+https://chat.openai.com
+Research
+Productive
+1
+7
+1
+Spotify
+Spotify - Workspace
+4140
+-
+Entertainment
+Non-Productive
+1
+8
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3900
+https://linkedin.com
+Office
+Productive
+0
+9
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4380
+https://facebook.com
+Social Media
+Non-Productive
+0
+10
+1
+Google Chrome
+Google Chrome - https://facebook.com
+2880
+https://facebook.com
+Social Media
+Non-Productive
+4
+11
+1
+PowerPoint
+PowerPoint - Workspace
+4620
+-
+Office
+Productive
+1
+12
+1
+Google Chrome
+Google Chrome - https://github.com
+4020
+https://github.com
+Coding
+Productive
+3
+13
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4860
+-
+Coding
+Productive
+1
+14
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4500
+https://codechef.com
+Coding
+Productive
+2
+15
+1
+Discord
+Discord - Workspace
+3780
+-
+Communication
+Non-Productive
+1
+16
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2014
+https://twitter.com
+Social Media
+Non-Productive
+2
+17
+1
+Discord
+Discord - Workspace
+5902
+-
+Communication
+Non-Productive
+1
+18
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1961
+https://chat.openai.com
+Research
+Productive
+2
+19
+1
+Spotify
+Spotify - Workspace
+5194
+-
+Entertainment
+Non-Productive
+1
+20
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4995
+https://linkedin.com
+Office
+Productive
+1
+21
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3333
+https://facebook.com
+Social Media
+Non-Productive
+1
+22
+1
+Google Chrome
+Google Chrome - https://github.com
+3192
+https://github.com
+Coding
+Productive
+3
+23
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4484
+-
+Coding
+Productive
+1
+24
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4532
+https://codechef.com
+Coding
+Productive
+3
+25
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3456
+https://udemy.com
+Learning
+Productive
+4
+26
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2634
+https://stackoverflow.com
+Research
+Productive
+3
+27
+1
+PowerPoint
+PowerPoint - Workspace
+1029
+-
+Office
+Productive
+2
+28
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2012
+https://twitter.com
+Social Media
+Non-Productive
+3
+29
+1
+Discord
+Discord - Workspace
+5267
+-
+Communication
+Non-Productive
+2
+30
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1994
+https://chat.openai.com
+Research
+Productive
+2
+31
+1
+Spotify
+Spotify - Workspace
+5290
+-
+Entertainment
+Non-Productive
+1
+32
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4422
+https://linkedin.com
+Office
+Productive
+1
+33
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4737
+https://facebook.com
+Social Media
+Non-Productive
+1
+34
+1
+Google Chrome
+Google Chrome - https://github.com
+3353
+https://github.com
+Coding
+Productive
+3
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+35
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4205
+-
+Coding
+Productive
+1
+36
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4040
+https://codechef.com
+Coding
+Productive
+2
+37
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4483
+https://udemy.com
+Learning
+Productive
+4
+38
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2906
+https://stackoverflow.com
+Research
+Productive
+4
+39
+1
+PowerPoint
+PowerPoint - Workspace
+738
+-
+Office
+Productive
+2
+40
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2668
+https://twitter.com
+Social Media
+Non-Productive
+2
+41
+1
+Discord
+Discord - Workspace
+5476
+-
+Communication
+Non-Productive
+1
+42
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2030
+https://chat.openai.com
+Research
+Productive
+1
+43
+1
+Spotify
+Spotify - Workspace
+3373
+-
+Entertainment
+Non-Productive
+2
+44
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4798
+https://linkedin.com
+Office
+Productive
+1
+45
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4183
+https://facebook.com
+Social Media
+Non-Productive
+0
+46
+1
+Google Chrome
+Google Chrome - https://github.com
+3926
+https://github.com
+Coding
+Productive
+4
+47
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3422
+-
+Coding
+Productive
+2
+48
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4897
+https://codechef.com
+Coding
+Productive
+3
+49
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5848
+https://udemy.com
+Learning
+Productive
+3
+50
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2792
+https://stackoverflow.com
+Research
+Productive
+3
+51
+1
+PowerPoint
+PowerPoint - Workspace
+804
+-
+Office
+Productive
+2
+52
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2483
+https://twitter.com
+Social Media
+Non-Productive
+2
+53
+1
+Discord
+Discord - Workspace
+5358
+-
+Communication
+Non-Productive
+1
+54
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2547
+https://chat.openai.com
+Research
+Productive
+2
+55
+1
+Spotify
+Spotify - Workspace
+3578
+-
+Entertainment
+Non-Productive
+2
+56
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3085
+https://linkedin.com
+Office
+Productive
+1
+57
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4604
+https://facebook.com
+Social Media
+Non-Productive
+1
+58
+1
+Google Chrome
+Google Chrome - https://github.com
+4451
+https://github.com
+Coding
+Productive
+3
+59
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5178
+-
+Coding
+Productive
+2
+60
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4984
+https://codechef.com
+Coding
+Productive
+3
+61
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3897
+https://udemy.com
+Learning
+Productive
+3
+62
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2759
+https://stackoverflow.com
+Research
+Productive
+4
+63
+1
+PowerPoint
+PowerPoint - Workspace
+783
+-
+Office
+Productive
+2
+64
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2731
+https://twitter.com
+Social Media
+Non-Productive
+3
+65
+1
+Discord
+Discord - Workspace
+5849
+-
+Communication
+Non-Productive
+1
+66
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1826
+https://chat.openai.com
+Research
+Productive
+2
+67
+1
+Spotify
+Spotify - Workspace
+3176
+-
+Entertainment
+Non-Productive
+2
+68
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4481
+https://linkedin.com
+Office
+Productive
+1
+69
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4431
+https://facebook.com
+Social Media
+Non-Productive
+0
+70
+1
+Google Chrome
+Google Chrome - https://github.com
+4561
+https://github.com
+Coding
+Productive
+4
+71
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5661
+-
+Coding
+Productive
+2
+72
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4573
+https://codechef.com
+Coding
+Productive
+3
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+73
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3875
+https://udemy.com
+Learning
+Productive
+3
+74
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3212
+https://stackoverflow.com
+Research
+Productive
+3
+75
+1
+PowerPoint
+PowerPoint - Workspace
+692
+-
+Office
+Productive
+2
+76
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2689
+https://twitter.com
+Social Media
+Non-Productive
+2
+77
+1
+Discord
+Discord - Workspace
+5354
+-
+Communication
+Non-Productive
+1
+78
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1999
+https://chat.openai.com
+Research
+Productive
+1
+79
+1
+Spotify
+Spotify - Workspace
+3005
+-
+Entertainment
+Non-Productive
+1
+80
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4244
+https://linkedin.com
+Office
+Productive
+0
+81
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3647
+https://facebook.com
+Social Media
+Non-Productive
+1
+82
+1
+Google Chrome
+Google Chrome - https://github.com
+3777
+https://github.com
+Coding
+Productive
+4
+83
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4694
+-
+Coding
+Productive
+1
+84
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4168
+https://codechef.com
+Coding
+Productive
+2
+85
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4845
+https://udemy.com
+Learning
+Productive
+3
+86
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2561
+https://stackoverflow.com
+Research
+Productive
+3
+87
+1
+PowerPoint
+PowerPoint - Workspace
+1116
+-
+Office
+Productive
+2
+88
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1770
+https://twitter.com
+Social Media
+Non-Productive
+3
+89
+1
+Discord
+Discord - Workspace
+3747
+-
+Communication
+Non-Productive
+1
+90
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1835
+https://chat.openai.com
+Research
+Productive
+2
+91
+1
+Spotify
+Spotify - Workspace
+3740
+-
+Entertainment
+Non-Productive
+1
+92
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4267
+https://linkedin.com
+Office
+Productive
+0
+93
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5658
+https://facebook.com
+Social Media
+Non-Productive
+1
+94
+1
+Google Chrome
+Google Chrome - https://github.com
+2858
+https://github.com
+Coding
+Productive
+4
+95
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4929
+-
+Coding
+Productive
+1
+96
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3405
+https://codechef.com
+Coding
+Productive
+2
+97
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5642
+https://udemy.com
+Learning
+Productive
+4
+98
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2171
+https://stackoverflow.com
+Research
+Productive
+3
+99
+1
+PowerPoint
+PowerPoint - Workspace
+957
+-
+Office
+Productive
+2
+100
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2685
+https://twitter.com
+Social Media
+Non-Productive
+3
+101
+1
+Discord
+Discord - Workspace
+3789
+-
+Communication
+Non-Productive
+1
+102
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2108
+https://chat.openai.com
+Research
+Productive
+1
+103
+1
+Spotify
+Spotify - Workspace
+5007
+-
+Entertainment
+Non-Productive
+1
+104
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4236
+https://linkedin.com
+Office
+Productive
+1
+105
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4074
+https://facebook.com
+Social Media
+Non-Productive
+1
+106
+1
+Google Chrome
+Google Chrome - https://github.com
+4617
+https://github.com
+Coding
+Productive
+4
+107
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4113
+-
+Coding
+Productive
+1
+108
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4077
+https://codechef.com
+Coding
+Productive
+3
+109
+1
+Google Chrome
+Google Chrome - https://udemy.com
+6064
+https://udemy.com
+Learning
+Productive
+4
+110
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2900
+https://stackoverflow.com
+Research
+Productive
+3
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+111
+1
+PowerPoint
+PowerPoint - Workspace
+1160
+-
+Office
+Productive
+1
+112
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2194
+https://twitter.com
+Social Media
+Non-Productive
+3
+113
+1
+Discord
+Discord - Workspace
+4427
+-
+Communication
+Non-Productive
+2
+114
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2025
+https://chat.openai.com
+Research
+Productive
+2
+115
+1
+Spotify
+Spotify - Workspace
+4542
+-
+Entertainment
+Non-Productive
+2
+116
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+2821
+https://linkedin.com
+Office
+Productive
+0
+117
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3439
+https://facebook.com
+Social Media
+Non-Productive
+1
+118
+1
+Google Chrome
+Google Chrome - https://github.com
+4511
+https://github.com
+Coding
+Productive
+3
+119
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5656
+-
+Coding
+Productive
+1
+120
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3519
+https://codechef.com
+Coding
+Productive
+2
+121
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3459
+https://udemy.com
+Learning
+Productive
+4
+122
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2119
+https://stackoverflow.com
+Research
+Productive
+3
+123
+1
+PowerPoint
+PowerPoint - Workspace
+852
+-
+Office
+Productive
+2
+124
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2579
+https://twitter.com
+Social Media
+Non-Productive
+3
+125
+1
+Discord
+Discord - Workspace
+4429
+-
+Communication
+Non-Productive
+2
+126
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2187
+https://chat.openai.com
+Research
+Productive
+2
+127
+1
+Spotify
+Spotify - Workspace
+4284
+-
+Entertainment
+Non-Productive
+2
+128
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+5045
+https://linkedin.com
+Office
+Productive
+1
+129
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3706
+https://facebook.com
+Social Media
+Non-Productive
+0
+130
+1
+Google Chrome
+Google Chrome - https://github.com
+4544
+https://github.com
+Coding
+Productive
+4
+131
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3674
+-
+Coding
+Productive
+2
+132
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3514
+https://codechef.com
+Coding
+Productive
+2
+133
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4663
+https://udemy.com
+Learning
+Productive
+4
+134
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2338
+https://stackoverflow.com
+Research
+Productive
+3
+135
+1
+PowerPoint
+PowerPoint - Workspace
+665
+-
+Office
+Productive
+1
+136
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2010
+https://twitter.com
+Social Media
+Non-Productive
+2
+137
+1
+Discord
+Discord - Workspace
+4974
+-
+Communication
+Non-Productive
+1
+138
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1972
+https://chat.openai.com
+Research
+Productive
+1
+139
+1
+Spotify
+Spotify - Workspace
+3931
+-
+Entertainment
+Non-Productive
+2
+140
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3694
+https://linkedin.com
+Office
+Productive
+1
+141
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5385
+https://facebook.com
+Social Media
+Non-Productive
+0
+142
+1
+Google Chrome
+Google Chrome - https://github.com
+4284
+https://github.com
+Coding
+Productive
+3
+143
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3908
+-
+Coding
+Productive
+1
+144
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3782
+https://codechef.com
+Coding
+Productive
+3
+145
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3561
+https://udemy.com
+Learning
+Productive
+4
+146
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3102
+https://stackoverflow.com
+Research
+Productive
+3
+147
+1
+PowerPoint
+PowerPoint - Workspace
+635
+-
+Office
+Productive
+2
+148
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2486
+https://twitter.com
+Social Media
+Non-Productive
+2
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+149
+1
+Discord
+Discord - Workspace
+3310
+-
+Communication
+Non-Productive
+1
+150
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1955
+https://chat.openai.com
+Research
+Productive
+1
+151
+1
+Spotify
+Spotify - Workspace
+3023
+-
+Entertainment
+Non-Productive
+2
+152
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3556
+https://linkedin.com
+Office
+Productive
+0
+153
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3436
+https://facebook.com
+Social Media
+Non-Productive
+0
+154
+1
+Google Chrome
+Google Chrome - https://github.com
+4516
+https://github.com
+Coding
+Productive
+3
+155
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3941
+-
+Coding
+Productive
+2
+156
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4611
+https://codechef.com
+Coding
+Productive
+3
+157
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3524
+https://udemy.com
+Learning
+Productive
+4
+158
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2367
+https://stackoverflow.com
+Research
+Productive
+3
+159
+1
+PowerPoint
+PowerPoint - Workspace
+1004
+-
+Office
+Productive
+1
+160
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2516
+https://twitter.com
+Social Media
+Non-Productive
+2
+161
+1
+Discord
+Discord - Workspace
+5473
+-
+Communication
+Non-Productive
+1
+162
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2520
+https://chat.openai.com
+Research
+Productive
+2
+163
+1
+Spotify
+Spotify - Workspace
+3500
+-
+Entertainment
+Non-Productive
+2
+164
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4548
+https://linkedin.com
+Office
+Productive
+1
+165
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3518
+https://facebook.com
+Social Media
+Non-Productive
+1
+166
+1
+Google Chrome
+Google Chrome - https://github.com
+4959
+https://github.com
+Coding
+Productive
+3
+167
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4733
+-
+Coding
+Productive
+2
+168
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3823
+https://codechef.com
+Coding
+Productive
+2
+169
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4058
+https://udemy.com
+Learning
+Productive
+4
+170
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2116
+https://stackoverflow.com
+Research
+Productive
+4
+171
+1
+PowerPoint
+PowerPoint - Workspace
+793
+-
+Office
+Productive
+1
+172
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2002
+https://twitter.com
+Social Media
+Non-Productive
+2
+173
+1
+Discord
+Discord - Workspace
+5379
+-
+Communication
+Non-Productive
+1
+174
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2142
+https://chat.openai.com
+Research
+Productive
+1
+175
+1
+Spotify
+Spotify - Workspace
+4554
+-
+Entertainment
+Non-Productive
+1
+176
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4493
+https://linkedin.com
+Office
+Productive
+0
+177
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5306
+https://facebook.com
+Social Media
+Non-Productive
+0
+178
+1
+Google Chrome
+Google Chrome - https://github.com
+2821
+https://github.com
+Coding
+Productive
+3
+179
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3866
+-
+Coding
+Productive
+1
+180
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4234
+https://codechef.com
+Coding
+Productive
+2
+181
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3600
+https://udemy.com
+Learning
+Productive
+4
+182
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3149
+https://stackoverflow.com
+Research
+Productive
+4
+183
+1
+PowerPoint
+PowerPoint - Workspace
+735
+-
+Office
+Productive
+1
+184
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1922
+https://twitter.com
+Social Media
+Non-Productive
+2
+185
+1
+Discord
+Discord - Workspace
+5286
+-
+Communication
+Non-Productive
+1
+186
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2172
+https://chat.openai.com
+Research
+Productive
+1
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+187
+1
+Spotify
+Spotify - Workspace
+5080
+-
+Entertainment
+Non-Productive
+1
+188
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+2736
+https://linkedin.com
+Office
+Productive
+1
+189
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4387
+https://facebook.com
+Social Media
+Non-Productive
+0
+190
+1
+Google Chrome
+Google Chrome - https://github.com
+5223
+https://github.com
+Coding
+Productive
+3
+191
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3714
+-
+Coding
+Productive
+2
+192
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4460
+https://codechef.com
+Coding
+Productive
+3
+193
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3874
+https://udemy.com
+Learning
+Productive
+4
+194
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2107
+https://stackoverflow.com
+Research
+Productive
+4
+195
+1
+PowerPoint
+PowerPoint - Workspace
+1083
+-
+Office
+Productive
+1
+196
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2702
+https://twitter.com
+Social Media
+Non-Productive
+2
+197
+1
+Discord
+Discord - Workspace
+5430
+-
+Communication
+Non-Productive
+1
+198
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1662
+https://chat.openai.com
+Research
+Productive
+2
+199
+1
+Spotify
+Spotify - Workspace
+3151
+-
+Entertainment
+Non-Productive
+1
+200
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4835
+https://linkedin.com
+Office
+Productive
+1
+201
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3629
+https://facebook.com
+Social Media
+Non-Productive
+1
+202
+1
+Google Chrome
+Google Chrome - https://github.com
+3881
+https://github.com
+Coding
+Productive
+3
+203
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4363
+-
+Coding
+Productive
+2
+204
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5398
+https://codechef.com
+Coding
+Productive
+2
+205
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5788
+https://udemy.com
+Learning
+Productive
+4
+206
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2359
+https://stackoverflow.com
+Research
+Productive
+4
+207
+1
+PowerPoint
+PowerPoint - Workspace
+1112
+-
+Office
+Productive
+1
+208
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2293
+https://twitter.com
+Social Media
+Non-Productive
+3
+209
+1
+Discord
+Discord - Workspace
+4574
+-
+Communication
+Non-Productive
+2
+210
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2502
+https://chat.openai.com
+Research
+Productive
+2
+211
+1
+Spotify
+Spotify - Workspace
+3040
+-
+Entertainment
+Non-Productive
+1
+212
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+2862
+https://linkedin.com
+Office
+Productive
+1
+213
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3943
+https://facebook.com
+Social Media
+Non-Productive
+0
+214
+1
+Google Chrome
+Google Chrome - https://github.com
+4698
+https://github.com
+Coding
+Productive
+3
+215
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3831
+-
+Coding
+Productive
+1
+216
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3484
+https://codechef.com
+Coding
+Productive
+2
+217
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4138
+https://udemy.com
+Learning
+Productive
+3
+218
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2341
+https://stackoverflow.com
+Research
+Productive
+4
+219
+1
+PowerPoint
+PowerPoint - Workspace
+1138
+-
+Office
+Productive
+1
+220
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1700
+https://twitter.com
+Social Media
+Non-Productive
+3
+221
+1
+Discord
+Discord - Workspace
+5564
+-
+Communication
+Non-Productive
+2
+222
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2153
+https://chat.openai.com
+Research
+Productive
+2
+223
+1
+Spotify
+Spotify - Workspace
+4682
+-
+Entertainment
+Non-Productive
+1
+224
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+2874
+https://linkedin.com
+Office
+Productive
+1
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+225
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4754
+https://facebook.com
+Social Media
+Non-Productive
+1
+226
+1
+Google Chrome
+Google Chrome - https://github.com
+3205
+https://github.com
+Coding
+Productive
+4
+227
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4237
+-
+Coding
+Productive
+1
+228
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5417
+https://codechef.com
+Coding
+Productive
+3
+229
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5942
+https://udemy.com
+Learning
+Productive
+3
+230
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2581
+https://stackoverflow.com
+Research
+Productive
+3
+231
+1
+PowerPoint
+PowerPoint - Workspace
+732
+-
+Office
+Productive
+1
+232
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2834
+https://twitter.com
+Social Media
+Non-Productive
+3
+233
+1
+Discord
+Discord - Workspace
+5499
+-
+Communication
+Non-Productive
+1
+234
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2836
+https://chat.openai.com
+Research
+Productive
+2
+235
+1
+Spotify
+Spotify - Workspace
+3450
+-
+Entertainment
+Non-Productive
+2
+236
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+5050
+https://linkedin.com
+Office
+Productive
+1
+237
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3508
+https://facebook.com
+Social Media
+Non-Productive
+0
+238
+1
+Google Chrome
+Google Chrome - https://github.com
+4622
+https://github.com
+Coding
+Productive
+4
+239
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5050
+-
+Coding
+Productive
+2
+240
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4325
+https://codechef.com
+Coding
+Productive
+2
+241
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5494
+https://udemy.com
+Learning
+Productive
+3
+242
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2023
+https://stackoverflow.com
+Research
+Productive
+4
+243
+1
+PowerPoint
+PowerPoint - Workspace
+820
+-
+Office
+Productive
+2
+244
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2624
+https://twitter.com
+Social Media
+Non-Productive
+3
+245
+1
+Discord
+Discord - Workspace
+4487
+-
+Communication
+Non-Productive
+1
+246
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1612
+https://chat.openai.com
+Research
+Productive
+2
+247
+1
+Spotify
+Spotify - Workspace
+4577
+-
+Entertainment
+Non-Productive
+1
+248
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3661
+https://linkedin.com
+Office
+Productive
+0
+249
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4994
+https://facebook.com
+Social Media
+Non-Productive
+0
+250
+1
+Google Chrome
+Google Chrome - https://github.com
+3297
+https://github.com
+Coding
+Productive
+3
+251
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5708
+-
+Coding
+Productive
+2
+252
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5674
+https://codechef.com
+Coding
+Productive
+2
+253
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4216
+https://udemy.com
+Learning
+Productive
+4
+254
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2674
+https://stackoverflow.com
+Research
+Productive
+3
+255
+1
+PowerPoint
+PowerPoint - Workspace
+888
+-
+Office
+Productive
+2
+256
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1956
+https://twitter.com
+Social Media
+Non-Productive
+2
+257
+1
+Discord
+Discord - Workspace
+3772
+-
+Communication
+Non-Productive
+1
+258
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1792
+https://chat.openai.com
+Research
+Productive
+1
+259
+1
+Spotify
+Spotify - Workspace
+3158
+-
+Entertainment
+Non-Productive
+1
+260
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3462
+https://linkedin.com
+Office
+Productive
+1
+261
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3941
+https://facebook.com
+Social Media
+Non-Productive
+0
+262
+1
+Google Chrome
+Google Chrome - https://github.com
+4871
+https://github.com
+Coding
+Productive
+3
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+263
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5816
+-
+Coding
+Productive
+2
+264
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5406
+https://codechef.com
+Coding
+Productive
+3
+265
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5526
+https://udemy.com
+Learning
+Productive
+4
+266
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2039
+https://stackoverflow.com
+Research
+Productive
+3
+267
+1
+PowerPoint
+PowerPoint - Workspace
+876
+-
+Office
+Productive
+2
+268
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1938
+https://twitter.com
+Social Media
+Non-Productive
+2
+269
+1
+Discord
+Discord - Workspace
+5346
+-
+Communication
+Non-Productive
+2
+270
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2548
+https://chat.openai.com
+Research
+Productive
+2
+271
+1
+Spotify
+Spotify - Workspace
+3179
+-
+Entertainment
+Non-Productive
+1
+272
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4615
+https://linkedin.com
+Office
+Productive
+0
+273
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4016
+https://facebook.com
+Social Media
+Non-Productive
+1
+274
+1
+Google Chrome
+Google Chrome - https://github.com
+3719
+https://github.com
+Coding
+Productive
+3
+275
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5622
+-
+Coding
+Productive
+1
+276
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3180
+https://codechef.com
+Coding
+Productive
+2
+277
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4435
+https://udemy.com
+Learning
+Productive
+3
+278
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1999
+https://stackoverflow.com
+Research
+Productive
+3
+279
+1
+PowerPoint
+PowerPoint - Workspace
+1012
+-
+Office
+Productive
+2
+280
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2821
+https://twitter.com
+Social Media
+Non-Productive
+2
+281
+1
+Discord
+Discord - Workspace
+5740
+-
+Communication
+Non-Productive
+2
+282
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2252
+https://chat.openai.com
+Research
+Productive
+2
+283
+1
+Spotify
+Spotify - Workspace
+3434
+-
+Entertainment
+Non-Productive
+2
+284
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4638
+https://linkedin.com
+Office
+Productive
+1
+285
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4476
+https://facebook.com
+Social Media
+Non-Productive
+1
+286
+1
+Google Chrome
+Google Chrome - https://github.com
+5201
+https://github.com
+Coding
+Productive
+3
+287
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3588
+-
+Coding
+Productive
+2
+288
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5225
+https://codechef.com
+Coding
+Productive
+2
+289
+1
+Google Chrome
+Google Chrome - https://udemy.com
+6048
+https://udemy.com
+Learning
+Productive
+3
+290
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2694
+https://stackoverflow.com
+Research
+Productive
+4
+291
+1
+PowerPoint
+PowerPoint - Workspace
+1126
+-
+Office
+Productive
+1
+292
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1655
+https://twitter.com
+Social Media
+Non-Productive
+3
+293
+1
+Discord
+Discord - Workspace
+5176
+-
+Communication
+Non-Productive
+2
+294
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2511
+https://chat.openai.com
+Research
+Productive
+2
+295
+1
+Spotify
+Spotify - Workspace
+4090
+-
+Entertainment
+Non-Productive
+1
+296
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3102
+https://linkedin.com
+Office
+Productive
+1
+297
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4866
+https://facebook.com
+Social Media
+Non-Productive
+0
+298
+1
+Google Chrome
+Google Chrome - https://github.com
+3878
+https://github.com
+Coding
+Productive
+3
+299
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4767
+-
+Coding
+Productive
+2
+300
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5612
+https://codechef.com
+Coding
+Productive
+2
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+301
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4230
+https://udemy.com
+Learning
+Productive
+4
+302
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2083
+https://stackoverflow.com
+Research
+Productive
+3
+303
+1
+PowerPoint
+PowerPoint - Workspace
+877
+-
+Office
+Productive
+2
+304
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2546
+https://twitter.com
+Social Media
+Non-Productive
+3
+305
+1
+Discord
+Discord - Workspace
+4512
+-
+Communication
+Non-Productive
+1
+306
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2844
+https://chat.openai.com
+Research
+Productive
+2
+307
+1
+Spotify
+Spotify - Workspace
+5363
+-
+Entertainment
+Non-Productive
+1
+308
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4554
+https://linkedin.com
+Office
+Productive
+0
+309
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5080
+https://facebook.com
+Social Media
+Non-Productive
+1
+310
+1
+Google Chrome
+Google Chrome - https://github.com
+5033
+https://github.com
+Coding
+Productive
+3
+311
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5105
+-
+Coding
+Productive
+2
+312
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3935
+https://codechef.com
+Coding
+Productive
+3
+313
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4914
+https://udemy.com
+Learning
+Productive
+4
+314
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3107
+https://stackoverflow.com
+Research
+Productive
+3
+315
+1
+PowerPoint
+PowerPoint - Workspace
+853
+-
+Office
+Productive
+2
+316
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2796
+https://twitter.com
+Social Media
+Non-Productive
+3
+317
+1
+Discord
+Discord - Workspace
+4761
+-
+Communication
+Non-Productive
+2
+318
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2872
+https://chat.openai.com
+Research
+Productive
+1
+319
+1
+Spotify
+Spotify - Workspace
+3106
+-
+Entertainment
+Non-Productive
+1
+320
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3742
+https://linkedin.com
+Office
+Productive
+0
+321
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5532
+https://facebook.com
+Social Media
+Non-Productive
+1
+322
+1
+Google Chrome
+Google Chrome - https://github.com
+4283
+https://github.com
+Coding
+Productive
+4
+323
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4405
+-
+Coding
+Productive
+2
+324
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5051
+https://codechef.com
+Coding
+Productive
+2
+325
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5468
+https://udemy.com
+Learning
+Productive
+3
+326
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1963
+https://stackoverflow.com
+Research
+Productive
+3
+327
+1
+PowerPoint
+PowerPoint - Workspace
+1129
+-
+Office
+Productive
+1
+328
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2866
+https://twitter.com
+Social Media
+Non-Productive
+3
+329
+1
+Discord
+Discord - Workspace
+4011
+-
+Communication
+Non-Productive
+1
+330
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2670
+https://chat.openai.com
+Research
+Productive
+2
+331
+1
+Spotify
+Spotify - Workspace
+3867
+-
+Entertainment
+Non-Productive
+2
+332
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3853
+https://linkedin.com
+Office
+Productive
+0
+333
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4383
+https://facebook.com
+Social Media
+Non-Productive
+1
+334
+1
+Google Chrome
+Google Chrome - https://github.com
+4360
+https://github.com
+Coding
+Productive
+3
+335
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3985
+-
+Coding
+Productive
+2
+336
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3710
+https://codechef.com
+Coding
+Productive
+2
+337
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3416
+https://udemy.com
+Learning
+Productive
+4
+338
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3047
+https://stackoverflow.com
+Research
+Productive
+3
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+339
+1
+PowerPoint
+PowerPoint - Workspace
+1051
+-
+Office
+Productive
+2
+340
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2178
+https://twitter.com
+Social Media
+Non-Productive
+3
+341
+1
+Discord
+Discord - Workspace
+3612
+-
+Communication
+Non-Productive
+1
+342
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2632
+https://chat.openai.com
+Research
+Productive
+1
+343
+1
+Spotify
+Spotify - Workspace
+3600
+-
+Entertainment
+Non-Productive
+1
+344
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3345
+https://linkedin.com
+Office
+Productive
+1
+345
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3529
+https://facebook.com
+Social Media
+Non-Productive
+0
+346
+1
+Google Chrome
+Google Chrome - https://github.com
+4372
+https://github.com
+Coding
+Productive
+4
+347
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5141
+-
+Coding
+Productive
+1
+348
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5253
+https://codechef.com
+Coding
+Productive
+2
+349
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4670
+https://udemy.com
+Learning
+Productive
+3
+350
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2240
+https://stackoverflow.com
+Research
+Productive
+4
+351
+1
+PowerPoint
+PowerPoint - Workspace
+844
+-
+Office
+Productive
+1
+352
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2052
+https://twitter.com
+Social Media
+Non-Productive
+3
+353
+1
+Discord
+Discord - Workspace
+4624
+-
+Communication
+Non-Productive
+2
+354
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2313
+https://chat.openai.com
+Research
+Productive
+1
+355
+1
+Spotify
+Spotify - Workspace
+4904
+-
+Entertainment
+Non-Productive
+2
+356
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+2823
+https://linkedin.com
+Office
+Productive
+0
+357
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4017
+https://facebook.com
+Social Media
+Non-Productive
+1
+358
+1
+Google Chrome
+Google Chrome - https://github.com
+4828
+https://github.com
+Coding
+Productive
+3
+359
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4503
+-
+Coding
+Productive
+1
+360
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5452
+https://codechef.com
+Coding
+Productive
+2
+361
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5369
+https://udemy.com
+Learning
+Productive
+4
+362
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2334
+https://stackoverflow.com
+Research
+Productive
+4
+363
+1
+PowerPoint
+PowerPoint - Workspace
+857
+-
+Office
+Productive
+1
+364
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2401
+https://twitter.com
+Social Media
+Non-Productive
+3
+365
+1
+Discord
+Discord - Workspace
+4318
+-
+Communication
+Non-Productive
+1
+366
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2317
+https://chat.openai.com
+Research
+Productive
+2
+367
+1
+Spotify
+Spotify - Workspace
+3501
+-
+Entertainment
+Non-Productive
+2
+368
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3834
+https://linkedin.com
+Office
+Productive
+1
+369
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4389
+https://facebook.com
+Social Media
+Non-Productive
+0
+370
+1
+Google Chrome
+Google Chrome - https://github.com
+3604
+https://github.com
+Coding
+Productive
+4
+371
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4249
+-
+Coding
+Productive
+1
+372
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3921
+https://codechef.com
+Coding
+Productive
+3
+373
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5462
+https://udemy.com
+Learning
+Productive
+3
+374
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3124
+https://stackoverflow.com
+Research
+Productive
+3
+375
+1
+PowerPoint
+PowerPoint - Workspace
+772
+-
+Office
+Productive
+1
+376
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1804
+https://twitter.com
+Social Media
+Non-Productive
+2
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+377
+1
+Discord
+Discord - Workspace
+4093
+-
+Communication
+Non-Productive
+1
+378
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2239
+https://chat.openai.com
+Research
+Productive
+1
+379
+1
+Spotify
+Spotify - Workspace
+4426
+-
+Entertainment
+Non-Productive
+2
+380
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3328
+https://linkedin.com
+Office
+Productive
+0
+381
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3644
+https://facebook.com
+Social Media
+Non-Productive
+0
+382
+1
+Google Chrome
+Google Chrome - https://github.com
+3838
+https://github.com
+Coding
+Productive
+4
+383
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3601
+-
+Coding
+Productive
+1
+384
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5659
+https://codechef.com
+Coding
+Productive
+2
+385
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3756
+https://udemy.com
+Learning
+Productive
+4
+386
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2401
+https://stackoverflow.com
+Research
+Productive
+3
+387
+1
+PowerPoint
+PowerPoint - Workspace
+1025
+-
+Office
+Productive
+1
+388
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1602
+https://twitter.com
+Social Media
+Non-Productive
+3
+389
+1
+Discord
+Discord - Workspace
+5721
+-
+Communication
+Non-Productive
+1
+390
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2908
+https://chat.openai.com
+Research
+Productive
+1
+391
+1
+Spotify
+Spotify - Workspace
+3205
+-
+Entertainment
+Non-Productive
+1
+392
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4935
+https://linkedin.com
+Office
+Productive
+0
+393
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5662
+https://facebook.com
+Social Media
+Non-Productive
+1
+394
+1
+Google Chrome
+Google Chrome - https://github.com
+4398
+https://github.com
+Coding
+Productive
+4
+395
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5757
+-
+Coding
+Productive
+1
+396
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3354
+https://codechef.com
+Coding
+Productive
+3
+397
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4003
+https://udemy.com
+Learning
+Productive
+3
+398
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2543
+https://stackoverflow.com
+Research
+Productive
+4
+399
+1
+PowerPoint
+PowerPoint - Workspace
+859
+-
+Office
+Productive
+1
+400
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2336
+https://twitter.com
+Social Media
+Non-Productive
+3
+401
+1
+Discord
+Discord - Workspace
+3230
+-
+Communication
+Non-Productive
+1
+402
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2725
+https://chat.openai.com
+Research
+Productive
+1
+403
+1
+Spotify
+Spotify - Workspace
+5349
+-
+Entertainment
+Non-Productive
+1
+404
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4808
+https://linkedin.com
+Office
+Productive
+1
+405
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3705
+https://facebook.com
+Social Media
+Non-Productive
+1
+406
+1
+Google Chrome
+Google Chrome - https://github.com
+4015
+https://github.com
+Coding
+Productive
+3
+407
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3987
+-
+Coding
+Productive
+2
+408
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4936
+https://codechef.com
+Coding
+Productive
+3
+409
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3372
+https://udemy.com
+Learning
+Productive
+4
+410
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2757
+https://stackoverflow.com
+Research
+Productive
+4
+411
+1
+PowerPoint
+PowerPoint - Workspace
+1167
+-
+Office
+Productive
+1
+412
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1678
+https://twitter.com
+Social Media
+Non-Productive
+3
+413
+1
+Discord
+Discord - Workspace
+3196
+-
+Communication
+Non-Productive
+1
+414
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2013
+https://chat.openai.com
+Research
+Productive
+1
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+415
+1
+Spotify
+Spotify - Workspace
+4823
+-
+Entertainment
+Non-Productive
+2
+416
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4574
+https://linkedin.com
+Office
+Productive
+0
+417
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4975
+https://facebook.com
+Social Media
+Non-Productive
+1
+418
+1
+Google Chrome
+Google Chrome - https://github.com
+3480
+https://github.com
+Coding
+Productive
+3
+419
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3758
+-
+Coding
+Productive
+2
+420
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3358
+https://codechef.com
+Coding
+Productive
+3
+421
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3693
+https://udemy.com
+Learning
+Productive
+4
+422
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2747
+https://stackoverflow.com
+Research
+Productive
+4
+423
+1
+PowerPoint
+PowerPoint - Workspace
+1045
+-
+Office
+Productive
+1
+424
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2562
+https://twitter.com
+Social Media
+Non-Productive
+2
+425
+1
+Discord
+Discord - Workspace
+5419
+-
+Communication
+Non-Productive
+1
+426
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2553
+https://chat.openai.com
+Research
+Productive
+1
+427
+1
+Spotify
+Spotify - Workspace
+3114
+-
+Entertainment
+Non-Productive
+1
+428
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4523
+https://linkedin.com
+Office
+Productive
+1
+429
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4697
+https://facebook.com
+Social Media
+Non-Productive
+0
+430
+1
+Google Chrome
+Google Chrome - https://github.com
+3913
+https://github.com
+Coding
+Productive
+3
+431
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4517
+-
+Coding
+Productive
+2
+432
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3557
+https://codechef.com
+Coding
+Productive
+2
+433
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5863
+https://udemy.com
+Learning
+Productive
+3
+434
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2436
+https://stackoverflow.com
+Research
+Productive
+3
+435
+1
+PowerPoint
+PowerPoint - Workspace
+637
+-
+Office
+Productive
+1
+436
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1970
+https://twitter.com
+Social Media
+Non-Productive
+3
+437
+1
+Discord
+Discord - Workspace
+5579
+-
+Communication
+Non-Productive
+2
+438
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2867
+https://chat.openai.com
+Research
+Productive
+2
+439
+1
+Spotify
+Spotify - Workspace
+4986
+-
+Entertainment
+Non-Productive
+1
+440
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4186
+https://linkedin.com
+Office
+Productive
+0
+441
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4193
+https://facebook.com
+Social Media
+Non-Productive
+0
+442
+1
+Google Chrome
+Google Chrome - https://github.com
+3786
+https://github.com
+Coding
+Productive
+3
+443
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4374
+-
+Coding
+Productive
+1
+444
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4507
+https://codechef.com
+Coding
+Productive
+2
+445
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4157
+https://udemy.com
+Learning
+Productive
+4
+446
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1807
+https://stackoverflow.com
+Research
+Productive
+4
+447
+1
+PowerPoint
+PowerPoint - Workspace
+998
+-
+Office
+Productive
+2
+448
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1773
+https://twitter.com
+Social Media
+Non-Productive
+2
+449
+1
+Discord
+Discord - Workspace
+5223
+-
+Communication
+Non-Productive
+1
+450
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2960
+https://chat.openai.com
+Research
+Productive
+2
+451
+1
+Spotify
+Spotify - Workspace
+3139
+-
+Entertainment
+Non-Productive
+1
+452
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3777
+https://linkedin.com
+Office
+Productive
+1
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+453
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4961
+https://facebook.com
+Social Media
+Non-Productive
+1
+454
+1
+Google Chrome
+Google Chrome - https://github.com
+3205
+https://github.com
+Coding
+Productive
+4
+455
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4061
+-
+Coding
+Productive
+2
+456
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3563
+https://codechef.com
+Coding
+Productive
+2
+457
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4189
+https://udemy.com
+Learning
+Productive
+3
+458
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3259
+https://stackoverflow.com
+Research
+Productive
+3
+459
+1
+PowerPoint
+PowerPoint - Workspace
+1070
+-
+Office
+Productive
+2
+460
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2431
+https://twitter.com
+Social Media
+Non-Productive
+3
+461
+1
+Discord
+Discord - Workspace
+3841
+-
+Communication
+Non-Productive
+1
+462
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1664
+https://chat.openai.com
+Research
+Productive
+1
+463
+1
+Spotify
+Spotify - Workspace
+4780
+-
+Entertainment
+Non-Productive
+1
+464
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+2749
+https://linkedin.com
+Office
+Productive
+0
+465
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3224
+https://facebook.com
+Social Media
+Non-Productive
+0
+466
+1
+Google Chrome
+Google Chrome - https://github.com
+5069
+https://github.com
+Coding
+Productive
+4
+467
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+6002
+-
+Coding
+Productive
+1
+468
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4456
+https://codechef.com
+Coding
+Productive
+3
+469
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4386
+https://udemy.com
+Learning
+Productive
+4
+470
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1937
+https://stackoverflow.com
+Research
+Productive
+3
+471
+1
+PowerPoint
+PowerPoint - Workspace
+709
+-
+Office
+Productive
+2
+472
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1937
+https://twitter.com
+Social Media
+Non-Productive
+3
+473
+1
+Discord
+Discord - Workspace
+4511
+-
+Communication
+Non-Productive
+2
+474
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1777
+https://chat.openai.com
+Research
+Productive
+2
+475
+1
+Spotify
+Spotify - Workspace
+5311
+-
+Entertainment
+Non-Productive
+2
+476
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4295
+https://linkedin.com
+Office
+Productive
+0
+477
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5114
+https://facebook.com
+Social Media
+Non-Productive
+1
+478
+1
+Google Chrome
+Google Chrome - https://github.com
+4308
+https://github.com
+Coding
+Productive
+4
+479
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4853
+-
+Coding
+Productive
+2
+480
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3787
+https://codechef.com
+Coding
+Productive
+3
+481
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5847
+https://udemy.com
+Learning
+Productive
+4
+482
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2700
+https://stackoverflow.com
+Research
+Productive
+4
+483
+1
+PowerPoint
+PowerPoint - Workspace
+778
+-
+Office
+Productive
+2
+484
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2584
+https://twitter.com
+Social Media
+Non-Productive
+2
+485
+1
+Discord
+Discord - Workspace
+5274
+-
+Communication
+Non-Productive
+1
+486
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1647
+https://chat.openai.com
+Research
+Productive
+1
+487
+1
+Spotify
+Spotify - Workspace
+5199
+-
+Entertainment
+Non-Productive
+1
+488
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4931
+https://linkedin.com
+Office
+Productive
+0
+489
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4145
+https://facebook.com
+Social Media
+Non-Productive
+0
+490
+1
+Google Chrome
+Google Chrome - https://github.com
+5142
+https://github.com
+Coding
+Productive
+4
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+491
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4898
+-
+Coding
+Productive
+2
+492
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3879
+https://codechef.com
+Coding
+Productive
+3
+493
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4268
+https://udemy.com
+Learning
+Productive
+4
+494
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2124
+https://stackoverflow.com
+Research
+Productive
+4
+495
+1
+PowerPoint
+PowerPoint - Workspace
+830
+-
+Office
+Productive
+2
+496
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2862
+https://twitter.com
+Social Media
+Non-Productive
+3
+497
+1
+Discord
+Discord - Workspace
+3626
+-
+Communication
+Non-Productive
+2
+498
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2885
+https://chat.openai.com
+Research
+Productive
+1
+499
+1
+Spotify
+Spotify - Workspace
+3854
+-
+Entertainment
+Non-Productive
+2
+500
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4258
+https://linkedin.com
+Office
+Productive
+1
+501
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4352
+https://facebook.com
+Social Media
+Non-Productive
+0
+502
+1
+Google Chrome
+Google Chrome - https://github.com
+3705
+https://github.com
+Coding
+Productive
+4
+503
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5018
+-
+Coding
+Productive
+2
+504
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4815
+https://codechef.com
+Coding
+Productive
+2
+505
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5584
+https://udemy.com
+Learning
+Productive
+3
+506
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2607
+https://stackoverflow.com
+Research
+Productive
+3
+507
+1
+PowerPoint
+PowerPoint - Workspace
+635
+-
+Office
+Productive
+1
+508
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2775
+https://twitter.com
+Social Media
+Non-Productive
+2
+509
+1
+Discord
+Discord - Workspace
+5260
+-
+Communication
+Non-Productive
+1
+510
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1941
+https://chat.openai.com
+Research
+Productive
+2
+511
+1
+Spotify
+Spotify - Workspace
+3482
+-
+Entertainment
+Non-Productive
+1
+512
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3231
+https://linkedin.com
+Office
+Productive
+1
+513
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4651
+https://facebook.com
+Social Media
+Non-Productive
+1
+514
+1
+Google Chrome
+Google Chrome - https://github.com
+4098
+https://github.com
+Coding
+Productive
+3
+515
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4936
+-
+Coding
+Productive
+1
+516
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3277
+https://codechef.com
+Coding
+Productive
+2
+517
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4566
+https://udemy.com
+Learning
+Productive
+3
+518
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2843
+https://stackoverflow.com
+Research
+Productive
+3
+519
+1
+PowerPoint
+PowerPoint - Workspace
+867
+-
+Office
+Productive
+1
+520
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2777
+https://twitter.com
+Social Media
+Non-Productive
+3
+521
+1
+Discord
+Discord - Workspace
+4895
+-
+Communication
+Non-Productive
+2
+522
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1894
+https://chat.openai.com
+Research
+Productive
+2
+523
+1
+Spotify
+Spotify - Workspace
+5009
+-
+Entertainment
+Non-Productive
+1
+524
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3202
+https://linkedin.com
+Office
+Productive
+0
+525
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3386
+https://facebook.com
+Social Media
+Non-Productive
+1
+526
+1
+Google Chrome
+Google Chrome - https://github.com
+3923
+https://github.com
+Coding
+Productive
+3
+527
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+6116
+-
+Coding
+Productive
+2
+528
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4759
+https://codechef.com
+Coding
+Productive
+3
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+529
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4413
+https://udemy.com
+Learning
+Productive
+3
+530
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2308
+https://stackoverflow.com
+Research
+Productive
+4
+531
+1
+PowerPoint
+PowerPoint - Workspace
+816
+-
+Office
+Productive
+2
+532
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1980
+https://twitter.com
+Social Media
+Non-Productive
+2
+533
+1
+Discord
+Discord - Workspace
+4512
+-
+Communication
+Non-Productive
+1
+534
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1779
+https://chat.openai.com
+Research
+Productive
+1
+535
+1
+Spotify
+Spotify - Workspace
+4684
+-
+Entertainment
+Non-Productive
+2
+536
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3209
+https://linkedin.com
+Office
+Productive
+1
+537
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3592
+https://facebook.com
+Social Media
+Non-Productive
+1
+538
+1
+Google Chrome
+Google Chrome - https://github.com
+4495
+https://github.com
+Coding
+Productive
+4
+539
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5398
+-
+Coding
+Productive
+1
+540
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4918
+https://codechef.com
+Coding
+Productive
+3
+541
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4144
+https://udemy.com
+Learning
+Productive
+3
+542
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3149
+https://stackoverflow.com
+Research
+Productive
+3
+543
+1
+PowerPoint
+PowerPoint - Workspace
+987
+-
+Office
+Productive
+1
+544
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2515
+https://twitter.com
+Social Media
+Non-Productive
+3
+545
+1
+Discord
+Discord - Workspace
+5372
+-
+Communication
+Non-Productive
+2
+546
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1800
+https://chat.openai.com
+Research
+Productive
+1
+547
+1
+Spotify
+Spotify - Workspace
+4755
+-
+Entertainment
+Non-Productive
+2
+548
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4133
+https://linkedin.com
+Office
+Productive
+1
+549
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4498
+https://facebook.com
+Social Media
+Non-Productive
+0
+550
+1
+Google Chrome
+Google Chrome - https://github.com
+3195
+https://github.com
+Coding
+Productive
+4
+551
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5452
+-
+Coding
+Productive
+1
+552
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5622
+https://codechef.com
+Coding
+Productive
+2
+553
+1
+Google Chrome
+Google Chrome - https://udemy.com
+6073
+https://udemy.com
+Learning
+Productive
+4
+554
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2497
+https://stackoverflow.com
+Research
+Productive
+4
+555
+1
+PowerPoint
+PowerPoint - Workspace
+773
+-
+Office
+Productive
+1
+556
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2311
+https://twitter.com
+Social Media
+Non-Productive
+2
+557
+1
+Discord
+Discord - Workspace
+4869
+-
+Communication
+Non-Productive
+2
+558
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2671
+https://chat.openai.com
+Research
+Productive
+1
+559
+1
+Spotify
+Spotify - Workspace
+3746
+-
+Entertainment
+Non-Productive
+1
+560
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4395
+https://linkedin.com
+Office
+Productive
+0
+561
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4645
+https://facebook.com
+Social Media
+Non-Productive
+0
+562
+1
+Google Chrome
+Google Chrome - https://github.com
+3153
+https://github.com
+Coding
+Productive
+3
+563
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4981
+-
+Coding
+Productive
+1
+564
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4090
+https://codechef.com
+Coding
+Productive
+3
+565
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4811
+https://udemy.com
+Learning
+Productive
+4
+566
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2036
+https://stackoverflow.com
+Research
+Productive
+4
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+567
+1
+PowerPoint
+PowerPoint - Workspace
+1022
+-
+Office
+Productive
+1
+568
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2211
+https://twitter.com
+Social Media
+Non-Productive
+3
+569
+1
+Discord
+Discord - Workspace
+5809
+-
+Communication
+Non-Productive
+1
+570
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2779
+https://chat.openai.com
+Research
+Productive
+1
+571
+1
+Spotify
+Spotify - Workspace
+3799
+-
+Entertainment
+Non-Productive
+1
+572
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4144
+https://linkedin.com
+Office
+Productive
+0
+573
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3708
+https://facebook.com
+Social Media
+Non-Productive
+0
+574
+1
+Google Chrome
+Google Chrome - https://github.com
+5075
+https://github.com
+Coding
+Productive
+4
+575
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5362
+-
+Coding
+Productive
+1
+576
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3367
+https://codechef.com
+Coding
+Productive
+2
+577
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3528
+https://udemy.com
+Learning
+Productive
+4
+578
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2200
+https://stackoverflow.com
+Research
+Productive
+3
+579
+1
+PowerPoint
+PowerPoint - Workspace
+792
+-
+Office
+Productive
+1
+580
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2188
+https://twitter.com
+Social Media
+Non-Productive
+3
+581
+1
+Discord
+Discord - Workspace
+5580
+-
+Communication
+Non-Productive
+2
+582
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1964
+https://chat.openai.com
+Research
+Productive
+2
+583
+1
+Spotify
+Spotify - Workspace
+3073
+-
+Entertainment
+Non-Productive
+1
+584
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+2831
+https://linkedin.com
+Office
+Productive
+0
+585
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4964
+https://facebook.com
+Social Media
+Non-Productive
+0
+586
+1
+Google Chrome
+Google Chrome - https://github.com
+4325
+https://github.com
+Coding
+Productive
+3
+587
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4320
+-
+Coding
+Productive
+1
+588
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4916
+https://codechef.com
+Coding
+Productive
+3
+589
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3774
+https://udemy.com
+Learning
+Productive
+4
+590
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1930
+https://stackoverflow.com
+Research
+Productive
+4
+591
+1
+PowerPoint
+PowerPoint - Workspace
+944
+-
+Office
+Productive
+2
+592
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1875
+https://twitter.com
+Social Media
+Non-Productive
+3
+593
+1
+Discord
+Discord - Workspace
+5584
+-
+Communication
+Non-Productive
+2
+594
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2109
+https://chat.openai.com
+Research
+Productive
+2
+595
+1
+Spotify
+Spotify - Workspace
+5087
+-
+Entertainment
+Non-Productive
+1
+596
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4972
+https://linkedin.com
+Office
+Productive
+1
+597
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5321
+https://facebook.com
+Social Media
+Non-Productive
+0
+598
+1
+Google Chrome
+Google Chrome - https://github.com
+3195
+https://github.com
+Coding
+Productive
+4
+599
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5453
+-
+Coding
+Productive
+1
+600
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4690
+https://codechef.com
+Coding
+Productive
+2
+601
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4725
+https://udemy.com
+Learning
+Productive
+3
+602
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1870
+https://stackoverflow.com
+Research
+Productive
+4
+603
+1
+PowerPoint
+PowerPoint - Workspace
+803
+-
+Office
+Productive
+2
+604
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2429
+https://twitter.com
+Social Media
+Non-Productive
+2
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+605
+1
+Discord
+Discord - Workspace
+4233
+-
+Communication
+Non-Productive
+2
+606
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2798
+https://chat.openai.com
+Research
+Productive
+1
+607
+1
+Spotify
+Spotify - Workspace
+3459
+-
+Entertainment
+Non-Productive
+1
+608
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4270
+https://linkedin.com
+Office
+Productive
+1
+609
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4125
+https://facebook.com
+Social Media
+Non-Productive
+1
+610
+1
+Google Chrome
+Google Chrome - https://github.com
+4041
+https://github.com
+Coding
+Productive
+4
+611
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3799
+-
+Coding
+Productive
+1
+612
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5082
+https://codechef.com
+Coding
+Productive
+2
+613
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4718
+https://udemy.com
+Learning
+Productive
+4
+614
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3040
+https://stackoverflow.com
+Research
+Productive
+4
+615
+1
+PowerPoint
+PowerPoint - Workspace
+860
+-
+Office
+Productive
+1
+616
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1990
+https://twitter.com
+Social Media
+Non-Productive
+3
+617
+1
+Discord
+Discord - Workspace
+3656
+-
+Communication
+Non-Productive
+2
+618
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2565
+https://chat.openai.com
+Research
+Productive
+1
+619
+1
+Spotify
+Spotify - Workspace
+4388
+-
+Entertainment
+Non-Productive
+1
+620
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4614
+https://linkedin.com
+Office
+Productive
+0
+621
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4731
+https://facebook.com
+Social Media
+Non-Productive
+1
+622
+1
+Google Chrome
+Google Chrome - https://github.com
+3584
+https://github.com
+Coding
+Productive
+4
+623
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4625
+-
+Coding
+Productive
+2
+624
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5366
+https://codechef.com
+Coding
+Productive
+3
+625
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3354
+https://udemy.com
+Learning
+Productive
+4
+626
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2331
+https://stackoverflow.com
+Research
+Productive
+4
+627
+1
+PowerPoint
+PowerPoint - Workspace
+1044
+-
+Office
+Productive
+1
+628
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2797
+https://twitter.com
+Social Media
+Non-Productive
+2
+629
+1
+Discord
+Discord - Workspace
+3531
+-
+Communication
+Non-Productive
+1
+630
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1865
+https://chat.openai.com
+Research
+Productive
+1
+631
+1
+Spotify
+Spotify - Workspace
+2909
+-
+Entertainment
+Non-Productive
+2
+632
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+5012
+https://linkedin.com
+Office
+Productive
+0
+633
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4759
+https://facebook.com
+Social Media
+Non-Productive
+1
+634
+1
+Google Chrome
+Google Chrome - https://github.com
+3573
+https://github.com
+Coding
+Productive
+3
+635
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3820
+-
+Coding
+Productive
+1
+636
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5580
+https://codechef.com
+Coding
+Productive
+3
+637
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5126
+https://udemy.com
+Learning
+Productive
+3
+638
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2290
+https://stackoverflow.com
+Research
+Productive
+4
+639
+1
+PowerPoint
+PowerPoint - Workspace
+653
+-
+Office
+Productive
+1
+640
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1906
+https://twitter.com
+Social Media
+Non-Productive
+2
+641
+1
+Discord
+Discord - Workspace
+3856
+-
+Communication
+Non-Productive
+1
+642
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2871
+https://chat.openai.com
+Research
+Productive
+1
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+643
+1
+Spotify
+Spotify - Workspace
+3505
+-
+Entertainment
+Non-Productive
+2
+644
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4887
+https://linkedin.com
+Office
+Productive
+1
+645
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3732
+https://facebook.com
+Social Media
+Non-Productive
+0
+646
+1
+Google Chrome
+Google Chrome - https://github.com
+4931
+https://github.com
+Coding
+Productive
+4
+647
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4224
+-
+Coding
+Productive
+1
+648
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3765
+https://codechef.com
+Coding
+Productive
+3
+649
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5411
+https://udemy.com
+Learning
+Productive
+4
+650
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2025
+https://stackoverflow.com
+Research
+Productive
+4
+651
+1
+PowerPoint
+PowerPoint - Workspace
+1061
+-
+Office
+Productive
+1
+652
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2866
+https://twitter.com
+Social Media
+Non-Productive
+2
+653
+1
+Discord
+Discord - Workspace
+3333
+-
+Communication
+Non-Productive
+1
+654
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1910
+https://chat.openai.com
+Research
+Productive
+1
+655
+1
+Spotify
+Spotify - Workspace
+4531
+-
+Entertainment
+Non-Productive
+1
+656
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3741
+https://linkedin.com
+Office
+Productive
+0
+657
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4416
+https://facebook.com
+Social Media
+Non-Productive
+1
+658
+1
+Google Chrome
+Google Chrome - https://github.com
+3501
+https://github.com
+Coding
+Productive
+4
+659
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4896
+-
+Coding
+Productive
+2
+660
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5564
+https://codechef.com
+Coding
+Productive
+2
+661
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4337
+https://udemy.com
+Learning
+Productive
+4
+662
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3007
+https://stackoverflow.com
+Research
+Productive
+4
+663
+1
+PowerPoint
+PowerPoint - Workspace
+917
+-
+Office
+Productive
+2
+664
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1738
+https://twitter.com
+Social Media
+Non-Productive
+2
+665
+1
+Discord
+Discord - Workspace
+4919
+-
+Communication
+Non-Productive
+2
+666
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2871
+https://chat.openai.com
+Research
+Productive
+1
+667
+1
+Spotify
+Spotify - Workspace
+4924
+-
+Entertainment
+Non-Productive
+1
+668
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3347
+https://linkedin.com
+Office
+Productive
+1
+669
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4673
+https://facebook.com
+Social Media
+Non-Productive
+0
+670
+1
+Google Chrome
+Google Chrome - https://github.com
+4639
+https://github.com
+Coding
+Productive
+3
+671
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4315
+-
+Coding
+Productive
+1
+672
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4014
+https://codechef.com
+Coding
+Productive
+2
+673
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4877
+https://udemy.com
+Learning
+Productive
+4
+674
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2917
+https://stackoverflow.com
+Research
+Productive
+4
+675
+1
+PowerPoint
+PowerPoint - Workspace
+1105
+-
+Office
+Productive
+2
+676
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2770
+https://twitter.com
+Social Media
+Non-Productive
+2
+677
+1
+Discord
+Discord - Workspace
+4047
+-
+Communication
+Non-Productive
+1
+678
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2028
+https://chat.openai.com
+Research
+Productive
+1
+679
+1
+Spotify
+Spotify - Workspace
+5239
+-
+Entertainment
+Non-Productive
+2
+680
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3631
+https://linkedin.com
+Office
+Productive
+1
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+681
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4921
+https://facebook.com
+Social Media
+Non-Productive
+1
+682
+1
+Google Chrome
+Google Chrome - https://github.com
+3609
+https://github.com
+Coding
+Productive
+3
+683
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3917
+-
+Coding
+Productive
+2
+684
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5504
+https://codechef.com
+Coding
+Productive
+2
+685
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5570
+https://udemy.com
+Learning
+Productive
+3
+686
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2354
+https://stackoverflow.com
+Research
+Productive
+4
+687
+1
+PowerPoint
+PowerPoint - Workspace
+903
+-
+Office
+Productive
+2
+688
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2742
+https://twitter.com
+Social Media
+Non-Productive
+3
+689
+1
+Discord
+Discord - Workspace
+3469
+-
+Communication
+Non-Productive
+2
+690
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2489
+https://chat.openai.com
+Research
+Productive
+2
+691
+1
+Spotify
+Spotify - Workspace
+4146
+-
+Entertainment
+Non-Productive
+2
+692
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4341
+https://linkedin.com
+Office
+Productive
+1
+693
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4469
+https://facebook.com
+Social Media
+Non-Productive
+0
+694
+1
+Google Chrome
+Google Chrome - https://github.com
+4209
+https://github.com
+Coding
+Productive
+4
+695
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3749
+-
+Coding
+Productive
+1
+696
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4450
+https://codechef.com
+Coding
+Productive
+3
+697
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4361
+https://udemy.com
+Learning
+Productive
+4
+698
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1880
+https://stackoverflow.com
+Research
+Productive
+4
+699
+1
+PowerPoint
+PowerPoint - Workspace
+714
+-
+Office
+Productive
+1
+700
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1677
+https://twitter.com
+Social Media
+Non-Productive
+3
+701
+1
+Discord
+Discord - Workspace
+3258
+-
+Communication
+Non-Productive
+2
+702
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2861
+https://chat.openai.com
+Research
+Productive
+1
+703
+1
+Spotify
+Spotify - Workspace
+3178
+-
+Entertainment
+Non-Productive
+2
+704
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3494
+https://linkedin.com
+Office
+Productive
+1
+705
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4642
+https://facebook.com
+Social Media
+Non-Productive
+1
+706
+1
+Google Chrome
+Google Chrome - https://github.com
+3765
+https://github.com
+Coding
+Productive
+4
+707
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3576
+-
+Coding
+Productive
+2
+708
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3359
+https://codechef.com
+Coding
+Productive
+2
+709
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5256
+https://udemy.com
+Learning
+Productive
+3
+710
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1869
+https://stackoverflow.com
+Research
+Productive
+4
+711
+1
+PowerPoint
+PowerPoint - Workspace
+723
+-
+Office
+Productive
+1
+712
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2589
+https://twitter.com
+Social Media
+Non-Productive
+3
+713
+1
+Discord
+Discord - Workspace
+4121
+-
+Communication
+Non-Productive
+1
+714
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2174
+https://chat.openai.com
+Research
+Productive
+2
+715
+1
+Spotify
+Spotify - Workspace
+5030
+-
+Entertainment
+Non-Productive
+2
+716
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3096
+https://linkedin.com
+Office
+Productive
+0
+717
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4694
+https://facebook.com
+Social Media
+Non-Productive
+1
+718
+1
+Google Chrome
+Google Chrome - https://github.com
+3711
+https://github.com
+Coding
+Productive
+3
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+719
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4868
+-
+Coding
+Productive
+2
+720
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3489
+https://codechef.com
+Coding
+Productive
+2
+721
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4319
+https://udemy.com
+Learning
+Productive
+4
+722
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2353
+https://stackoverflow.com
+Research
+Productive
+3
+723
+1
+PowerPoint
+PowerPoint - Workspace
+1026
+-
+Office
+Productive
+1
+724
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2665
+https://twitter.com
+Social Media
+Non-Productive
+3
+725
+1
+Discord
+Discord - Workspace
+4682
+-
+Communication
+Non-Productive
+1
+726
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1981
+https://chat.openai.com
+Research
+Productive
+1
+727
+1
+Spotify
+Spotify - Workspace
+5272
+-
+Entertainment
+Non-Productive
+2
+728
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4014
+https://linkedin.com
+Office
+Productive
+0
+729
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5676
+https://facebook.com
+Social Media
+Non-Productive
+1
+730
+1
+Google Chrome
+Google Chrome - https://github.com
+3385
+https://github.com
+Coding
+Productive
+4
+731
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4740
+-
+Coding
+Productive
+2
+732
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5107
+https://codechef.com
+Coding
+Productive
+3
+733
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5483
+https://udemy.com
+Learning
+Productive
+3
+734
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2116
+https://stackoverflow.com
+Research
+Productive
+3
+735
+1
+PowerPoint
+PowerPoint - Workspace
+700
+-
+Office
+Productive
+2
+736
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2355
+https://twitter.com
+Social Media
+Non-Productive
+2
+737
+1
+Discord
+Discord - Workspace
+4996
+-
+Communication
+Non-Productive
+1
+738
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2546
+https://chat.openai.com
+Research
+Productive
+1
+739
+1
+Spotify
+Spotify - Workspace
+3067
+-
+Entertainment
+Non-Productive
+1
+740
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4691
+https://linkedin.com
+Office
+Productive
+1
+741
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3959
+https://facebook.com
+Social Media
+Non-Productive
+1
+742
+1
+Google Chrome
+Google Chrome - https://github.com
+3551
+https://github.com
+Coding
+Productive
+4
+743
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+6288
+-
+Coding
+Productive
+2
+744
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5399
+https://codechef.com
+Coding
+Productive
+3
+745
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4561
+https://udemy.com
+Learning
+Productive
+3
+746
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1893
+https://stackoverflow.com
+Research
+Productive
+3
+747
+1
+PowerPoint
+PowerPoint - Workspace
+1141
+-
+Office
+Productive
+1
+748
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2208
+https://twitter.com
+Social Media
+Non-Productive
+2
+749
+1
+Discord
+Discord - Workspace
+5554
+-
+Communication
+Non-Productive
+2
+750
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1677
+https://chat.openai.com
+Research
+Productive
+2
+751
+1
+Spotify
+Spotify - Workspace
+4538
+-
+Entertainment
+Non-Productive
+2
+752
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+2745
+https://linkedin.com
+Office
+Productive
+0
+753
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3964
+https://facebook.com
+Social Media
+Non-Productive
+0
+754
+1
+Google Chrome
+Google Chrome - https://github.com
+3434
+https://github.com
+Coding
+Productive
+3
+755
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5125
+-
+Coding
+Productive
+2
+756
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5290
+https://codechef.com
+Coding
+Productive
+3
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+757
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4579
+https://udemy.com
+Learning
+Productive
+3
+758
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2713
+https://stackoverflow.com
+Research
+Productive
+4
+759
+1
+PowerPoint
+PowerPoint - Workspace
+1032
+-
+Office
+Productive
+2
+760
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2757
+https://twitter.com
+Social Media
+Non-Productive
+2
+761
+1
+Discord
+Discord - Workspace
+4956
+-
+Communication
+Non-Productive
+2
+762
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2881
+https://chat.openai.com
+Research
+Productive
+1
+763
+1
+Spotify
+Spotify - Workspace
+5003
+-
+Entertainment
+Non-Productive
+1
+764
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3596
+https://linkedin.com
+Office
+Productive
+1
+765
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4754
+https://facebook.com
+Social Media
+Non-Productive
+0
+766
+1
+Google Chrome
+Google Chrome - https://github.com
+3736
+https://github.com
+Coding
+Productive
+3
+767
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3711
+-
+Coding
+Productive
+2
+768
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5458
+https://codechef.com
+Coding
+Productive
+3
+769
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3638
+https://udemy.com
+Learning
+Productive
+4
+770
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2601
+https://stackoverflow.com
+Research
+Productive
+4
+771
+1
+PowerPoint
+PowerPoint - Workspace
+948
+-
+Office
+Productive
+1
+772
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2355
+https://twitter.com
+Social Media
+Non-Productive
+3
+773
+1
+Discord
+Discord - Workspace
+4880
+-
+Communication
+Non-Productive
+2
+774
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2044
+https://chat.openai.com
+Research
+Productive
+2
+775
+1
+Spotify
+Spotify - Workspace
+3800
+-
+Entertainment
+Non-Productive
+1
+776
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4475
+https://linkedin.com
+Office
+Productive
+0
+777
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3674
+https://facebook.com
+Social Media
+Non-Productive
+1
+778
+1
+Google Chrome
+Google Chrome - https://github.com
+3450
+https://github.com
+Coding
+Productive
+4
+779
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5940
+-
+Coding
+Productive
+2
+780
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4729
+https://codechef.com
+Coding
+Productive
+3
+781
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5324
+https://udemy.com
+Learning
+Productive
+4
+782
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2823
+https://stackoverflow.com
+Research
+Productive
+3
+783
+1
+PowerPoint
+PowerPoint - Workspace
+1056
+-
+Office
+Productive
+2
+784
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1760
+https://twitter.com
+Social Media
+Non-Productive
+2
+785
+1
+Discord
+Discord - Workspace
+5236
+-
+Communication
+Non-Productive
+1
+786
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1898
+https://chat.openai.com
+Research
+Productive
+2
+787
+1
+Spotify
+Spotify - Workspace
+5098
+-
+Entertainment
+Non-Productive
+2
+788
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4112
+https://linkedin.com
+Office
+Productive
+1
+789
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3365
+https://facebook.com
+Social Media
+Non-Productive
+1
+790
+1
+Google Chrome
+Google Chrome - https://github.com
+4285
+https://github.com
+Coding
+Productive
+4
+791
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3834
+-
+Coding
+Productive
+2
+792
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5730
+https://codechef.com
+Coding
+Productive
+3
+793
+1
+Google Chrome
+Google Chrome - https://udemy.com
+6003
+https://udemy.com
+Learning
+Productive
+3
+794
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2829
+https://stackoverflow.com
+Research
+Productive
+3
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+795
+1
+PowerPoint
+PowerPoint - Workspace
+887
+-
+Office
+Productive
+1
+796
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2641
+https://twitter.com
+Social Media
+Non-Productive
+2
+797
+1
+Discord
+Discord - Workspace
+5491
+-
+Communication
+Non-Productive
+1
+798
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2427
+https://chat.openai.com
+Research
+Productive
+1
+799
+1
+Spotify
+Spotify - Workspace
+3171
+-
+Entertainment
+Non-Productive
+1
+800
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4159
+https://linkedin.com
+Office
+Productive
+1
+801
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4940
+https://facebook.com
+Social Media
+Non-Productive
+1
+802
+1
+Google Chrome
+Google Chrome - https://github.com
+3775
+https://github.com
+Coding
+Productive
+4
+803
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4266
+-
+Coding
+Productive
+2
+804
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5516
+https://codechef.com
+Coding
+Productive
+2
+805
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4756
+https://udemy.com
+Learning
+Productive
+4
+806
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2897
+https://stackoverflow.com
+Research
+Productive
+4
+807
+1
+PowerPoint
+PowerPoint - Workspace
+897
+-
+Office
+Productive
+1
+808
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2527
+https://twitter.com
+Social Media
+Non-Productive
+2
+809
+1
+Discord
+Discord - Workspace
+3899
+-
+Communication
+Non-Productive
+2
+810
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1632
+https://chat.openai.com
+Research
+Productive
+1
+811
+1
+Spotify
+Spotify - Workspace
+3709
+-
+Entertainment
+Non-Productive
+1
+812
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3986
+https://linkedin.com
+Office
+Productive
+0
+813
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5656
+https://facebook.com
+Social Media
+Non-Productive
+0
+814
+1
+Google Chrome
+Google Chrome - https://github.com
+4374
+https://github.com
+Coding
+Productive
+4
+815
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5857
+-
+Coding
+Productive
+1
+816
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5303
+https://codechef.com
+Coding
+Productive
+2
+817
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5829
+https://udemy.com
+Learning
+Productive
+4
+818
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1901
+https://stackoverflow.com
+Research
+Productive
+3
+819
+1
+PowerPoint
+PowerPoint - Workspace
+699
+-
+Office
+Productive
+2
+820
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1901
+https://twitter.com
+Social Media
+Non-Productive
+3
+821
+1
+Discord
+Discord - Workspace
+4820
+-
+Communication
+Non-Productive
+2
+822
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2265
+https://chat.openai.com
+Research
+Productive
+2
+823
+1
+Spotify
+Spotify - Workspace
+4177
+-
+Entertainment
+Non-Productive
+2
+824
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3589
+https://linkedin.com
+Office
+Productive
+1
+825
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3917
+https://facebook.com
+Social Media
+Non-Productive
+1
+826
+1
+Google Chrome
+Google Chrome - https://github.com
+3009
+https://github.com
+Coding
+Productive
+4
+827
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5970
+-
+Coding
+Productive
+2
+828
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5539
+https://codechef.com
+Coding
+Productive
+3
+829
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4233
+https://udemy.com
+Learning
+Productive
+3
+830
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2747
+https://stackoverflow.com
+Research
+Productive
+4
+831
+1
+PowerPoint
+PowerPoint - Workspace
+1061
+-
+Office
+Productive
+1
+832
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2438
+https://twitter.com
+Social Media
+Non-Productive
+2
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+833
+1
+Discord
+Discord - Workspace
+4874
+-
+Communication
+Non-Productive
+2
+834
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2229
+https://chat.openai.com
+Research
+Productive
+1
+835
+1
+Spotify
+Spotify - Workspace
+3125
+-
+Entertainment
+Non-Productive
+2
+836
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4553
+https://linkedin.com
+Office
+Productive
+0
+837
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5045
+https://facebook.com
+Social Media
+Non-Productive
+1
+838
+1
+Google Chrome
+Google Chrome - https://github.com
+4373
+https://github.com
+Coding
+Productive
+4
+839
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+6066
+-
+Coding
+Productive
+2
+840
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4017
+https://codechef.com
+Coding
+Productive
+2
+841
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4138
+https://udemy.com
+Learning
+Productive
+4
+842
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3179
+https://stackoverflow.com
+Research
+Productive
+4
+843
+1
+PowerPoint
+PowerPoint - Workspace
+647
+-
+Office
+Productive
+1
+844
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1609
+https://twitter.com
+Social Media
+Non-Productive
+2
+845
+1
+Discord
+Discord - Workspace
+5145
+-
+Communication
+Non-Productive
+1
+846
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1676
+https://chat.openai.com
+Research
+Productive
+1
+847
+1
+Spotify
+Spotify - Workspace
+3248
+-
+Entertainment
+Non-Productive
+2
+848
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4119
+https://linkedin.com
+Office
+Productive
+0
+849
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5354
+https://facebook.com
+Social Media
+Non-Productive
+1
+850
+1
+Google Chrome
+Google Chrome - https://github.com
+3691
+https://github.com
+Coding
+Productive
+4
+851
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5771
+-
+Coding
+Productive
+1
+852
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3399
+https://codechef.com
+Coding
+Productive
+3
+853
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4977
+https://udemy.com
+Learning
+Productive
+3
+854
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1988
+https://stackoverflow.com
+Research
+Productive
+4
+855
+1
+PowerPoint
+PowerPoint - Workspace
+648
+-
+Office
+Productive
+1
+856
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2372
+https://twitter.com
+Social Media
+Non-Productive
+3
+857
+1
+Discord
+Discord - Workspace
+5423
+-
+Communication
+Non-Productive
+1
+858
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2412
+https://chat.openai.com
+Research
+Productive
+1
+859
+1
+Spotify
+Spotify - Workspace
+5312
+-
+Entertainment
+Non-Productive
+1
+860
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4051
+https://linkedin.com
+Office
+Productive
+1
+861
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4195
+https://facebook.com
+Social Media
+Non-Productive
+0
+862
+1
+Google Chrome
+Google Chrome - https://github.com
+3855
+https://github.com
+Coding
+Productive
+3
+863
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3751
+-
+Coding
+Productive
+2
+864
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3898
+https://codechef.com
+Coding
+Productive
+3
+865
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5748
+https://udemy.com
+Learning
+Productive
+3
+866
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3121
+https://stackoverflow.com
+Research
+Productive
+3
+867
+1
+PowerPoint
+PowerPoint - Workspace
+839
+-
+Office
+Productive
+1
+868
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2136
+https://twitter.com
+Social Media
+Non-Productive
+3
+869
+1
+Discord
+Discord - Workspace
+3810
+-
+Communication
+Non-Productive
+2
+870
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2564
+https://chat.openai.com
+Research
+Productive
+2
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+871
+1
+Spotify
+Spotify - Workspace
+4153
+-
+Entertainment
+Non-Productive
+1
+872
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4364
+https://linkedin.com
+Office
+Productive
+1
+873
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3286
+https://facebook.com
+Social Media
+Non-Productive
+0
+874
+1
+Google Chrome
+Google Chrome - https://github.com
+4987
+https://github.com
+Coding
+Productive
+3
+875
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3633
+-
+Coding
+Productive
+2
+876
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3484
+https://codechef.com
+Coding
+Productive
+2
+877
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4977
+https://udemy.com
+Learning
+Productive
+4
+878
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2492
+https://stackoverflow.com
+Research
+Productive
+4
+879
+1
+PowerPoint
+PowerPoint - Workspace
+1040
+-
+Office
+Productive
+1
+880
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2145
+https://twitter.com
+Social Media
+Non-Productive
+3
+881
+1
+Discord
+Discord - Workspace
+4110
+-
+Communication
+Non-Productive
+1
+882
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2890
+https://chat.openai.com
+Research
+Productive
+1
+883
+1
+Spotify
+Spotify - Workspace
+3768
+-
+Entertainment
+Non-Productive
+1
+884
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4165
+https://linkedin.com
+Office
+Productive
+0
+885
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3612
+https://facebook.com
+Social Media
+Non-Productive
+0
+886
+1
+Google Chrome
+Google Chrome - https://github.com
+3431
+https://github.com
+Coding
+Productive
+3
+887
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3689
+-
+Coding
+Productive
+1
+888
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3740
+https://codechef.com
+Coding
+Productive
+2
+889
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3541
+https://udemy.com
+Learning
+Productive
+3
+890
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2083
+https://stackoverflow.com
+Research
+Productive
+3
+891
+1
+PowerPoint
+PowerPoint - Workspace
+1036
+-
+Office
+Productive
+2
+892
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1597
+https://twitter.com
+Social Media
+Non-Productive
+2
+893
+1
+Discord
+Discord - Workspace
+5172
+-
+Communication
+Non-Productive
+2
+894
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2348
+https://chat.openai.com
+Research
+Productive
+1
+895
+1
+Spotify
+Spotify - Workspace
+4673
+-
+Entertainment
+Non-Productive
+1
+896
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4205
+https://linkedin.com
+Office
+Productive
+0
+897
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3876
+https://facebook.com
+Social Media
+Non-Productive
+1
+898
+1
+Google Chrome
+Google Chrome - https://github.com
+3526
+https://github.com
+Coding
+Productive
+4
+899
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4611
+-
+Coding
+Productive
+1
+900
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5069
+https://codechef.com
+Coding
+Productive
+2
+901
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4111
+https://udemy.com
+Learning
+Productive
+4
+902
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3238
+https://stackoverflow.com
+Research
+Productive
+4
+903
+1
+PowerPoint
+PowerPoint - Workspace
+1011
+-
+Office
+Productive
+2
+904
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2729
+https://twitter.com
+Social Media
+Non-Productive
+3
+905
+1
+Discord
+Discord - Workspace
+4632
+-
+Communication
+Non-Productive
+2
+906
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2451
+https://chat.openai.com
+Research
+Productive
+1
+907
+1
+Spotify
+Spotify - Workspace
+3696
+-
+Entertainment
+Non-Productive
+2
+908
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4167
+https://linkedin.com
+Office
+Productive
+1
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+909
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3285
+https://facebook.com
+Social Media
+Non-Productive
+1
+910
+1
+Google Chrome
+Google Chrome - https://github.com
+4685
+https://github.com
+Coding
+Productive
+4
+911
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3914
+-
+Coding
+Productive
+2
+912
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5230
+https://codechef.com
+Coding
+Productive
+2
+913
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5254
+https://udemy.com
+Learning
+Productive
+4
+914
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2719
+https://stackoverflow.com
+Research
+Productive
+3
+915
+1
+PowerPoint
+PowerPoint - Workspace
+1047
+-
+Office
+Productive
+2
+916
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2030
+https://twitter.com
+Social Media
+Non-Productive
+3
+917
+1
+Discord
+Discord - Workspace
+5837
+-
+Communication
+Non-Productive
+2
+918
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2572
+https://chat.openai.com
+Research
+Productive
+2
+919
+1
+Spotify
+Spotify - Workspace
+5149
+-
+Entertainment
+Non-Productive
+2
+920
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4740
+https://linkedin.com
+Office
+Productive
+1
+921
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3753
+https://facebook.com
+Social Media
+Non-Productive
+0
+922
+1
+Google Chrome
+Google Chrome - https://github.com
+5104
+https://github.com
+Coding
+Productive
+4
+923
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4566
+-
+Coding
+Productive
+2
+924
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3923
+https://codechef.com
+Coding
+Productive
+2
+925
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4112
+https://udemy.com
+Learning
+Productive
+3
+926
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2525
+https://stackoverflow.com
+Research
+Productive
+3
+927
+1
+PowerPoint
+PowerPoint - Workspace
+1007
+-
+Office
+Productive
+1
+928
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2371
+https://twitter.com
+Social Media
+Non-Productive
+3
+929
+1
+Discord
+Discord - Workspace
+5430
+-
+Communication
+Non-Productive
+2
+930
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2752
+https://chat.openai.com
+Research
+Productive
+2
+931
+1
+Spotify
+Spotify - Workspace
+3757
+-
+Entertainment
+Non-Productive
+2
+932
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3912
+https://linkedin.com
+Office
+Productive
+0
+933
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4532
+https://facebook.com
+Social Media
+Non-Productive
+1
+934
+1
+Google Chrome
+Google Chrome - https://github.com
+4329
+https://github.com
+Coding
+Productive
+4
+935
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5468
+-
+Coding
+Productive
+2
+936
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5362
+https://codechef.com
+Coding
+Productive
+2
+937
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5161
+https://udemy.com
+Learning
+Productive
+4
+938
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2435
+https://stackoverflow.com
+Research
+Productive
+3
+939
+1
+PowerPoint
+PowerPoint - Workspace
+728
+-
+Office
+Productive
+2
+940
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1784
+https://twitter.com
+Social Media
+Non-Productive
+2
+941
+1
+Discord
+Discord - Workspace
+3517
+-
+Communication
+Non-Productive
+2
+942
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2687
+https://chat.openai.com
+Research
+Productive
+1
+943
+1
+Spotify
+Spotify - Workspace
+4927
+-
+Entertainment
+Non-Productive
+2
+944
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3564
+https://linkedin.com
+Office
+Productive
+0
+945
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3297
+https://facebook.com
+Social Media
+Non-Productive
+0
+946
+1
+Google Chrome
+Google Chrome - https://github.com
+3933
+https://github.com
+Coding
+Productive
+4
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+947
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4921
+-
+Coding
+Productive
+2
+948
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3293
+https://codechef.com
+Coding
+Productive
+2
+949
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5511
+https://udemy.com
+Learning
+Productive
+3
+950
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2452
+https://stackoverflow.com
+Research
+Productive
+4
+951
+1
+PowerPoint
+PowerPoint - Workspace
+1077
+-
+Office
+Productive
+2
+952
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2536
+https://twitter.com
+Social Media
+Non-Productive
+2
+953
+1
+Discord
+Discord - Workspace
+4574
+-
+Communication
+Non-Productive
+1
+954
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1857
+https://chat.openai.com
+Research
+Productive
+1
+955
+1
+Spotify
+Spotify - Workspace
+5032
+-
+Entertainment
+Non-Productive
+2
+956
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3259
+https://linkedin.com
+Office
+Productive
+1
+957
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4665
+https://facebook.com
+Social Media
+Non-Productive
+1
+958
+1
+Google Chrome
+Google Chrome - https://github.com
+4089
+https://github.com
+Coding
+Productive
+3
+959
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3712
+-
+Coding
+Productive
+1
+960
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3969
+https://codechef.com
+Coding
+Productive
+2
+961
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5939
+https://udemy.com
+Learning
+Productive
+3
+962
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+1948
+https://stackoverflow.com
+Research
+Productive
+3
+963
+1
+PowerPoint
+PowerPoint - Workspace
+910
+-
+Office
+Productive
+2
+964
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2091
+https://twitter.com
+Social Media
+Non-Productive
+3
+965
+1
+Discord
+Discord - Workspace
+3650
+-
+Communication
+Non-Productive
+1
+966
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2739
+https://chat.openai.com
+Research
+Productive
+2
+967
+1
+Spotify
+Spotify - Workspace
+3182
+-
+Entertainment
+Non-Productive
+1
+968
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4584
+https://linkedin.com
+Office
+Productive
+1
+969
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3573
+https://facebook.com
+Social Media
+Non-Productive
+1
+970
+1
+Google Chrome
+Google Chrome - https://github.com
+3678
+https://github.com
+Coding
+Productive
+4
+971
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5645
+-
+Coding
+Productive
+1
+972
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5742
+https://codechef.com
+Coding
+Productive
+3
+973
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5129
+https://udemy.com
+Learning
+Productive
+4
+974
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2736
+https://stackoverflow.com
+Research
+Productive
+4
+975
+1
+PowerPoint
+PowerPoint - Workspace
+803
+-
+Office
+Productive
+2
+976
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1615
+https://twitter.com
+Social Media
+Non-Productive
+2
+977
+1
+Discord
+Discord - Workspace
+5878
+-
+Communication
+Non-Productive
+1
+978
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1773
+https://chat.openai.com
+Research
+Productive
+1
+979
+1
+Spotify
+Spotify - Workspace
+5116
+-
+Entertainment
+Non-Productive
+1
+980
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3987
+https://linkedin.com
+Office
+Productive
+1
+981
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5092
+https://facebook.com
+Social Media
+Non-Productive
+1
+982
+1
+Google Chrome
+Google Chrome - https://github.com
+5219
+https://github.com
+Coding
+Productive
+3
+983
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4862
+-
+Coding
+Productive
+2
+984
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4498
+https://codechef.com
+Coding
+Productive
+2
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+985
+1
+Google Chrome
+Google Chrome - https://udemy.com
+3492
+https://udemy.com
+Learning
+Productive
+3
+986
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2258
+https://stackoverflow.com
+Research
+Productive
+3
+987
+1
+PowerPoint
+PowerPoint - Workspace
+718
+-
+Office
+Productive
+1
+988
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1774
+https://twitter.com
+Social Media
+Non-Productive
+3
+989
+1
+Discord
+Discord - Workspace
+4943
+-
+Communication
+Non-Productive
+1
+990
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2595
+https://chat.openai.com
+Research
+Productive
+2
+991
+1
+Spotify
+Spotify - Workspace
+3096
+-
+Entertainment
+Non-Productive
+2
+992
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3522
+https://linkedin.com
+Office
+Productive
+0
+993
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3215
+https://facebook.com
+Social Media
+Non-Productive
+0
+994
+1
+Google Chrome
+Google Chrome - https://github.com
+4609
+https://github.com
+Coding
+Productive
+4
+995
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4022
+-
+Coding
+Productive
+2
+996
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3478
+https://codechef.com
+Coding
+Productive
+2
+997
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5849
+https://udemy.com
+Learning
+Productive
+3
+998
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2920
+https://stackoverflow.com
+Research
+Productive
+3
+999
+1
+PowerPoint
+PowerPoint - Workspace
+636
+-
+Office
+Productive
+2
+1000
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2753
+https://twitter.com
+Social Media
+Non-Productive
+3
+1001
+1
+Discord
+Discord - Workspace
+5760
+-
+Communication
+Non-Productive
+1
+1002
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1878
+https://chat.openai.com
+Research
+Productive
+1
+1003
+1
+Spotify
+Spotify - Workspace
+4183
+-
+Entertainment
+Non-Productive
+2
+1004
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4565
+https://linkedin.com
+Office
+Productive
+1
+1005
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5148
+https://facebook.com
+Social Media
+Non-Productive
+0
+1006
+1
+Google Chrome
+Google Chrome - https://github.com
+4704
+https://github.com
+Coding
+Productive
+3
+1007
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3915
+-
+Coding
+Productive
+2
+1008
+1
+Google Chrome
+Google Chrome - https://codechef.com
+5504
+https://codechef.com
+Coding
+Productive
+3
+1009
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4806
+https://udemy.com
+Learning
+Productive
+4
+1010
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+3015
+https://stackoverflow.com
+Research
+Productive
+4
+1011
+1
+PowerPoint
+PowerPoint - Workspace
+1147
+-
+Office
+Productive
+2
+1012
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2569
+https://twitter.com
+Social Media
+Non-Productive
+2
+1013
+1
+Discord
+Discord - Workspace
+5094
+-
+Communication
+Non-Productive
+1
+1014
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1841
+https://chat.openai.com
+Research
+Productive
+1
+1015
+1
+Spotify
+Spotify - Workspace
+3350
+-
+Entertainment
+Non-Productive
+1
+1016
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4996
+https://linkedin.com
+Office
+Productive
+1
+1017
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4232
+https://facebook.com
+Social Media
+Non-Productive
+0
+1018
+1
+Google Chrome
+Google Chrome - https://github.com
+3591
+https://github.com
+Coding
+Productive
+3
+1019
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4004
+-
+Coding
+Productive
+2
+1020
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3771
+https://codechef.com
+Coding
+Productive
+3
+1021
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5221
+https://udemy.com
+Learning
+Productive
+4
+1022
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2341
+https://stackoverflow.com
+Research
+Productive
+4
+
+ID
+User
+App
+Window/Page
+Duration (s)
+URL
+Category
+Status
+Switches
+1023
+1
+PowerPoint
+PowerPoint - Workspace
+886
+-
+Office
+Productive
+1
+1024
+1
+Google Chrome
+Google Chrome - https://twitter.com
+1919
+https://twitter.com
+Social Media
+Non-Productive
+3
+1025
+1
+Discord
+Discord - Workspace
+3411
+-
+Communication
+Non-Productive
+2
+1026
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2736
+https://chat.openai.com
+Research
+Productive
+2
+1027
+1
+Spotify
+Spotify - Workspace
+2997
+-
+Entertainment
+Non-Productive
+2
+1028
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+4316
+https://linkedin.com
+Office
+Productive
+1
+1029
+1
+Google Chrome
+Google Chrome - https://facebook.com
+4622
+https://facebook.com
+Social Media
+Non-Productive
+0
+1030
+1
+Google Chrome
+Google Chrome - https://github.com
+3115
+https://github.com
+Coding
+Productive
+4
+1031
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+5701
+-
+Coding
+Productive
+2
+1032
+1
+Google Chrome
+Google Chrome - https://codechef.com
+3182
+https://codechef.com
+Coding
+Productive
+2
+1033
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4399
+https://udemy.com
+Learning
+Productive
+4
+1034
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2309
+https://stackoverflow.com
+Research
+Productive
+3
+1035
+1
+PowerPoint
+PowerPoint - Workspace
+765
+-
+Office
+Productive
+2
+1036
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2785
+https://twitter.com
+Social Media
+Non-Productive
+3
+1037
+1
+Discord
+Discord - Workspace
+5507
+-
+Communication
+Non-Productive
+1
+1038
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+2176
+https://chat.openai.com
+Research
+Productive
+2
+1039
+1
+Spotify
+Spotify - Workspace
+3301
+-
+Entertainment
+Non-Productive
+1
+1040
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3658
+https://linkedin.com
+Office
+Productive
+0
+1041
+1
+Google Chrome
+Google Chrome - https://facebook.com
+5116
+https://facebook.com
+Social Media
+Non-Productive
+1
+1042
+1
+Google Chrome
+Google Chrome - https://github.com
+4079
+https://github.com
+Coding
+Productive
+3
+1043
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+4612
+-
+Coding
+Productive
+2
+1044
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4349
+https://codechef.com
+Coding
+Productive
+2
+1045
+1
+Google Chrome
+Google Chrome - https://udemy.com
+5297
+https://udemy.com
+Learning
+Productive
+3
+1046
+1
+Google Chrome
+Google Chrome - https://stackoverflow.com
+2892
+https://stackoverflow.com
+Research
+Productive
+3
+1047
+1
+PowerPoint
+PowerPoint - Workspace
+779
+-
+Office
+Productive
+1
+1048
+1
+Google Chrome
+Google Chrome - https://twitter.com
+2198
+https://twitter.com
+Social Media
+Non-Productive
+3
+1049
+1
+Discord
+Discord - Workspace
+3636
+-
+Communication
+Non-Productive
+1
+1050
+1
+Google Chrome
+Google Chrome - https://chat.openai.com
+1626
+https://chat.openai.com
+Research
+Productive
+1
+1051
+1
+Spotify
+Spotify - Workspace
+3686
+-
+Entertainment
+Non-Productive
+2
+1052
+1
+Google Chrome
+Google Chrome - https://linkedin.com
+3926
+https://linkedin.com
+Office
+Productive
+0
+1053
+1
+Google Chrome
+Google Chrome - https://facebook.com
+3462
+https://facebook.com
+Social Media
+Non-Productive
+1
+1054
+1
+Google Chrome
+Google Chrome - https://github.com
+3707
+https://github.com
+Coding
+Productive
+3
+1055
+1
+IntelliJ IDEA
+IntelliJ IDEA - Workspace
+3774
+-
+Coding
+Productive
+1
+1056
+1
+Google Chrome
+Google Chrome - https://codechef.com
+4993
+https://codechef.com
+Coding
+Productive
+2
+1057
+1
+Google Chrome
+Google Chrome - https://udemy.com
+4226
+https://udemy.com
+Learning
+Productive
+4

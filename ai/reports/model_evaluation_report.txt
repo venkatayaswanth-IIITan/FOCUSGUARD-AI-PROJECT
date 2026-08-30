@@ -1,0 +1,68 @@
+======================================================================
+  FOCUSGUARD AI — MODEL EVALUATION REPORT
+  Generated : 2026-08-17 19:08:21
+======================================================================
+
+DATASET
+----------------------------------------
+  Source       : PostgreSQL -> user_activity_export.csv
+  Total rows   : 12
+  Features     : ['duration_minutes', 'switch_tabs', 'user_type_enc', 'app_website_enc']
+  Target       : productive  (1=Productive, 0=Not Productive)
+  Train split  : 8 rows (66.7%)
+  Test split   : 4 rows  (33.3%)
+  Split type   : 70/30 RANDOM (not fixed)
+
+======================================================================
+  MODEL: Decision Tree
+======================================================================
+
+  Accuracy  : 75.00%
+  Precision : 66.67%
+  Recall    : 100.00%
+  F1-Score  : 80.00%
+
+  Confusion Matrix:
+                     Predicted
+                     Not-Prod   Prod
+    Actual Not-Prod  [     1]  [     1]
+    Actual Prod      [     0]  [     2]
+
+  Full Classification Report:
+                    precision    recall  f1-score   support
+    
+    Not Productive       1.00      0.50      0.67         2
+        Productive       0.67      1.00      0.80         2
+    
+          accuracy                           0.75         4
+         macro avg       0.83      0.75      0.73         4
+      weighted avg       0.83      0.75      0.73         4
+
+======================================================================
+  MODEL: Random Forest
+======================================================================
+
+  Accuracy  : 75.00%
+  Precision : 66.67%
+  Recall    : 100.00%
+  F1-Score  : 80.00%
+
+  Confusion Matrix:
+                     Predicted
+                     Not-Prod   Prod
+    Actual Not-Prod  [     1]  [     1]
+    Actual Prod      [     0]  [     2]
+
+  Full Classification Report:
+                    precision    recall  f1-score   support
+    
+    Not Productive       1.00      0.50      0.67         2
+        Productive       0.67      1.00      0.80         2
+    
+          accuracy                           0.75         4
+         macro avg       0.83      0.75      0.73         4
+      weighted avg       0.83      0.75      0.73         4
+
+======================================================================
+  BEST MODEL (by F1-Score): Decision Tree
+======================================================================

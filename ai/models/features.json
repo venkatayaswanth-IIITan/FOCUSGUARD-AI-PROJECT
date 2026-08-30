@@ -1,0 +1,9 @@
+{
+  "features": [
+    "duration_minutes",
+    "switch_tabs",
+    "user_type_enc",
+    "app_website_enc"
+  ],
+  "target": "productive"
+}

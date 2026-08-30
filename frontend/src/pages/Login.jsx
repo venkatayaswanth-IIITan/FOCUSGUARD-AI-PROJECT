@@ -51,6 +51,10 @@ function Login() {
 
       if (response.ok) {
         localStorage.setItem("token", data.token);
+        if (data.user) {
+          localStorage.setItem("user", JSON.stringify(data.user));
+          if (data.user.username) localStorage.setItem("username", data.user.username);
+        }
 
         setNotification({
           message: "Login successful! Welcome back.",

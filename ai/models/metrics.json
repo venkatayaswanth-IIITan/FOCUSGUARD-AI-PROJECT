@@ -1,0 +1,22 @@
+{
+  "dataset": "Synthetic Activity Dataset (500 samples)",
+  "train_samples": 350,
+  "test_samples": 150,
+  "train_split": "70%",
+  "test_split": "30%",
+  "best_model": "Decision Tree",
+  "models": {
+    "Decision Tree": {
+      "accuracy": 97.33,
+      "precision": 96.26,
+      "recall": 100.0,
+      "f1_score": 98.1
+    },
+    "Random Forest": {
+      "accuracy": 95.33,
+      "precision": 95.28,
+      "recall": 98.06,
+      "f1_score": 96.65
+    }
+  }
+}

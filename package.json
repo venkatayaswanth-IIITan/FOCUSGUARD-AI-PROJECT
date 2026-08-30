@@ -1,0 +1,17 @@
+{
+  "name": "focusguard-ai-platform",
+  "version": "1.0.0",
+  "description": "FocusGuard AI – Human Attention Preservation & Digital Distraction Intelligence Platform",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "postinstall": "cd backend && npm install",
+    "build:frontend": "cd frontend && npm install && npm run build",
+    "build": "npm run build:frontend && npm install"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "FocusGuard Team",
+  "license": "ISC"
+}

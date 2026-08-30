@@ -1,0 +1,501 @@
+id,user_id,user_name,user_type,app_website,url,activity_date,opened_time,closed_time,duration_minutes,switch_tabs,productive
+1,2,User2,Student,Stack Overflow,stackoverflow.com,2026-07-29,09:43:00,09:59:00,16,2,true
+2,2,User2,Manager,Google Sheets,sheets.google.com,2026-07-29,11:32:00,11:51:00,19,1,true
+3,1,User1,Manager,Notion,notion.so,2026-07-29,14:14:00,14:13:00,59,1,true
+4,8,User8,Manager,PyCharm,,2026-07-29,20:10:00,21:19:00,69,1,true
+5,7,User7,Designer,PyCharm,,2026-07-29,13:06:00,13:46:00,40,3,true
+6,2,User2,Analyst,Notion,notion.so,2026-07-29,12:51:00,12:35:00,44,1,true
+7,1,User1,Analyst,ChatGPT,chatgpt.com,2026-07-29,09:35:00,09:56:00,21,3,true
+8,5,User5,Manager,Udemy,udemy.com,2026-07-29,08:42:00,08:24:00,42,2,true
+9,4,User4,Designer,Stack Overflow,stackoverflow.com,2026-07-29,14:17:00,14:43:00,26,4,true
+10,8,User8,Designer,Google Docs,docs.google.com,2026-07-29,12:44:00,12:24:00,40,1,true
+11,2,User2,Manager,TikTok,tiktok.com,2026-07-29,10:29:00,10:35:00,6,12,false
+12,7,User7,Designer,TikTok,tiktok.com,2026-07-29,13:53:00,13:02:00,9,7,false
+13,1,User1,Developer,Discord (gaming),discord.com,2026-07-29,12:04:00,12:20:00,16,4,false
+14,4,User4,Manager,Discord (gaming),discord.com,2026-07-29,14:56:00,14:17:00,21,6,false
+15,8,User8,Developer,GitHub,github.com,2026-07-29,16:16:00,16:34:00,18,2,true
+16,7,User7,Manager,LinkedIn,linkedin.com,2026-07-29,10:32:00,10:45:00,13,4,true
+17,8,User8,Student,LeetCode,leetcode.com,2026-07-29,10:50:00,10:35:00,45,1,true
+18,7,User7,Manager,Stack Overflow,stackoverflow.com,2026-07-29,15:33:00,15:51:00,18,3,true
+19,5,User5,Manager,VS Code,,2026-07-29,16:48:00,16:34:00,46,1,true
+20,5,User5,Designer,LeetCode,leetcode.com,2026-07-29,08:46:00,08:15:00,29,1,true
+21,5,User5,Manager,Amazon,amazon.com,2026-07-29,21:40:00,21:49:00,9,8,false
+22,5,User5,Manager,Twitter,twitter.com,2026-07-29,10:34:00,10:42:00,8,8,false
+23,1,User1,Manager,Coursera,coursera.org,2026-07-29,13:56:00,13:31:00,35,1,true
+24,5,User5,Developer,LeetCode,leetcode.com,2026-07-29,09:05:00,09:33:00,28,2,true
+25,8,User8,Student,Twitter,twitter.com,2026-07-29,15:35:00,15:47:00,12,6,false
+26,3,User3,Designer,Instagram,instagram.com,2026-07-29,11:59:00,11:15:00,16,6,false
+27,4,User4,Designer,LinkedIn,linkedin.com,2026-07-29,15:57:00,15:18:00,21,3,true
+28,8,User8,Student,VS Code,,2026-07-29,17:35:00,17:06:00,31,2,true
+29,4,User4,Manager,Postman,,2026-07-29,08:14:00,08:26:00,12,4,true
+30,2,User2,Student,Notion,notion.so,2026-07-29,18:31:00,18:04:00,33,1,true
+31,4,User4,Manager,ChatGPT,chatgpt.com,2026-07-29,17:30:00,17:05:00,35,3,true
+32,4,User4,Analyst,Facebook,facebook.com,2026-07-29,18:27:00,18:40:00,13,4,false
+33,6,User6,Analyst,Udemy,udemy.com,2026-07-29,18:41:00,18:20:00,39,2,true
+34,2,User2,Student,Coursera,coursera.org,2026-07-29,09:15:00,09:56:00,41,3,true
+35,4,User4,Developer,ChatGPT,chatgpt.com,2026-07-29,12:29:00,12:58:00,29,2,true
+36,4,User4,Student,Google Sheets,sheets.google.com,2026-07-29,09:03:00,09:40:00,37,3,true
+37,1,User1,Student,VS Code,,2026-07-29,11:55:00,11:24:00,29,2,true
+38,7,User7,Student,Coursera,coursera.org,2026-07-29,12:59:00,12:31:00,32,3,true
+39,8,User8,Designer,Google Sheets,sheets.google.com,2026-07-29,20:35:00,20:10:00,35,2,true
+40,8,User8,Developer,LinkedIn,linkedin.com,2026-07-29,17:47:00,17:00:00,13,4,true
+41,1,User1,Designer,GitHub,github.com,2026-07-29,21:33:00,21:49:00,16,2,true
+42,3,User3,Student,Netflix,netflix.com,2026-07-29,17:04:00,17:24:00,20,2,false
+43,4,User4,Analyst,Postman,,2026-07-29,17:38:00,17:05:00,27,3,true
+44,1,User1,Manager,Stack Overflow,stackoverflow.com,2026-07-29,16:20:00,16:39:00,19,3,true
+45,5,User5,Developer,LinkedIn,linkedin.com,2026-07-29,14:08:00,14:26:00,18,2,true
+46,5,User5,Analyst,Google Docs,docs.google.com,2026-07-29,08:29:00,09:29:00,60,1,true
+47,2,User2,Student,Twitter,twitter.com,2026-07-29,13:56:00,13:04:00,8,7,false
+48,2,User2,Developer,PyCharm,,2026-07-29,16:45:00,16:31:00,46,2,true
+49,5,User5,Manager,Snapchat,snapchat.com,2026-07-29,21:35:00,21:45:00,10,5,false
+50,5,User5,Student,PyCharm,,2026-07-29,19:35:00,19:20:00,45,3,true
+51,3,User3,Designer,Figma,figma.com,2026-07-29,11:43:00,11:26:00,43,2,true
+52,5,User5,Manager,YouTube,youtube.com,2026-07-29,08:05:00,08:19:00,14,8,false
+53,7,User7,Designer,GitHub,github.com,2026-07-29,18:16:00,18:31:00,15,3,true
+54,3,User3,Analyst,Google Docs,docs.google.com,2026-07-29,09:04:00,09:56:00,52,1,true
+55,3,User3,Manager,GitHub,github.com,2026-07-29,10:27:00,10:59:00,32,2,true
+56,3,User3,Student,ChatGPT,chatgpt.com,2026-07-29,21:02:00,21:29:00,27,3,true
+57,6,User6,Developer,Google Sheets,sheets.google.com,2026-07-29,20:35:00,20:59:00,24,1,true
+58,7,User7,Manager,Spotify,spotify.com,2026-07-29,21:10:00,21:24:00,14,4,false
+59,3,User3,Analyst,GitHub,github.com,2026-07-29,20:59:00,20:18:00,19,3,true
+60,7,User7,Developer,Stack Overflow,stackoverflow.com,2026-07-29,14:55:00,14:10:00,15,4,true
+61,1,User1,Analyst,Slack (work),slack.com,2026-07-29,13:19:00,13:34:00,15,6,true
+62,4,User4,Developer,GitHub,github.com,2026-07-29,12:55:00,12:23:00,28,2,true
+63,2,User2,Designer,Udemy,udemy.com,2026-07-29,21:34:00,21:19:00,45,2,true
+64,6,User6,Student,Postman,,2026-07-29,17:16:00,17:42:00,26,2,true
+65,1,User1,Student,Spotify,spotify.com,2026-07-29,13:27:00,13:46:00,19,4,false
+66,2,User2,Analyst,Notion,notion.so,2026-07-29,14:00:00,14:38:00,38,1,true
+67,4,User4,Designer,Google Sheets,sheets.google.com,2026-07-29,13:39:00,13:59:00,20,2,true
+68,6,User6,Student,ChatGPT,chatgpt.com,2026-07-29,13:25:00,13:55:00,30,2,true
+69,5,User5,Manager,ChatGPT,chatgpt.com,2026-07-29,14:43:00,14:06:00,23,2,true
+70,3,User3,Manager,Reddit,reddit.com,2026-07-29,08:19:00,08:32:00,13,8,false
+71,5,User5,Developer,LinkedIn,linkedin.com,2026-07-29,13:29:00,13:47:00,18,3,true
+72,8,User8,Analyst,Google Sheets,sheets.google.com,2026-07-29,20:47:00,20:10:00,23,2,true
+73,3,User3,Student,LeetCode,leetcode.com,2026-07-29,13:05:00,13:40:00,35,2,true
+74,4,User4,Designer,Postman,,2026-07-29,08:15:00,08:40:00,25,2,true
+75,8,User8,Manager,Amazon,amazon.com,2026-07-29,18:36:00,18:44:00,8,5,false
+76,4,User4,Analyst,GitHub,github.com,2026-07-29,19:00:00,19:23:00,23,1,true
+77,2,User2,Analyst,Slack (work),slack.com,2026-07-29,16:29:00,16:44:00,15,6,true
+78,1,User1,Manager,Postman,,2026-07-29,10:51:00,10:18:00,27,2,true
+79,8,User8,Manager,Netflix,netflix.com,2026-07-29,15:39:00,15:11:00,32,4,false
+80,7,User7,Manager,Slack (work),slack.com,2026-07-29,15:28:00,15:54:00,26,5,true
+81,5,User5,Developer,Spotify,spotify.com,2026-07-29,16:31:00,16:53:00,22,4,false
+82,4,User4,Designer,Slack (work),slack.com,2026-07-29,12:21:00,12:34:00,13,3,true
+83,6,User6,Manager,Stack Overflow,stackoverflow.com,2026-07-29,19:09:00,19:23:00,14,2,true
+84,4,User4,Student,Udemy,udemy.com,2026-07-29,14:03:00,14:40:00,37,2,true
+85,4,User4,Analyst,Figma,figma.com,2026-07-29,19:01:00,19:54:00,53,2,true
+86,7,User7,Analyst,VS Code,,2026-07-29,14:54:00,14:48:00,54,2,true
+87,7,User7,Manager,Spotify,spotify.com,2026-07-29,11:31:00,11:55:00,24,4,false
+88,4,User4,Designer,Google Sheets,sheets.google.com,2026-07-29,18:43:00,18:13:00,30,2,true
+89,7,User7,Developer,Spotify,spotify.com,2026-07-29,17:34:00,17:53:00,19,2,false
+90,1,User1,Analyst,Postman,,2026-07-29,18:27:00,18:48:00,21,2,true
+91,3,User3,Analyst,Udemy,udemy.com,2026-07-29,11:29:00,11:55:00,26,2,true
+92,6,User6,Designer,Amazon,amazon.com,2026-07-29,21:26:00,21:42:00,16,5,false
+93,5,User5,Student,YouTube,youtube.com,2026-07-29,13:14:00,13:25:00,11,6,false
+94,2,User2,Student,GitHub,github.com,2026-07-29,08:39:00,08:13:00,34,1,true
+95,3,User3,Developer,PyCharm,,2026-07-29,11:29:00,11:23:00,54,1,true
+96,5,User5,Designer,Google Docs,docs.google.com,2026-07-29,19:07:00,19:56:00,49,1,true
+97,3,User3,Designer,LeetCode,leetcode.com,2026-07-29,17:43:00,17:20:00,37,3,true
+98,7,User7,Analyst,YouTube,youtube.com,2026-07-29,21:40:00,21:54:00,14,7,false
+99,4,User4,Student,ChatGPT,chatgpt.com,2026-07-29,09:50:00,09:28:00,38,2,true
+100,1,User1,Designer,Netflix,netflix.com,2026-07-29,16:41:00,16:09:00,28,3,false
+101,6,User6,Student,Udemy,udemy.com,2026-07-29,13:40:00,13:30:00,50,1,true
+102,8,User8,Developer,LinkedIn,linkedin.com,2026-07-29,18:17:00,18:28:00,11,3,true
+103,8,User8,Analyst,LinkedIn,linkedin.com,2026-07-29,13:54:00,13:13:00,19,3,true
+104,4,User4,Student,Stack Overflow,stackoverflow.com,2026-07-29,15:36:00,15:02:00,26,2,true
+105,7,User7,Designer,VS Code,,2026-07-29,15:13:00,15:53:00,40,2,true
+106,6,User6,Designer,Coursera,coursera.org,2026-07-29,12:35:00,12:04:00,29,2,true
+107,1,User1,Manager,Notion,notion.so,2026-07-29,15:35:00,15:08:00,33,1,true
+108,4,User4,Analyst,Udemy,udemy.com,2026-07-29,08:05:00,08:52:00,47,2,true
+109,5,User5,Developer,Coursera,coursera.org,2026-07-29,17:23:00,17:03:00,40,2,true
+110,8,User8,Manager,Instagram,instagram.com,2026-07-29,16:21:00,16:32:00,11,10,false
+111,6,User6,Analyst,Stack Overflow,stackoverflow.com,2026-07-29,19:12:00,19:29:00,17,2,true
+112,6,User6,Student,Twitter,twitter.com,2026-07-29,11:13:00,11:27:00,14,11,false
+113,8,User8,Designer,Spotify,spotify.com,2026-07-29,17:18:00,17:39:00,21,4,false
+114,2,User2,Developer,LeetCode,leetcode.com,2026-07-29,08:45:00,08:12:00,27,1,true
+115,3,User3,Designer,GitHub,github.com,2026-07-29,19:08:00,19:42:00,34,2,true
+116,8,User8,Student,VS Code,,2026-07-29,15:21:00,15:03:00,42,2,true
+117,3,User3,Student,GitHub,github.com,2026-07-29,21:04:00,21:38:00,34,2,true
+118,7,User7,Analyst,ChatGPT,chatgpt.com,2026-07-29,10:09:00,10:41:00,32,2,true
+119,5,User5,Student,VS Code,,2026-07-29,17:38:00,17:06:00,28,3,true
+120,4,User4,Manager,LinkedIn,linkedin.com,2026-07-29,21:37:00,21:51:00,14,3,true
+121,7,User7,Designer,Reddit,reddit.com,2026-07-29,19:06:00,19:22:00,16,9,false
+122,4,User4,Developer,GitHub,github.com,2026-07-29,10:35:00,10:03:00,28,1,true
+123,2,User2,Developer,VS Code,,2026-07-29,15:18:00,15:55:00,37,2,true
+124,1,User1,Developer,LeetCode,leetcode.com,2026-07-29,15:04:00,15:45:00,41,2,true
+125,4,User4,Designer,Snapchat,snapchat.com,2026-07-29,20:59:00,20:10:00,11,10,false
+126,4,User4,Analyst,Postman,,2026-07-29,12:52:00,12:13:00,21,3,true
+127,3,User3,Student,LeetCode,leetcode.com,2026-07-29,19:52:00,19:18:00,26,2,true
+128,5,User5,Analyst,Postman,,2026-07-29,14:17:00,14:36:00,19,2,true
+129,8,User8,Analyst,Google Docs,docs.google.com,2026-07-29,19:20:00,19:09:00,49,1,true
+130,5,User5,Student,Google Docs,docs.google.com,2026-07-29,21:36:00,21:11:00,35,1,true
+131,1,User1,Designer,Reddit,reddit.com,2026-07-29,15:33:00,15:42:00,9,10,false
+132,8,User8,Designer,Google Docs,docs.google.com,2026-07-29,21:31:00,22:34:00,63,1,true
+133,2,User2,Analyst,Postman,,2026-07-29,09:54:00,09:13:00,19,2,true
+134,3,User3,Designer,Google Sheets,sheets.google.com,2026-07-29,14:52:00,14:27:00,35,2,true
+135,1,User1,Analyst,Google Docs,docs.google.com,2026-07-29,20:25:00,20:03:00,38,1,true
+136,1,User1,Manager,Slack (work),slack.com,2026-07-29,13:39:00,13:58:00,19,3,true
+137,8,User8,Analyst,Reddit,reddit.com,2026-07-29,10:59:00,10:09:00,10,6,false
+138,5,User5,Analyst,Slack (work),slack.com,2026-07-29,18:38:00,18:58:00,20,2,true
+139,4,User4,Developer,ChatGPT,chatgpt.com,2026-07-29,09:14:00,09:45:00,31,2,true
+140,2,User2,Analyst,Postman,,2026-07-29,19:18:00,19:40:00,22,2,true
+141,5,User5,Analyst,Spotify,spotify.com,2026-07-29,15:35:00,15:55:00,20,3,false
+142,3,User3,Analyst,LinkedIn,linkedin.com,2026-07-29,10:55:00,10:15:00,20,3,true
+143,2,User2,Designer,Amazon,amazon.com,2026-07-29,20:32:00,20:47:00,15,5,false
+144,5,User5,Student,LeetCode,leetcode.com,2026-07-29,17:42:00,17:23:00,41,3,true
+145,8,User8,Developer,Google Sheets,sheets.google.com,2026-07-29,16:48:00,16:19:00,31,2,true
+146,7,User7,Analyst,Google Docs,docs.google.com,2026-07-29,11:36:00,11:34:00,58,1,true
+147,7,User7,Developer,Amazon,amazon.com,2026-07-29,19:30:00,19:45:00,15,3,false
+148,7,User7,Analyst,LinkedIn,linkedin.com,2026-07-29,10:31:00,10:50:00,19,3,true
+149,1,User1,Developer,Stack Overflow,stackoverflow.com,2026-07-29,09:55:00,09:22:00,27,2,true
+150,8,User8,Student,Reddit,reddit.com,2026-07-29,10:26:00,10:46:00,20,4,false
+151,3,User3,Student,YouTube,youtube.com,2026-07-29,17:44:00,17:06:00,22,5,false
+152,7,User7,Student,Notion,notion.so,2026-07-29,14:20:00,15:24:00,64,1,true
+153,8,User8,Manager,GitHub,github.com,2026-07-29,18:58:00,18:25:00,27,1,true
+154,5,User5,Developer,Netflix,netflix.com,2026-07-29,20:40:00,20:00:00,20,4,false
+155,2,User2,Analyst,Coursera,coursera.org,2026-07-29,08:20:00,08:00:00,40,3,true
+156,1,User1,Designer,Udemy,udemy.com,2026-07-29,16:26:00,16:02:00,36,1,true
+157,3,User3,Developer,Udemy,udemy.com,2026-07-29,17:43:00,17:10:00,27,3,true
+158,4,User4,Analyst,Postman,,2026-07-29,12:29:00,12:43:00,14,3,true
+159,5,User5,Student,Slack (work),slack.com,2026-07-29,10:04:00,10:30:00,26,5,true
+160,8,User8,Designer,Reddit,reddit.com,2026-07-29,19:16:00,19:29:00,13,12,false
+161,8,User8,Designer,Notion,notion.so,2026-07-29,09:15:00,10:25:00,70,1,true
+162,7,User7,Manager,Udemy,udemy.com,2026-07-29,12:01:00,12:43:00,42,3,true
+163,7,User7,Designer,VS Code,,2026-07-29,19:03:00,19:45:00,42,2,true
+164,8,User8,Designer,Amazon,amazon.com,2026-07-29,13:14:00,13:29:00,15,7,false
+165,4,User4,Manager,PyCharm,,2026-07-29,18:43:00,19:46:00,63,2,true
+166,3,User3,Student,Snapchat,snapchat.com,2026-07-29,15:02:00,15:12:00,10,7,false
+167,6,User6,Developer,Google Docs,docs.google.com,2026-07-29,14:11:00,15:11:00,60,1,true
+168,4,User4,Developer,TikTok,tiktok.com,2026-07-29,16:32:00,16:40:00,8,15,false
+169,5,User5,Developer,GitHub,github.com,2026-07-29,20:18:00,20:51:00,33,3,true
+170,6,User6,Student,Slack (work),slack.com,2026-07-29,11:55:00,11:22:00,27,3,true
+171,7,User7,Manager,Udemy,udemy.com,2026-07-29,12:34:00,12:01:00,27,2,true
+172,2,User2,Analyst,PyCharm,,2026-07-29,17:24:00,18:27:00,63,2,true
+173,6,User6,Student,Slack (work),slack.com,2026-07-29,16:20:00,16:40:00,20,4,true
+174,4,User4,Student,Snapchat,snapchat.com,2026-07-29,12:41:00,12:52:00,11,13,false
+175,7,User7,Student,PyCharm,,2026-07-29,15:07:00,15:42:00,35,1,true
+176,2,User2,Developer,ChatGPT,chatgpt.com,2026-07-29,18:47:00,18:08:00,21,2,true
+177,7,User7,Manager,Spotify,spotify.com,2026-07-29,18:06:00,18:30:00,24,4,false
+178,8,User8,Manager,Google Sheets,sheets.google.com,2026-07-29,19:23:00,19:04:00,41,2,true
+179,4,User4,Analyst,Google Sheets,sheets.google.com,2026-07-29,09:43:00,09:24:00,41,3,true
+180,6,User6,Manager,TikTok,tiktok.com,2026-07-29,11:07:00,11:14:00,7,9,false
+181,8,User8,Student,Google Sheets,sheets.google.com,2026-07-29,08:03:00,08:36:00,33,2,true
+182,6,User6,Developer,PyCharm,,2026-07-29,21:48:00,22:56:00,68,1,true
+183,4,User4,Manager,Notion,notion.so,2026-07-29,20:09:00,21:12:00,63,1,true
+184,1,User1,Designer,ChatGPT,chatgpt.com,2026-07-29,20:11:00,20:53:00,42,2,true
+185,2,User2,Student,PyCharm,,2026-07-29,11:37:00,11:11:00,34,3,true
+186,6,User6,Student,Udemy,udemy.com,2026-07-29,14:33:00,14:05:00,32,1,true
+187,2,User2,Student,YouTube,youtube.com,2026-07-29,17:06:00,17:23:00,17,5,false
+188,8,User8,Manager,Postman,,2026-07-29,20:58:00,20:25:00,27,2,true
+189,5,User5,Analyst,Udemy,udemy.com,2026-07-29,15:54:00,15:49:00,55,1,true
+190,7,User7,Analyst,Google Sheets,sheets.google.com,2026-07-29,15:04:00,15:25:00,21,2,true
+191,2,User2,Designer,Twitter,twitter.com,2026-07-29,17:40:00,17:47:00,7,6,false
+192,6,User6,Analyst,PyCharm,,2026-07-29,17:27:00,17:23:00,56,2,true
+193,2,User2,Student,TikTok,tiktok.com,2026-07-29,15:56:00,15:05:00,9,7,false
+194,4,User4,Analyst,Notion,notion.so,2026-07-29,19:06:00,20:09:00,63,1,true
+195,6,User6,Analyst,Google Docs,docs.google.com,2026-07-29,10:43:00,10:34:00,51,1,true
+196,8,User8,Student,Google Docs,docs.google.com,2026-07-29,09:47:00,09:44:00,57,1,true
+197,6,User6,Developer,Google Docs,docs.google.com,2026-07-29,16:21:00,16:50:00,29,1,true
+198,2,User2,Analyst,Postman,,2026-07-29,14:55:00,14:21:00,26,4,true
+199,1,User1,Designer,Twitter,twitter.com,2026-07-29,16:13:00,16:21:00,8,5,false
+200,3,User3,Analyst,Slack (work),slack.com,2026-07-29,16:23:00,16:49:00,26,3,true
+201,2,User2,Designer,Reddit,reddit.com,2026-07-29,16:49:00,16:01:00,12,7,false
+202,1,User1,Manager,Facebook,facebook.com,2026-07-29,10:17:00,10:35:00,18,5,false
+203,5,User5,Designer,Udemy,udemy.com,2026-07-29,17:42:00,17:06:00,24,3,true
+204,7,User7,Student,Figma,figma.com,2026-07-29,09:47:00,09:35:00,48,3,true
+205,4,User4,Analyst,Udemy,udemy.com,2026-07-29,12:46:00,12:25:00,39,1,true
+206,6,User6,Manager,Twitter,twitter.com,2026-07-29,10:48:00,10:55:00,7,5,false
+207,1,User1,Student,Stack Overflow,stackoverflow.com,2026-07-29,17:28:00,17:47:00,19,3,true
+208,7,User7,Designer,Notion,notion.so,2026-07-29,14:07:00,15:07:00,60,1,true
+209,5,User5,Manager,YouTube,youtube.com,2026-07-29,11:25:00,11:43:00,18,5,false
+210,1,User1,Student,Google Sheets,sheets.google.com,2026-07-29,10:48:00,10:13:00,25,1,true
+211,5,User5,Designer,Coursera,coursera.org,2026-07-29,14:11:00,14:35:00,24,2,true
+212,3,User3,Analyst,ChatGPT,chatgpt.com,2026-07-29,21:42:00,21:17:00,35,2,true
+213,6,User6,Student,Coursera,coursera.org,2026-07-29,08:29:00,08:14:00,45,1,true
+214,2,User2,Designer,Reddit,reddit.com,2026-07-29,18:26:00,18:40:00,14,7,false
+215,5,User5,Student,Coursera,coursera.org,2026-07-29,20:39:00,20:01:00,22,2,true
+216,8,User8,Designer,Stack Overflow,stackoverflow.com,2026-07-29,14:37:00,14:56:00,19,2,true
+217,7,User7,Manager,Stack Overflow,stackoverflow.com,2026-07-29,13:14:00,13:32:00,18,2,true
+218,6,User6,Developer,ChatGPT,chatgpt.com,2026-07-29,16:12:00,16:42:00,30,1,true
+219,6,User6,Designer,Spotify,spotify.com,2026-07-29,10:15:00,10:42:00,27,3,false
+220,2,User2,Developer,GitHub,github.com,2026-07-29,20:48:00,20:07:00,19,2,true
+221,2,User2,Developer,Twitter,twitter.com,2026-07-29,17:48:00,17:59:00,11,9,false
+222,8,User8,Manager,TikTok,tiktok.com,2026-07-29,21:40:00,21:49:00,9,11,false
+223,6,User6,Developer,Google Sheets,sheets.google.com,2026-07-29,12:50:00,12:10:00,20,2,true
+224,5,User5,Manager,GitHub,github.com,2026-07-29,15:28:00,15:50:00,22,1,true
+225,1,User1,Student,PyCharm,,2026-07-29,21:54:00,22:04:00,70,1,true
+226,2,User2,Manager,Twitter,twitter.com,2026-07-29,16:50:00,16:00:00,10,9,false
+227,1,User1,Analyst,Facebook,facebook.com,2026-07-29,17:30:00,17:45:00,15,5,false
+228,3,User3,Student,Google Sheets,sheets.google.com,2026-07-29,13:45:00,13:05:00,20,3,true
+229,2,User2,Manager,TikTok,tiktok.com,2026-07-29,15:28:00,15:34:00,6,7,false
+230,3,User3,Designer,Udemy,udemy.com,2026-07-29,20:21:00,20:14:00,53,2,true
+231,1,User1,Designer,Stack Overflow,stackoverflow.com,2026-07-29,14:18:00,14:35:00,17,3,true
+232,5,User5,Manager,ChatGPT,chatgpt.com,2026-07-29,10:58:00,10:24:00,26,2,true
+233,6,User6,Designer,TikTok,tiktok.com,2026-07-29,17:45:00,17:54:00,9,9,false
+234,2,User2,Designer,Netflix,netflix.com,2026-07-29,21:08:00,21:35:00,27,4,false
+235,2,User2,Analyst,Stack Overflow,stackoverflow.com,2026-07-29,10:13:00,10:31:00,18,3,true
+236,6,User6,Analyst,LinkedIn,linkedin.com,2026-07-29,09:18:00,09:30:00,12,2,true
+237,2,User2,Manager,Amazon,amazon.com,2026-07-29,16:02:00,16:14:00,12,7,false
+238,6,User6,Manager,ChatGPT,chatgpt.com,2026-07-29,10:53:00,10:25:00,32,1,true
+239,3,User3,Analyst,Stack Overflow,stackoverflow.com,2026-07-29,11:28:00,11:47:00,19,4,true
+240,5,User5,Analyst,Slack (work),slack.com,2026-07-29,20:50:00,20:11:00,21,3,true
+241,8,User8,Developer,PyCharm,,2026-07-29,15:29:00,16:32:00,63,2,true
+242,5,User5,Analyst,Stack Overflow,stackoverflow.com,2026-07-29,21:12:00,21:32:00,20,4,true
+243,3,User3,Designer,GitHub,github.com,2026-07-29,16:59:00,16:27:00,28,3,true
+244,2,User2,Manager,LeetCode,leetcode.com,2026-07-29,12:28:00,12:57:00,29,3,true
+245,3,User3,Analyst,Google Docs,docs.google.com,2026-07-29,15:56:00,16:57:00,61,1,true
+246,6,User6,Student,Udemy,udemy.com,2026-07-29,11:24:00,11:50:00,26,2,true
+247,2,User2,Designer,Postman,,2026-07-29,21:45:00,21:57:00,12,4,true
+248,6,User6,Developer,PyCharm,,2026-07-29,15:44:00,15:19:00,35,3,true
+249,3,User3,Analyst,Google Sheets,sheets.google.com,2026-07-29,08:16:00,08:49:00,33,3,true
+250,4,User4,Developer,Google Docs,docs.google.com,2026-07-29,14:07:00,15:08:00,61,1,true
+251,5,User5,Developer,ChatGPT,chatgpt.com,2026-07-29,18:50:00,18:11:00,21,1,true
+252,8,User8,Student,Postman,,2026-07-29,16:01:00,16:26:00,25,3,true
+253,4,User4,Developer,LeetCode,leetcode.com,2026-07-29,11:36:00,11:09:00,33,2,true
+254,7,User7,Developer,LinkedIn,linkedin.com,2026-07-29,13:04:00,13:21:00,17,3,true
+255,1,User1,Analyst,Snapchat,snapchat.com,2026-07-29,13:16:00,13:25:00,9,10,false
+256,1,User1,Designer,Snapchat,snapchat.com,2026-07-29,18:40:00,18:46:00,6,7,false
+257,2,User2,Manager,Spotify,spotify.com,2026-07-29,13:34:00,13:58:00,24,2,false
+258,6,User6,Developer,Spotify,spotify.com,2026-07-29,19:30:00,19:54:00,24,3,false
+259,3,User3,Developer,ChatGPT,chatgpt.com,2026-07-29,08:18:00,08:53:00,35,3,true
+260,4,User4,Student,LinkedIn,linkedin.com,2026-07-29,12:32:00,12:52:00,20,2,true
+261,7,User7,Manager,YouTube,youtube.com,2026-07-29,11:18:00,11:32:00,14,8,false
+262,6,User6,Student,Notion,notion.so,2026-07-29,14:56:00,14:37:00,41,1,true
+263,7,User7,Analyst,Figma,figma.com,2026-07-29,19:31:00,19:06:00,35,1,true
+264,6,User6,Manager,PyCharm,,2026-07-29,09:27:00,10:35:00,68,2,true
+265,3,User3,Manager,Figma,figma.com,2026-07-29,18:18:00,18:52:00,34,1,true
+266,5,User5,Analyst,PyCharm,,2026-07-29,15:22:00,16:27:00,65,1,true
+267,8,User8,Student,Postman,,2026-07-29,18:50:00,18:12:00,22,3,true
+268,1,User1,Student,Snapchat,snapchat.com,2026-07-29,19:43:00,19:51:00,8,9,false
+269,3,User3,Student,Figma,figma.com,2026-07-29,15:02:00,15:53:00,51,2,true
+270,3,User3,Student,VS Code,,2026-07-29,14:36:00,14:25:00,49,2,true
+271,1,User1,Manager,ChatGPT,chatgpt.com,2026-07-29,13:28:00,13:02:00,34,3,true
+272,2,User2,Manager,ChatGPT,chatgpt.com,2026-07-29,18:17:00,18:48:00,31,2,true
+273,4,User4,Student,GitHub,github.com,2026-07-29,14:58:00,14:28:00,30,2,true
+274,2,User2,Designer,Amazon,amazon.com,2026-07-29,17:18:00,17:28:00,10,6,false
+275,8,User8,Developer,Postman,,2026-07-29,10:57:00,10:11:00,14,2,true
+276,8,User8,Student,Google Docs,docs.google.com,2026-07-29,16:34:00,16:25:00,51,1,true
+277,5,User5,Designer,Google Docs,docs.google.com,2026-07-29,18:11:00,18:04:00,53,1,true
+278,6,User6,Manager,Postman,,2026-07-29,10:15:00,10:29:00,14,2,true
+279,8,User8,Student,PyCharm,,2026-07-29,20:35:00,20:32:00,57,2,true
+280,3,User3,Manager,Stack Overflow,stackoverflow.com,2026-07-29,19:46:00,19:59:00,13,3,true
+281,8,User8,Manager,Google Sheets,sheets.google.com,2026-07-29,09:08:00,09:44:00,36,3,true
+282,6,User6,Student,Google Sheets,sheets.google.com,2026-07-29,10:56:00,10:25:00,29,2,true
+283,3,User3,Developer,LinkedIn,linkedin.com,2026-07-29,21:07:00,21:22:00,15,4,true
+284,3,User3,Designer,Google Docs,docs.google.com,2026-07-29,11:22:00,11:55:00,33,1,true
+285,5,User5,Student,GitHub,github.com,2026-07-29,12:08:00,12:27:00,19,3,true
+286,5,User5,Manager,Netflix,netflix.com,2026-07-29,17:37:00,17:57:00,20,3,false
+287,3,User3,Developer,LinkedIn,linkedin.com,2026-07-29,13:53:00,13:09:00,16,4,true
+288,1,User1,Student,Google Docs,docs.google.com,2026-07-29,17:16:00,17:45:00,29,1,true
+289,4,User4,Manager,Google Sheets,sheets.google.com,2026-07-29,18:34:00,18:07:00,33,1,true
+290,5,User5,Designer,YouTube,youtube.com,2026-07-29,14:19:00,14:33:00,14,8,false
+291,8,User8,Student,LeetCode,leetcode.com,2026-07-29,15:13:00,15:38:00,25,2,true
+292,6,User6,Manager,ChatGPT,chatgpt.com,2026-07-29,19:55:00,19:21:00,26,2,true
+293,6,User6,Analyst,PyCharm,,2026-07-29,09:20:00,10:26:00,66,2,true
+294,4,User4,Analyst,Postman,,2026-07-29,09:03:00,09:19:00,16,2,true
+295,5,User5,Analyst,Snapchat,snapchat.com,2026-07-29,21:57:00,21:07:00,10,7,false
+296,3,User3,Designer,Reddit,reddit.com,2026-07-29,10:31:00,10:49:00,18,6,false
+297,8,User8,Analyst,ChatGPT,chatgpt.com,2026-07-29,14:32:00,14:02:00,30,1,true
+298,8,User8,Developer,Google Sheets,sheets.google.com,2026-07-29,12:31:00,12:03:00,32,1,true
+299,8,User8,Designer,Netflix,netflix.com,2026-07-29,10:56:00,10:14:00,18,2,false
+300,5,User5,Designer,Amazon,amazon.com,2026-07-29,08:36:00,08:47:00,11,3,false
+301,4,User4,Designer,Netflix,netflix.com,2026-07-29,15:48:00,15:13:00,25,3,false
+302,5,User5,Manager,Facebook,facebook.com,2026-07-29,09:25:00,09:40:00,15,4,false
+303,6,User6,Designer,Netflix,netflix.com,2026-07-29,11:38:00,11:19:00,41,4,false
+304,7,User7,Manager,GitHub,github.com,2026-07-29,13:51:00,13:07:00,16,1,true
+305,8,User8,Manager,Slack (work),slack.com,2026-07-29,10:20:00,10:34:00,14,6,true
+306,6,User6,Developer,Coursera,coursera.org,2026-07-29,12:37:00,12:26:00,49,2,true
+307,6,User6,Manager,Instagram,instagram.com,2026-07-29,12:30:00,12:42:00,12,8,false
+308,1,User1,Designer,Coursera,coursera.org,2026-07-29,17:19:00,17:59:00,40,3,true
+309,1,User1,Manager,YouTube,youtube.com,2026-07-29,20:37:00,20:52:00,15,7,false
+310,4,User4,Student,Discord (gaming),discord.com,2026-07-29,19:39:00,19:04:00,25,5,false
+311,7,User7,Developer,Discord (gaming),discord.com,2026-07-29,19:07:00,19:36:00,29,3,false
+312,4,User4,Student,Google Sheets,sheets.google.com,2026-07-29,19:13:00,19:39:00,26,1,true
+313,7,User7,Manager,Amazon,amazon.com,2026-07-29,21:47:00,21:00:00,13,6,false
+314,1,User1,Developer,LeetCode,leetcode.com,2026-07-29,18:30:00,18:57:00,27,2,true
+315,7,User7,Designer,Google Docs,docs.google.com,2026-07-29,16:22:00,16:06:00,44,1,true
+316,5,User5,Manager,YouTube,youtube.com,2026-07-29,16:19:00,16:33:00,14,4,false
+317,4,User4,Designer,Amazon,amazon.com,2026-07-29,19:31:00,19:41:00,10,4,false
+318,6,User6,Analyst,Postman,,2026-07-29,19:17:00,19:38:00,21,4,true
+319,5,User5,Student,Facebook,facebook.com,2026-07-29,14:52:00,14:08:00,16,6,false
+320,6,User6,Developer,LeetCode,leetcode.com,2026-07-29,09:22:00,09:44:00,22,3,true
+321,8,User8,Designer,Spotify,spotify.com,2026-07-29,16:17:00,16:37:00,20,2,false
+322,5,User5,Developer,Notion,notion.so,2026-07-29,11:03:00,11:58:00,55,1,true
+323,4,User4,Developer,LeetCode,leetcode.com,2026-07-29,15:06:00,15:30:00,24,2,true
+324,3,User3,Student,TikTok,tiktok.com,2026-07-29,18:59:00,18:10:00,11,7,false
+325,8,User8,Analyst,Udemy,udemy.com,2026-07-29,13:18:00,13:48:00,30,3,true
+326,1,User1,Student,Facebook,facebook.com,2026-07-29,21:59:00,21:10:00,11,9,false
+327,1,User1,Developer,Udemy,udemy.com,2026-07-29,08:53:00,08:45:00,52,1,true
+328,7,User7,Analyst,Udemy,udemy.com,2026-07-29,12:56:00,12:50:00,54,3,true
+329,1,User1,Student,ChatGPT,chatgpt.com,2026-07-29,13:18:00,13:50:00,32,1,true
+330,8,User8,Manager,Instagram,instagram.com,2026-07-29,21:32:00,21:44:00,12,10,false
+331,8,User8,Designer,Notion,notion.so,2026-07-29,19:29:00,20:31:00,62,1,true
+332,5,User5,Developer,VS Code,,2026-07-29,17:43:00,17:31:00,48,3,true
+333,4,User4,Developer,Figma,figma.com,2026-07-29,21:27:00,21:18:00,51,3,true
+334,6,User6,Student,Coursera,coursera.org,2026-07-29,10:30:00,10:10:00,40,1,true
+335,6,User6,Developer,VS Code,,2026-07-29,20:17:00,20:49:00,32,1,true
+336,6,User6,Designer,Reddit,reddit.com,2026-07-29,18:23:00,18:41:00,18,4,false
+337,4,User4,Student,Postman,,2026-07-29,18:32:00,18:51:00,19,2,true
+338,5,User5,Student,Snapchat,snapchat.com,2026-07-29,17:14:00,17:26:00,12,7,false
+339,4,User4,Developer,VS Code,,2026-07-29,17:23:00,17:52:00,29,2,true
+340,7,User7,Manager,YouTube,youtube.com,2026-07-29,21:13:00,21:35:00,22,8,false
+341,4,User4,Manager,Snapchat,snapchat.com,2026-07-29,19:23:00,19:29:00,6,9,false
+342,2,User2,Manager,LeetCode,leetcode.com,2026-07-29,16:12:00,16:35:00,23,2,true
+343,3,User3,Developer,Google Docs,docs.google.com,2026-07-29,18:13:00,18:11:00,58,1,true
+344,8,User8,Student,Netflix,netflix.com,2026-07-29,10:32:00,10:01:00,29,2,false
+345,7,User7,Analyst,Notion,notion.so,2026-07-29,20:19:00,20:51:00,32,1,true
+346,1,User1,Analyst,GitHub,github.com,2026-07-29,17:04:00,17:35:00,31,2,true
+347,1,User1,Analyst,Postman,,2026-07-29,08:59:00,08:22:00,23,3,true
+348,2,User2,Analyst,Stack Overflow,stackoverflow.com,2026-07-29,10:49:00,10:06:00,17,2,true
+349,7,User7,Designer,LinkedIn,linkedin.com,2026-07-29,14:24:00,14:38:00,14,4,true
+350,2,User2,Manager,ChatGPT,chatgpt.com,2026-07-29,10:34:00,10:08:00,34,2,true
+351,7,User7,Manager,ChatGPT,chatgpt.com,2026-07-29,08:48:00,08:23:00,35,1,true
+352,1,User1,Designer,Slack (work),slack.com,2026-07-29,16:24:00,16:47:00,23,4,true
+353,4,User4,Developer,Slack (work),slack.com,2026-07-29,19:48:00,19:06:00,18,3,true
+354,2,User2,Student,Udemy,udemy.com,2026-07-29,08:15:00,08:59:00,44,3,true
+355,4,User4,Student,Notion,notion.so,2026-07-29,18:45:00,18:39:00,54,1,true
+356,1,User1,Developer,Netflix,netflix.com,2026-07-29,16:13:00,16:32:00,19,3,false
+357,1,User1,Developer,Stack Overflow,stackoverflow.com,2026-07-29,19:36:00,19:04:00,28,2,true
+358,6,User6,Manager,Twitter,twitter.com,2026-07-29,11:19:00,11:31:00,12,12,false
+359,3,User3,Manager,Postman,,2026-07-29,16:37:00,16:56:00,19,2,true
+360,3,User3,Analyst,Google Docs,docs.google.com,2026-07-29,18:42:00,18:27:00,45,1,true
+361,7,User7,Manager,Coursera,coursera.org,2026-07-29,12:24:00,12:04:00,40,2,true
+362,3,User3,Manager,YouTube,youtube.com,2026-07-29,21:45:00,21:59:00,14,4,false
+363,3,User3,Analyst,LeetCode,leetcode.com,2026-07-29,16:33:00,16:10:00,37,3,true
+364,3,User3,Analyst,VS Code,,2026-07-29,09:59:00,09:31:00,32,2,true
+365,8,User8,Designer,Stack Overflow,stackoverflow.com,2026-07-29,08:17:00,08:38:00,21,4,true
+366,7,User7,Manager,Twitter,twitter.com,2026-07-29,20:48:00,20:54:00,6,5,false
+367,4,User4,Analyst,Google Sheets,sheets.google.com,2026-07-29,08:13:00,08:52:00,39,2,true
+368,4,User4,Student,YouTube,youtube.com,2026-07-29,19:13:00,19:37:00,24,7,false
+369,7,User7,Developer,Google Docs,docs.google.com,2026-07-29,15:34:00,15:13:00,39,1,true
+370,6,User6,Designer,PyCharm,,2026-07-29,15:06:00,15:55:00,49,3,true
+371,8,User8,Designer,Notion,notion.so,2026-07-29,17:55:00,17:40:00,45,1,true
+372,4,User4,Developer,GitHub,github.com,2026-07-29,17:46:00,17:06:00,20,3,true
+373,7,User7,Designer,ChatGPT,chatgpt.com,2026-07-29,17:53:00,17:16:00,23,1,true
+374,4,User4,Analyst,Google Docs,docs.google.com,2026-07-29,12:48:00,12:39:00,51,1,true
+375,8,User8,Analyst,Slack (work),slack.com,2026-07-29,10:08:00,10:23:00,15,5,true
+376,8,User8,Developer,ChatGPT,chatgpt.com,2026-07-29,16:02:00,16:44:00,42,3,true
+377,2,User2,Student,VS Code,,2026-07-29,11:04:00,11:41:00,37,3,true
+378,3,User3,Student,Google Sheets,sheets.google.com,2026-07-29,17:40:00,17:10:00,30,2,true
+379,8,User8,Analyst,GitHub,github.com,2026-07-29,08:01:00,08:16:00,15,2,true
+380,5,User5,Manager,Figma,figma.com,2026-07-29,18:27:00,18:52:00,25,3,true
+381,3,User3,Student,Notion,notion.so,2026-07-29,17:33:00,17:24:00,51,1,true
+382,5,User5,Designer,PyCharm,,2026-07-29,14:29:00,15:37:00,68,1,true
+383,4,User4,Developer,ChatGPT,chatgpt.com,2026-07-29,18:54:00,18:28:00,34,3,true
+384,1,User1,Student,Coursera,coursera.org,2026-07-29,08:40:00,08:12:00,32,2,true
+385,1,User1,Developer,Google Docs,docs.google.com,2026-07-29,20:21:00,20:06:00,45,1,true
+386,2,User2,Manager,GitHub,github.com,2026-07-29,19:56:00,19:16:00,20,3,true
+387,8,User8,Designer,GitHub,github.com,2026-07-29,12:57:00,12:30:00,33,2,true
+388,1,User1,Developer,Amazon,amazon.com,2026-07-29,17:09:00,17:19:00,10,9,false
+389,7,User7,Student,ChatGPT,chatgpt.com,2026-07-29,21:54:00,21:16:00,22,1,true
+390,7,User7,Manager,Coursera,coursera.org,2026-07-29,20:44:00,20:16:00,32,2,true
+391,2,User2,Manager,Spotify,spotify.com,2026-07-29,14:14:00,14:42:00,28,2,false
+392,2,User2,Designer,Twitter,twitter.com,2026-07-29,14:49:00,14:01:00,12,13,false
+393,6,User6,Student,Snapchat,snapchat.com,2026-07-29,15:14:00,15:21:00,7,13,false
+394,6,User6,Manager,LinkedIn,linkedin.com,2026-07-29,18:24:00,18:38:00,14,4,true
+395,2,User2,Manager,Figma,figma.com,2026-07-29,09:17:00,09:07:00,50,2,true
+396,3,User3,Analyst,YouTube,youtube.com,2026-07-29,14:20:00,14:42:00,22,4,false
+397,6,User6,Student,Google Docs,docs.google.com,2026-07-29,13:48:00,13:15:00,27,1,true
+398,5,User5,Student,PyCharm,,2026-07-29,16:35:00,16:12:00,37,2,true
+399,7,User7,Student,GitHub,github.com,2026-07-29,17:38:00,17:55:00,17,2,true
+400,6,User6,Analyst,VS Code,,2026-07-29,09:46:00,09:19:00,33,2,true
+401,4,User4,Manager,Instagram,instagram.com,2026-07-29,10:17:00,10:26:00,9,6,false
+402,5,User5,Designer,YouTube,youtube.com,2026-07-29,12:26:00,12:39:00,13,4,false
+403,5,User5,Analyst,TikTok,tiktok.com,2026-07-29,11:46:00,11:51:00,5,8,false
+404,8,User8,Manager,Twitter,twitter.com,2026-07-29,12:00:00,12:08:00,8,5,false
+405,7,User7,Designer,Twitter,twitter.com,2026-07-29,15:21:00,15:30:00,9,12,false
+406,7,User7,Manager,ChatGPT,chatgpt.com,2026-07-29,19:12:00,19:37:00,25,2,true
+407,8,User8,Designer,Google Docs,docs.google.com,2026-07-29,12:47:00,13:49:00,62,1,true
+408,8,User8,Manager,Snapchat,snapchat.com,2026-07-29,21:50:00,21:57:00,7,8,false
+409,7,User7,Designer,LeetCode,leetcode.com,2026-07-29,16:11:00,16:58:00,47,1,true
+410,1,User1,Analyst,YouTube,youtube.com,2026-07-29,21:44:00,21:58:00,14,8,false
+411,2,User2,Analyst,Google Sheets,sheets.google.com,2026-07-29,11:16:00,11:46:00,30,2,true
+412,3,User3,Analyst,TikTok,tiktok.com,2026-07-29,17:30:00,17:37:00,7,9,false
+413,7,User7,Manager,Instagram,instagram.com,2026-07-29,14:34:00,14:50:00,16,10,false
+414,1,User1,Designer,Discord (gaming),discord.com,2026-07-29,18:58:00,18:31:00,33,5,false
+415,2,User2,Student,VS Code,,2026-07-29,18:39:00,18:24:00,45,2,true
+416,1,User1,Manager,TikTok,tiktok.com,2026-07-29,20:21:00,20:30:00,9,9,false
+417,7,User7,Student,VS Code,,2026-07-29,19:33:00,19:00:00,27,1,true
+418,4,User4,Analyst,PyCharm,,2026-07-29,17:44:00,17:34:00,50,3,true
+419,3,User3,Designer,VS Code,,2026-07-29,09:07:00,09:46:00,39,2,true
+420,3,User3,Designer,Figma,figma.com,2026-07-29,16:30:00,16:05:00,35,3,true
+421,6,User6,Analyst,Notion,notion.so,2026-07-29,13:04:00,13:52:00,48,1,true
+422,5,User5,Student,Postman,,2026-07-29,09:43:00,09:55:00,12,3,true
+423,3,User3,Developer,LeetCode,leetcode.com,2026-07-29,16:27:00,16:53:00,26,1,true
+424,8,User8,Developer,Facebook,facebook.com,2026-07-29,18:42:00,18:55:00,13,5,false
+425,7,User7,Analyst,GitHub,github.com,2026-07-29,15:37:00,15:07:00,30,3,true
+426,7,User7,Analyst,VS Code,,2026-07-29,20:45:00,20:32:00,47,1,true
+427,2,User2,Manager,LeetCode,leetcode.com,2026-07-29,13:20:00,13:03:00,43,2,true
+428,4,User4,Analyst,Postman,,2026-07-29,16:40:00,16:56:00,16,4,true
+429,6,User6,Manager,LinkedIn,linkedin.com,2026-07-29,13:22:00,13:38:00,16,3,true
+430,8,User8,Manager,Google Docs,docs.google.com,2026-07-29,12:58:00,12:54:00,56,1,true
+431,2,User2,Developer,Google Docs,docs.google.com,2026-07-29,10:23:00,10:54:00,31,1,true
+432,3,User3,Manager,LinkedIn,linkedin.com,2026-07-29,14:27:00,14:41:00,14,2,true
+433,3,User3,Analyst,Coursera,coursera.org,2026-07-29,10:35:00,10:11:00,36,3,true
+434,3,User3,Analyst,LeetCode,leetcode.com,2026-07-29,15:39:00,15:04:00,25,2,true
+435,1,User1,Designer,VS Code,,2026-07-29,14:35:00,14:15:00,40,1,true
+436,8,User8,Analyst,Google Sheets,sheets.google.com,2026-07-29,15:31:00,15:01:00,30,2,true
+437,3,User3,Student,Facebook,facebook.com,2026-07-29,12:02:00,12:11:00,9,9,false
+438,5,User5,Developer,ChatGPT,chatgpt.com,2026-07-29,17:47:00,17:12:00,25,3,true
+439,8,User8,Manager,Instagram,instagram.com,2026-07-29,20:34:00,20:42:00,8,4,false
+440,6,User6,Manager,Amazon,amazon.com,2026-07-29,16:13:00,16:21:00,8,7,false
+441,7,User7,Student,VS Code,,2026-07-29,15:16:00,15:50:00,34,3,true
+442,6,User6,Student,Google Sheets,sheets.google.com,2026-07-29,20:15:00,20:54:00,39,1,true
+443,4,User4,Manager,Discord (gaming),discord.com,2026-07-29,18:27:00,18:49:00,22,6,false
+444,3,User3,Manager,ChatGPT,chatgpt.com,2026-07-29,20:03:00,20:40:00,37,3,true
+445,6,User6,Manager,PyCharm,,2026-07-29,19:18:00,19:17:00,59,1,true
+446,5,User5,Manager,PyCharm,,2026-07-29,18:52:00,19:07:00,75,2,true
+447,2,User2,Developer,Reddit,reddit.com,2026-07-29,12:55:00,12:13:00,18,11,false
+448,3,User3,Developer,VS Code,,2026-07-29,11:48:00,11:17:00,29,2,true
+449,7,User7,Analyst,Figma,figma.com,2026-07-29,14:24:00,14:06:00,42,2,true
+450,8,User8,Student,Snapchat,snapchat.com,2026-07-29,14:32:00,14:43:00,11,11,false
+451,5,User5,Designer,Slack (work),slack.com,2026-07-29,08:55:00,08:22:00,27,3,true
+452,2,User2,Analyst,Coursera,coursera.org,2026-07-29,09:50:00,09:30:00,40,2,true
+453,7,User7,Developer,LinkedIn,linkedin.com,2026-07-29,13:53:00,13:12:00,19,3,true
+454,5,User5,Designer,Netflix,netflix.com,2026-07-29,15:50:00,15:22:00,32,3,false
+455,6,User6,Student,Stack Overflow,stackoverflow.com,2026-07-29,15:01:00,15:15:00,14,4,true
+456,2,User2,Developer,Google Sheets,sheets.google.com,2026-07-29,14:12:00,14:41:00,29,3,true
+457,3,User3,Designer,Google Docs,docs.google.com,2026-07-29,09:41:00,09:39:00,58,1,true
+458,6,User6,Designer,Stack Overflow,stackoverflow.com,2026-07-29,10:03:00,10:21:00,18,4,true
+459,7,User7,Designer,Spotify,spotify.com,2026-07-29,18:05:00,18:28:00,23,2,false
+460,2,User2,Student,Google Sheets,sheets.google.com,2026-07-29,11:33:00,11:02:00,29,1,true
+461,8,User8,Student,VS Code,,2026-07-29,21:27:00,21:13:00,46,3,true
+462,3,User3,Analyst,ChatGPT,chatgpt.com,2026-07-29,20:06:00,20:29:00,23,1,true
+463,2,User2,Designer,Udemy,udemy.com,2026-07-29,20:52:00,20:44:00,52,1,true
+464,3,User3,Developer,ChatGPT,chatgpt.com,2026-07-29,18:10:00,18:41:00,31,1,true
+465,8,User8,Designer,Spotify,spotify.com,2026-07-29,14:39:00,14:54:00,15,4,false
+466,8,User8,Developer,Google Docs,docs.google.com,2026-07-29,09:37:00,09:36:00,59,1,true
+467,7,User7,Designer,Google Sheets,sheets.google.com,2026-07-29,12:41:00,12:07:00,26,1,true
+468,2,User2,Developer,Google Docs,docs.google.com,2026-07-29,12:49:00,12:38:00,49,1,true
+469,1,User1,Designer,Notion,notion.so,2026-07-29,19:25:00,19:16:00,51,1,true
+470,5,User5,Student,VS Code,,2026-07-29,15:40:00,15:20:00,40,1,true
+471,2,User2,Manager,VS Code,,2026-07-29,10:24:00,10:20:00,56,3,true
+472,7,User7,Designer,Netflix,netflix.com,2026-07-29,20:04:00,20:38:00,34,4,false
+473,1,User1,Manager,Stack Overflow,stackoverflow.com,2026-07-29,08:50:00,08:02:00,12,2,true
+474,7,User7,Manager,Figma,figma.com,2026-07-29,14:27:00,14:11:00,44,2,true
+475,7,User7,Student,Snapchat,snapchat.com,2026-07-29,12:05:00,12:14:00,9,10,false
+476,5,User5,Student,Netflix,netflix.com,2026-07-29,10:34:00,10:14:00,40,4,false
+477,6,User6,Analyst,Postman,,2026-07-29,18:41:00,18:03:00,22,4,true
+478,2,User2,Designer,Discord (gaming),discord.com,2026-07-29,11:03:00,11:27:00,24,7,false
+479,4,User4,Student,LinkedIn,linkedin.com,2026-07-29,08:19:00,08:29:00,10,3,true
+480,3,User3,Student,VS Code,,2026-07-29,10:31:00,10:18:00,47,2,true
+481,6,User6,Manager,Instagram,instagram.com,2026-07-29,10:23:00,10:38:00,15,9,false
+482,3,User3,Designer,Spotify,spotify.com,2026-07-29,08:21:00,08:47:00,26,4,false
+483,7,User7,Designer,Instagram,instagram.com,2026-07-29,17:40:00,17:48:00,8,8,false
+484,2,User2,Analyst,Slack (work),slack.com,2026-07-29,21:36:00,21:56:00,20,2,true
+485,3,User3,Designer,Google Docs,docs.google.com,2026-07-29,17:43:00,17:19:00,36,1,true
+486,2,User2,Developer,Netflix,netflix.com,2026-07-29,21:00:00,21:30:00,30,2,false
+487,4,User4,Student,YouTube,youtube.com,2026-07-29,10:59:00,10:15:00,16,9,false
+488,1,User1,Manager,Snapchat,snapchat.com,2026-07-29,14:14:00,14:26:00,12,11,false
+489,6,User6,Developer,Udemy,udemy.com,2026-07-29,21:04:00,21:57:00,53,2,true
+490,6,User6,Student,Netflix,netflix.com,2026-07-29,11:51:00,11:25:00,34,2,false
+491,1,User1,Analyst,ChatGPT,chatgpt.com,2026-07-29,20:54:00,20:33:00,39,3,true
+492,5,User5,Designer,Stack Overflow,stackoverflow.com,2026-07-29,11:18:00,11:39:00,21,2,true
+493,5,User5,Manager,Postman,,2026-07-29,15:49:00,15:08:00,19,3,true
+494,4,User4,Manager,Amazon,amazon.com,2026-07-29,14:01:00,14:16:00,15,4,false
+495,4,User4,Manager,Udemy,udemy.com,2026-07-29,08:21:00,08:05:00,44,2,true
+496,1,User1,Analyst,Amazon,amazon.com,2026-07-29,11:33:00,11:47:00,14,5,false
+497,4,User4,Analyst,GitHub,github.com,2026-07-29,10:45:00,10:19:00,34,3,true
+498,5,User5,Student,Stack Overflow,stackoverflow.com,2026-07-29,16:26:00,16:53:00,27,4,true
+499,6,User6,Analyst,Netflix,netflix.com,2026-07-29,10:40:00,10:00:00,20,2,false
+500,7,User7,Student,Discord (gaming),discord.com,2026-07-29,10:15:00,10:41:00,26,5,false

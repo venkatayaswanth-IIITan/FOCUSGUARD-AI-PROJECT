@@ -217,9 +217,18 @@ function LandingPage() {
           </div>
 
           <div className="ln-nav-right">
-            <button className="ln-btn-ghost" onClick={() => navigate("/login")}>Login</button>
-            <button className="ln-btn-primary" onClick={() => navigate("/register")}>
-              Get Started <span className="ln-arrow">→</span>
+            <button className="ln-btn-ghost" onClick={() => navigate("/login")}>Sign In</button>
+            <button
+              className="ln-btn-primary"
+              onClick={() => navigate("/register")}
+              style={{
+                background: "linear-gradient(135deg, #10b981, #06d6a0)",
+                color: "#052e16",
+                fontWeight: 700,
+                boxShadow: "0 0 16px rgba(16,185,129,0.4)",
+              }}
+            >
+              Sign Up <span className="ln-arrow">&rarr;</span>
             </button>
           </div>
 
@@ -250,8 +259,16 @@ function LandingPage() {
             </p>
 
             <div className="hero-actions">
-              <button className="btn-primary lg" onClick={() => navigate("/register")}>
-                Start Focusing <span className="btn-icon">→</span>
+              <button
+                className="btn-primary lg"
+                onClick={() => navigate("/register")}
+                style={{
+                  background: "linear-gradient(135deg, #10b981, #059669)",
+                  boxShadow: "0 4px 20px rgba(16,185,129,0.4)",
+                  color: "#fff",
+                }}
+              >
+                Sign Up <span className="btn-icon">&rarr;</span>
               </button>
               <button className="btn-secondary lg" onClick={() => scrollTo("pipeline")}>
                 <span className="play-circle">▶</span> Explore How It Works
@@ -782,8 +799,16 @@ function LandingPage() {
             </h2>
             <p className="cta-desc">Understand your digital behavior, reduce distractions and build healthier focus habits with FocusGuard AI.</p>
             <div className="cta-actions">
-              <button className="btn-primary lg" onClick={() => navigate("/register")}>
-                Start Your Focus Journey <span className="btn-icon">→</span>
+              <button
+                className="btn-primary lg"
+                onClick={() => navigate("/register")}
+                style={{
+                  background: "linear-gradient(135deg, #10b981, #059669)",
+                  boxShadow: "0 4px 20px rgba(16,185,129,0.4)",
+                  color: "#fff",
+                }}
+              >
+                Sign Up <span className="btn-icon">&rarr;</span>
               </button>
               <button className="btn-secondary lg" onClick={() => scrollTo("features")}>
                 Explore FocusGuard AI

@@ -3,12 +3,28 @@ const http = require("http");
 const { Server } = require("socket.io");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
-require("dotenv").config({ path: "../.env" });
+const path = require("path");
+const fs = require("fs");
+
+const possibleEnvPaths = [
+  path.resolve(__dirname, "../.env"),
+  path.resolve(__dirname, ".env"),
+  path.resolve(process.cwd(), ".env"),
+  path.resolve(process.cwd(), "../.env")
+];
+
+for (const envPath of possibleEnvPaths) {
+  if (fs.existsSync(envPath)) {
+    require("dotenv").config({ path: envPath });
+    break;
+  }
+}
 
 const pool = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const activityRoutes = require("./routes/activityRoutes");
+const goalRoutes = require("./routes/goalRoutes");
 const {
   recordActivitySwitch,
   recordIdleEvent,
@@ -18,14 +34,40 @@ const {
 const app = express();
 const server = http.createServer(app);
 
+const ALLOWED_ORIGINS = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "http://localhost:5175",
+  "http://localhost:3000",
+  "http://127.0.0.1:5173",
+  "http://127.0.0.1:5174",
+  "http://127.0.0.1:3000",
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow requests with no origin (e.g. mobile apps, curl, Postman)
+    if (!origin) return callback(null, true);
+    if (ALLOWED_ORIGINS.includes(origin)) {
+      return callback(null, true);
+    }
+    console.warn(`⚠️  CORS blocked origin: ${origin}`);
+    return callback(new Error(`CORS policy: origin ${origin} not allowed`));
+  },
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: ALLOWED_ORIGINS,
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Routes
@@ -33,10 +75,43 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/activity", activityRoutes);
 app.use("/api/monitoring", activityRoutes); // Alias for prompt spec compliance
+app.use("/api/goals", goalRoutes);
 
-app.get("/", (req, res) => {
-  res.json({ message: "FocusGuard AI API & Socket Server Running 🚀" });
+app.get("/api/health", async (req, res) => {
+  try {
+    const result = await pool.query("SELECT NOW()");
+    res.json({
+      status: "ok",
+      database: "connected",
+      timestamp: result.rows[0].now,
+      db_name: process.env.DB_NAME || "focusguard_db",
+      db_host: process.env.DB_HOST || "localhost"
+    });
+  } catch (error) {
+    res.status(500).json({
+      status: "error",
+      database: "disconnected",
+      message: "Unable to connect to PostgreSQL server",
+      error: error.message
+    });
+  }
 });
+
+// Serve static React build in production if frontend/dist exists
+const frontendDistPath = path.resolve(__dirname, "../frontend/dist");
+if (fs.existsSync(frontendDistPath)) {
+  app.use(express.static(frontendDistPath));
+  app.use((req, res, next) => {
+    if (req.path.startsWith("/api") || req.path.startsWith("/socket.io")) {
+      return next();
+    }
+    res.sendFile(path.join(frontendDistPath, "index.html"));
+  });
+} else {
+  app.get("/", (req, res) => {
+    res.json({ message: "FocusGuard AI API & Socket Server Running 🚀" });
+  });
+}
 
 // Socket.IO Authentication Middleware
 io.use((socket, next) => {
@@ -101,7 +176,7 @@ io.on("connection", (socket) => {
       lastAgentPing = Date.now();
       isAgentConnected = true;
 
-      const { app_name, process_name, window_title, start_time } = data;
+      const { app_name, process_name, window_title, start_time, productivity } = data;
 
       for (const [userId, userSession] of activeUserSessions.entries()) {
         if (!userSession.sessionId) continue;
@@ -111,6 +186,8 @@ io.on("connection", (socket) => {
           app_name,
           window_title: window_title || null,
           start_time: start_time || new Date().toISOString(),
+          // ML productivity prediction from Python agent
+          productivity: productivity || null,
         };
 
         const liveStats = await calculateLiveSessionStats(
@@ -135,7 +212,20 @@ io.on("connection", (socket) => {
       for (const [userId, userSession] of activeUserSessions.entries()) {
         if (!userSession.sessionId) continue;
 
+        // Write the completed app session to DB
         await recordActivitySwitch(userId, userSession.sessionId, data);
+
+        // Immediately update userSession to the new app so next stats pull is correct
+        const newApp = data.to_app;
+        if (newApp) {
+          userSession.currentApp = {
+            app_name: newApp,
+            process_name: null,
+            window_title: null,
+            start_time: data.end_time || new Date().toISOString(),
+            productivity: null, // will be filled by next activity_update
+          };
+        }
 
         const liveStats = await calculateLiveSessionStats(
           userId,
@@ -146,10 +236,13 @@ io.on("connection", (socket) => {
         io.to(`user_${userId}`).emit("activity:changed", {
           previousApp: data.from_app,
           currentApp: data.to_app,
+          // currentAppData gives frontend the full object to display immediately
+          currentAppData: userSession.currentApp,
           durationSeconds: data.duration_seconds,
           stats: liveStats,
         });
       }
+
     });
 
     // Handle idle start from Python Agent
@@ -295,4 +388,6 @@ const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, () => {
   console.log(`🚀 FocusGuard API & Socket.IO running on http://localhost:${PORT}`);
+  console.log(`🔑 GROQ_API_KEY:          ${process.env.GROQ_API_KEY          ? "✅ Loaded (" + process.env.GROQ_API_KEY.slice(0,8) + "...)" : "❌ MISSING"}`);
+  console.log(`🔑 GROQ_API_KEY_FALLBACK: ${process.env.GROQ_API_KEY_FALLBACK ? "✅ Loaded (" + process.env.GROQ_API_KEY_FALLBACK.slice(0,8) + "...)" : "❌ MISSING"}`);
 });

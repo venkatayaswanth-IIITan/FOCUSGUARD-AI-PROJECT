@@ -39,7 +39,7 @@ function AttentionInsights({ insights }) {
           </div>
           <div>
             <span className="eyebrow">BEHAVIORAL INTELLIGENCE</span>
-            <h3>Attention & Interruption Insights</h3>
+            <h3>Attention &amp; Interruption Insights</h3>
           </div>
         </div>
         <div className="insightsBadges">

@@ -1,0 +1,13 @@
+id,user_id,user_name,user_type,app_website,url,activity_date,opened_time,closed_time,duration_minutes,switch_tabs,productive
+1,1,Yaswanth,Student,VS Code,,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),10:00:00,10:40:00,40,2,true
+2,1,Yaswanth,Student,YouTube,youtube.com,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),10:40:00,11:00:00,20,5,false
+3,1,Yaswanth,Student,LeetCode,leetcode.com,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),11:00:00,11:45:00,45,3,true
+4,1,Yaswanth,Student,Instagram,instagram.com,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),11:45:00,12:00:00,15,6,false
+5,2,Rahul,Developer,VS Code,,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),10:00:00,10:50:00,50,3,true
+6,2,Rahul,Developer,Stack Overflow,stackoverflow.com,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),10:50:00,11:20:00,30,4,true
+7,2,Rahul,Developer,Instagram,instagram.com,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),11:20:00,11:40:00,20,7,false
+8,2,Rahul,Developer,GitHub,github.com,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),11:40:00,12:30:00,50,3,true
+9,3,Hema,Student,ChatGPT,chatgpt.com,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),10:00:00,10:35:00,35,3,true
+10,3,Hema,Student,YouTube,youtube.com,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),10:35:00,11:00:00,25,5,false
+11,3,Hema,Student,Google Docs,docs.google.com,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),11:00:00,11:45:00,45,2,true
+12,3,Hema,Student,Netflix,netflix.com,Wed Jul 29 2026 00:00:00 GMT+0530 (India Standard Time),11:45:00,12:15:00,30,4,false

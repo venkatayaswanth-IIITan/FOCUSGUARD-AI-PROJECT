@@ -43,4 +43,7 @@ APP_NAME_MAP = {
     "vlc.exe": "VLC Media Player",
     "taskmgr.exe": "Task Manager",
     "applicationframehost.exe": "Windows App Host",
+    "pgadmin4.exe": "pgAdmin 4",
+    "pgadmin.exe": "pgAdmin 4",
+    "nw.exe": "pgAdmin 4",
 }

@@ -1290,3 +1290,232 @@ button { font-family: 'Inter', sans-serif; cursor: pointer; }
 }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   REPORTS VIEW
+═══════════════════════════════════════════════════════════════════════ */
+.reportsViewContainer { display: flex; flex-direction: column; gap: 20px; }
+
+.reportsHeaderPanel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.reportsHeaderPanel h2 { margin: 4px 0 6px; font-size: 1.45rem; }
+.reportsHeaderPanel p { color: var(--text-secondary, rgba(255,255,255,0.55)); font-size: 0.875rem; margin: 0; }
+
+.reportsHeaderActions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.reportsSection { display: flex; flex-direction: column; gap: 16px; }
+
+/* PERIOD TOGGLE */
+.periodToggle {
+  display: flex;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.periodBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary, rgba(255,255,255,0.5));
+  padding: 7px 14px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s;
+}
+.periodBtn:hover { background: rgba(255,255,255,0.06); color: #fff; }
+.periodBtnActive {
+  background: rgba(139,92,246,0.25);
+  color: #a78bfa;
+  font-weight: 600;
+}
+
+/* DUAL GRID for focus + switch panels */
+.reportsDualGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  flex-direction: unset;
+}
+@media (max-width: 900px) {
+  .reportsDualGrid { grid-template-columns: 1fr; }
+}
+
+/* FORMULA TAG */
+.formulaTag {
+  display: inline-block;
+  background: rgba(139,92,246,0.12);
+  border: 1px solid rgba(139,92,246,0.25);
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin: 6px 0 14px;
+}
+.formulaTag code { font-size: 0.78rem; color: #c4b5fd; }
+
+/* ═══ FOCUS SCORE PANEL ══════════════════════════════════════════════════ */
+.focusScorePanel { display: flex; flex-direction: column; gap: 0; }
+
+.focusScoreBody {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 8px 0 16px;
+  flex-wrap: wrap;
+}
+.focusGaugeWrapper { flex-shrink: 0; }
+
+.focusSummaryStats { display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 180px; }
+.focusStat { display: flex; flex-direction: column; gap: 2px; }
+.focusStatLabel { font-size: 0.72rem; color: var(--text-secondary, rgba(255,255,255,0.5)); text-transform: uppercase; letter-spacing: 0.05em; }
+.focusStatVal { font-size: 1rem; font-weight: 600; color: #fff; }
+
+/* Bucket bar chart */
+.focusBuckets { margin-top: 8px; }
+.focusBucketsTitle { font-size: 0.78rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.05em; margin: 0 0 10px; }
+.focusBucketGrid {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 80px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.focusBucket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  min-width: 30px;
+  height: 100%;
+  cursor: default;
+}
+.bucketBar {
+  width: 20px;
+  border-radius: 3px 3px 0 0;
+  transition: height 0.4s ease;
+  min-height: 4px;
+}
+.bucketLabel { font-size: 0.62rem; color: rgba(255,255,255,0.4); white-space: nowrap; }
+
+/* ═══ SWITCH MATRIX PANEL ════════════════════════════════════════════════ */
+.switchMatrixPanel { display: flex; flex-direction: column; gap: 0; }
+
+.switchSummaryRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 10px 0 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  margin-bottom: 14px;
+}
+.switchStat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+}
+.switchStat strong { color: #fff; }
+
+.switchMatrixBody {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 700px) {
+  .switchMatrixBody { grid-template-columns: 1fr; }
+}
+
+.switchColumn { display: flex; flex-direction: column; gap: 6px; }
+.switchColTitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.74rem;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 6px;
+}
+
+/* Pair rows */
+.switchPairRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: background 0.15s;
+}
+.switchPairRow:hover { background: rgba(255,255,255,0.06); }
+.pairNum { font-size: 0.7rem; color: rgba(255,255,255,0.3); font-weight: 600; min-width: 22px; }
+.pairLabel { font-size: 0.78rem; color: rgba(255,255,255,0.8); flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pairCount { font-size: 0.75rem; font-weight: 600; color: #a78bfa; white-space: nowrap; }
+
+/* Frequency bar rows */
+.switchFreqRow {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 0;
+}
+.freqApp { font-size: 0.75rem; color: rgba(255,255,255,0.75); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.freqBar { width: 50px; height: 5px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+.freqFill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+.freqFrom { background: linear-gradient(90deg, #f59e0b, #ef4444); }
+.freqTo { background: linear-gradient(90deg, #22c55e, #06b6d4); }
+.freqCount { font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.5); min-width: 20px; text-align: right; }
+
+/* ═══ ICON UTILITIES ══════════════════════════════════════════════════════ */
+.iconAmber { color: #f59e0b; }
+.iconBlue  { color: #60a5fa; }
+.iconGreen { color: #22c55e; }
+.iconRed   { color: #ef4444; }
+.iconMuted { color: rgba(255,255,255,0.3); }
+
+/* SPIN ANIMATION for loading states */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinIcon { animation: spin 1.2s linear infinite; }
+
+/* ALERT BANNERS */
+.alertSuccessBanner {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.25);
+  color: #86efac;
+  font-size: 0.875rem;
+  animation: fadeIn 0.3s ease;
+}
+
+/* SECONDARY BUTTON */
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.75);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.btnSecondary:hover { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.25); }
+
