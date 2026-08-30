@@ -17,11 +17,11 @@ for (const envPath of possibleEnvPaths) {
 }
 
 const dbConfig = {
-  user: process.env.DB_USER || "postgres",
+  user: process.env.DB_USER || process.env.POSTGRES_USER || "postgres",
   host: process.env.DB_HOST || "localhost",
-  database: process.env.DB_NAME || "focusguard_db",
-  password: process.env.DB_PASSWORD,
-  port: parseInt(process.env.DB_PORT || "5432", 10),
+  database: process.env.DB_NAME || process.env.POSTGRES_DB || "focusguard_db",
+  password: process.env.DB_PASSWORD || process.env.POSTGRES_PASSWORD,
+  port: parseInt(process.env.DB_PORT || process.env.POSTGRES_PORT || "5432", 10),
 };
 
 const pool = new Pool(dbConfig);

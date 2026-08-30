@@ -14,8 +14,9 @@ import {
   RefreshCw,
 } from "lucide-react";
 import SessionAnalytics from "./SessionAnalytics";
+import { API_MONITORING } from "../services/api";
 
-const API = "http://localhost:5000/api/monitoring";
+const API = API_MONITORING;
 
 function formatDuration(seconds) {
   const secs = Number(seconds || 0);

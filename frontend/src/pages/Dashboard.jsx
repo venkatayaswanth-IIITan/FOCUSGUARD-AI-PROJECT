@@ -13,11 +13,11 @@ import AnalyticsView from "../components/AnalyticsView";
 import AIInsightsView from "../components/AIInsightsView";
 import SettingsView from "../components/SettingsView";
 import PersonalFocusBot from "../components/PersonalFocusBot";
+import { API_MONITORING } from "../services/api";
 
 import "./dashboard.css";
 
-
-const API = "http://localhost:5000/api/monitoring";
+const API = API_MONITORING;
 
 function Dashboard() {
   const [activeTab, setActiveTab] = useState("dashboard");

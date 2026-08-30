@@ -17,8 +17,9 @@ import {
 } from "lucide-react";
 import AttentionInsights from "./AttentionInsights";
 import MLMetricsCard from "./MLMetricsCard";
+import { API_MONITORING } from "../services/api";
 
-const API = "http://localhost:5000/api/monitoring";
+const API = API_MONITORING;
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 function formatMins(mins = 0) {

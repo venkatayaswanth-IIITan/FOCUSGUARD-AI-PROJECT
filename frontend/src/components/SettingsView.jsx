@@ -12,6 +12,7 @@ import {
   Check,
   Database
 } from "lucide-react";
+import { API_USERS } from "../services/api";
 
 
 const THEME_PRESETS = [
@@ -60,7 +61,7 @@ function SettingsView() {
     async function loadUserProfile() {
       const token = localStorage.getItem("token");
       try {
-        const res = await fetch("http://localhost:5000/api/users/profile", {
+        const res = await fetch(`${API_USERS}/profile`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {
@@ -147,7 +148,7 @@ function SettingsView() {
 
     // 2. Automatically update PostgreSQL database via API
     try {
-      const res = await fetch("http://localhost:5000/api/users/profile", {
+      const res = await fetch(`${API_USERS}/profile`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -22,7 +22,9 @@ import {
   Eye,
 } from "lucide-react";
 
-const API = "http://localhost:5000/api/monitoring";
+import { API_MONITORING } from "../services/api";
+
+const API = API_MONITORING;
 
 /* ─── Animated Donut Chart (SVG, no library) ─── */
 function DonutChart({ productive = 72, distraction = 28 }) {

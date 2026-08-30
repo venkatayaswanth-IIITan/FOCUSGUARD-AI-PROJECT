@@ -1,0 +1,72 @@
+name: focusguard-ai-dev
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: focusguard-postgres-dev
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres_password_2026}
+      POSTGRES_DB: ${POSTGRES_DB:-focusguard_db}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_dev_data:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    networks:
+      - focusguard-dev-network
+
+  backend:
+    image: node:20-alpine
+    container_name: focusguard-backend-dev
+    working_dir: /app
+    restart: unless-stopped
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    ports:
+      - "5000:5000"
+    environment:
+      NODE_ENV: development
+      PORT: 5000
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: ${POSTGRES_USER:-postgres}
+      DB_PASSWORD: ${POSTGRES_PASSWORD:-postgres_password_2026}
+      DB_NAME: ${POSTGRES_DB:-focusguard_db}
+      JWT_SECRET: ${JWT_SECRET:-focusguard_secret_key_dev}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      GROQ_API_KEY_FALLBACK: ${GROQ_API_KEY_FALLBACK:-}
+    command: sh -c "npm install && npm run dev"
+    depends_on:
+      - postgres
+    networks:
+      - focusguard-dev-network
+
+  frontend:
+    image: node:20-alpine
+    container_name: focusguard-frontend-dev
+    working_dir: /app
+    restart: unless-stopped
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:5000
+      - VITE_SOCKET_URL=http://localhost:5000
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0"
+    depends_on:
+      - backend
+    networks:
+      - focusguard-dev-network
+
+volumes:
+  postgres_dev_data:
+    driver: local
+
+networks:
+  focusguard-dev-network:
+    driver: bridge

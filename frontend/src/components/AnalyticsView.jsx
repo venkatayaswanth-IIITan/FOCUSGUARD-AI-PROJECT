@@ -5,7 +5,9 @@ import {
   Clock, ArrowUpRight, ArrowDownRight, Cpu, Shield,
 } from "lucide-react";
 
-const API = "http://localhost:5000/api/monitoring";
+import { API_MONITORING } from "../services/api";
+
+const API = API_MONITORING;
 
 /* ── helpers ── */
 function fmtMins(m = 0) {

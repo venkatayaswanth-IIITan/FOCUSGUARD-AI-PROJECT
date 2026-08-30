@@ -5,8 +5,9 @@ import {
   Plus, Timer, Brain, Star, Layers, ArrowRight, Activity,
 } from "lucide-react";
 import SessionAnalytics from "./SessionAnalytics";
+import { API_MONITORING } from "../services/api";
 
-const API = "http://localhost:5000/api/monitoring";
+const API = API_MONITORING;
 
 function fmt(s) {
   const secs = Number(s || 0), h = Math.floor(secs / 3600), m = Math.floor((secs % 3600) / 60);

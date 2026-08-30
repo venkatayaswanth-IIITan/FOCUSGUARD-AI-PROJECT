@@ -19,7 +19,9 @@ import {
   Sparkles,
 } from "lucide-react";
 
-const API_CHAT = "http://localhost:5000/api/monitoring/chat";
+import { API_MONITORING } from "../services/api";
+
+const API_CHAT = `${API_MONITORING}/chat`;
 
 // ── Actionable Insights (Clean & Direct) ──────────────────────────────────────
 const CORE_INSIGHTS = [

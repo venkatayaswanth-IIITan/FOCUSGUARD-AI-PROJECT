@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { Play, Square, AlertCircle, Radio, Clock, Monitor, Brain, TrendingUp, TrendingDown } from "lucide-react";
+import { API_MONITORING, getSocketUrl } from "../services/api";
 
 function formatTimer(seconds) {
   const secs = Number(seconds || 0);
@@ -61,7 +62,7 @@ function LiveActivity({
   // Initialize Socket.IO connection
   useEffect(() => {
     const token = localStorage.getItem("token");
-    const socketInstance = io("http://localhost:5000", {
+    const socketInstance = io(getSocketUrl(), {
       auth: { token },
       reconnection: true,
       reconnectionDelay: 2000,
@@ -230,7 +231,7 @@ function LiveActivity({
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/monitoring/start", {
+      const res = await fetch(`${API_MONITORING}/start`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -259,7 +260,7 @@ function LiveActivity({
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/monitoring/stop", {
+      const res = await fetch(`${API_MONITORING}/stop`, {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

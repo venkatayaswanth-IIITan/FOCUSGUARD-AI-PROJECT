@@ -18,7 +18,9 @@ import {
   BarChart2,
 } from "lucide-react";
 
-const API = "http://localhost:5000/api/monitoring";
+import { API_MONITORING } from "../services/api";
+
+const API = API_MONITORING;
 
 const APP_COLOR_MAP = {
   "Google Chrome": { bg: "#4285f4", text: "#fff" },

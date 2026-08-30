@@ -5,6 +5,7 @@ import {
   Clock, Zap, Activity, BarChart2, Cpu, Wifi, WifiOff, Circle,
   ArrowRightLeft, Eye, Shield, Target, Layers,
 } from "lucide-react";
+import { API_MONITORING, getSocketUrl } from "../services/api";
 
 /* ── helpers ── */
 function fmt(s) {
@@ -84,7 +85,7 @@ function ActivityView({ activeSession, onSessionStart, onSessionStop, onStatsUpd
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    const s = io("http://localhost:5000", { auth: { token }, reconnection: true, reconnectionDelay: 2000 });
+    const s = io(getSocketUrl(), { auth: { token }, reconnection: true, reconnectionDelay: 2000 });
     setSocket(s);
     s.on("connect", () => s.emit("client:sync"));
     s.on("agent:status", (d) => { const c = Boolean(d?.connected); setIsAgentConnected(c); if (onAgentStatusChange) onAgentStatusChange(c); });
@@ -122,7 +123,7 @@ function ActivityView({ activeSession, onSessionStart, onSessionStop, onStatsUpd
   const handleStart = async () => {
     const token = localStorage.getItem("token"); setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/monitoring/start", {
+      const res = await fetch(`${API_MONITORING}/start`, {
         method: "POST", headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" }
       });
       if (res.ok) { const d = await res.json(); setIsMonitoring(true); if (socket) socket.emit("client:start_monitoring", d.session); if (onSessionStart) onSessionStart(d.session); }
@@ -132,7 +133,7 @@ function ActivityView({ activeSession, onSessionStart, onSessionStop, onStatsUpd
   const handleStop = async () => {
     const token = localStorage.getItem("token"); setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/monitoring/stop", {
+      const res = await fetch(`${API_MONITORING}/stop`, {
         method: "POST", headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
         body: JSON.stringify({ currentApp })
       });

@@ -24,7 +24,9 @@ import {
   HelpCircle,
 } from "lucide-react";
 
-const GOALS_API = "http://localhost:5000/api/goals";
+import { API_GOALS } from "../services/api";
+
+const GOALS_API = API_GOALS;
 
 // Default preset goals for instant creation
 const PRESET_GOALS = [

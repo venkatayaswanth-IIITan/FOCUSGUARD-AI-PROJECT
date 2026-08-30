@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Brain, CheckCircle, BarChart3, ShieldCheck, Cpu } from "lucide-react";
+import { API_MONITORING } from "../services/api";
 
 function MLMetricsCard() {
   const [metrics, setMetrics] = useState(null);
@@ -8,7 +9,7 @@ function MLMetricsCard() {
   useEffect(() => {
     async function fetchMetrics() {
       try {
-        const res = await fetch("http://localhost:5000/api/monitoring/ml-metrics");
+        const res = await fetch(`${API_MONITORING}/ml-metrics`);
         if (res.ok) {
           const data = await res.json();
           setMetrics(data);
