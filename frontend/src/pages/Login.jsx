@@ -8,6 +8,7 @@ function Login() {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
+    name: "",
     email: "",
     password: "",
   });
@@ -55,19 +56,22 @@ function Login() {
         if (data.user) {
           localStorage.setItem("user", JSON.stringify(data.user));
           if (data.user.username) localStorage.setItem("username", data.user.username);
+          if (data.user.full_name) localStorage.setItem("full_name", data.user.full_name);
         }
 
+        const greetingName = data.user?.full_name || form.name.trim() || data.user?.username || "User";
+
         setNotification({
-          message: "Login successful! Welcome back.",
+          message: `Login successful! Welcome back, ${greetingName}.`,
           type: "success",
         });
 
         setTimeout(() => {
           navigate("/dashboard");
-        }, 1500);
+        }, 1200);
       } else {
         setNotification({
-          message: data.message || "Invalid email or password",
+          message: data.message || "Invalid email, username, or password",
           type: "error",
         });
       }
@@ -117,15 +121,34 @@ function Login() {
         <form onSubmit={handleLogin}>
 
           <div className="input-group">
-            <label>Email Address</label>
+            <label>
+              Your Name <span style={{ opacity: 0.6, fontSize: "0.78rem", fontWeight: 400 }}>(Optional - for greeting)</span>
+            </label>
+
+            <div className="input-container">
+              <span className="input-icon">👤</span>
+
+              <input
+                name="name"
+                type="text"
+                placeholder="e.g. Yashwanth"
+                value={form.name}
+                onChange={handleChange}
+                autoComplete="name"
+              />
+            </div>
+          </div>
+
+          <div className="input-group">
+            <label>Email Address or Username</label>
 
             <div className="input-container">
               <span className="input-icon">✉</span>
 
               <input
                 name="email"
-                type="email"
-                placeholder="you@example.com"
+                type="text"
+                placeholder="you@example.com or username"
                 value={form.email}
                 onChange={handleChange}
                 required

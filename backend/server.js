@@ -47,6 +47,7 @@ const ALLOWED_ORIGINS = [
   "http://127.0.0.1:3000",
   "http://127.0.0.1:80",
   "http://127.0.0.1",
+  "https://focusguard-ai-project-np8q.vercel.app",
   ...customOrigins
 ];
 
@@ -54,7 +55,12 @@ const corsOptions = {
   origin: function (origin, callback) {
     // Allow requests with no origin (e.g. mobile apps, curl, Postman, internal Docker)
     if (!origin) return callback(null, true);
-    if (ALLOWED_ORIGINS.includes(origin) || ALLOWED_ORIGINS.includes("*") || process.env.NODE_ENV !== "production") {
+    if (
+      ALLOWED_ORIGINS.includes(origin) ||
+      ALLOWED_ORIGINS.includes("*") ||
+      origin.endsWith(".vercel.app") ||
+      process.env.NODE_ENV !== "production"
+    ) {
       return callback(null, true);
     }
     console.warn(`⚠️  CORS blocked origin: ${origin}`);

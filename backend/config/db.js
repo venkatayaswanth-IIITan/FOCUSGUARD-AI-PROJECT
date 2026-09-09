@@ -16,22 +16,41 @@ for (const envPath of possibleEnvPaths) {
   }
 }
 
-const dbConfig = {
-  user: process.env.DB_USER || process.env.POSTGRES_USER || "postgres",
-  host: process.env.DB_HOST || "localhost",
-  database: process.env.DB_NAME || process.env.POSTGRES_DB || "focusguard_db",
-  password: process.env.DB_PASSWORD || process.env.POSTGRES_PASSWORD,
-  port: parseInt(process.env.DB_PORT || process.env.POSTGRES_PORT || "5432", 10),
-};
+let poolConfig = {};
 
-const pool = new Pool(dbConfig);
+const connectionString =
+  process.env.DATABASE_URL ||
+  process.env.POSTGRES_URL ||
+  process.env.DATABASE_URI ||
+  process.env.POSTGRES_CONNECTION_STRING;
+
+if (connectionString) {
+  const isLocal = connectionString.includes("localhost") || connectionString.includes("127.0.0.1");
+  poolConfig = {
+    connectionString,
+    ssl: process.env.DB_SSL === "false" || isLocal ? false : { rejectUnauthorized: false },
+  };
+} else {
+  const host = process.env.DB_HOST || process.env.POSTGRES_HOST || "localhost";
+  const isRemote = host !== "localhost" && host !== "127.0.0.1" && host !== "postgres";
+  poolConfig = {
+    user: process.env.DB_USER || process.env.POSTGRES_USER || "postgres",
+    host: host,
+    database: process.env.DB_NAME || process.env.POSTGRES_DB || "focusguard_db",
+    password: process.env.DB_PASSWORD || process.env.POSTGRES_PASSWORD || "",
+    port: parseInt(process.env.DB_PORT || process.env.POSTGRES_PORT || "5432", 10),
+    ssl: process.env.DB_SSL === "true" || (isRemote && process.env.DB_SSL !== "false") ? { rejectUnauthorized: false } : false,
+  };
+}
+
+const pool = new Pool(poolConfig);
 
 pool.on("error", (err) => {
   console.error("❌ Unexpected database pool error:", err.message);
 });
 
 pool.on("connect", () => {
-  console.log("PostgreSQL client connected successfully");
+  console.log("✅ PostgreSQL client connected successfully");
 });
 
 const initTables = async () => {
@@ -177,20 +196,20 @@ const initTables = async () => {
       CREATE INDEX IF NOT EXISTS idx_daily_user_date ON daily_reports(user_id, report_date);
 
       -- Reset sequence counters to prevent duplicate key violations on registration & inserts
-      SELECT setval(pg_get_serial_sequence('users', 'id'), COALESCE((SELECT MAX(id) FROM users), 1));
-      SELECT setval(pg_get_serial_sequence('monitoring_sessions', 'id'), COALESCE((SELECT MAX(id) FROM monitoring_sessions), 1));
-      SELECT setval(pg_get_serial_sequence('activity_logs', 'id'), COALESCE((SELECT MAX(id) FROM activity_logs), 1));
-      SELECT setval(pg_get_serial_sequence('task_switches', 'id'), COALESCE((SELECT MAX(id) FROM task_switches), 1));
-      SELECT setval(pg_get_serial_sequence('idle_events', 'id'), COALESCE((SELECT MAX(id) FROM idle_events), 1));
-      SELECT setval(pg_get_serial_sequence('user_goals', 'id'), COALESCE((SELECT MAX(id) FROM user_goals), 1));
-      SELECT setval(pg_get_serial_sequence('distraction_events', 'id'), COALESCE((SELECT MAX(id) FROM distraction_events), 1));
-      SELECT setval(pg_get_serial_sequence('daily_reports', 'id'), COALESCE((SELECT MAX(id) FROM daily_reports), 1));
-      SELECT setval(pg_get_serial_sequence('focus_sessions', 'id'), COALESCE((SELECT MAX(id) FROM focus_sessions), 1));
-      SELECT setval(pg_get_serial_sequence('recommendations', 'id'), COALESCE((SELECT MAX(id) FROM recommendations), 1));
+      SELECT setval(pg_get_serial_sequence('users', 'id'), COALESCE((SELECT MAX(id) FROM users), 1), (SELECT MAX(id) IS NOT NULL FROM users));
+      SELECT setval(pg_get_serial_sequence('monitoring_sessions', 'id'), COALESCE((SELECT MAX(id) FROM monitoring_sessions), 1), (SELECT MAX(id) IS NOT NULL FROM monitoring_sessions));
+      SELECT setval(pg_get_serial_sequence('activity_logs', 'id'), COALESCE((SELECT MAX(id) FROM activity_logs), 1), (SELECT MAX(id) IS NOT NULL FROM activity_logs));
+      SELECT setval(pg_get_serial_sequence('task_switches', 'id'), COALESCE((SELECT MAX(id) FROM task_switches), 1), (SELECT MAX(id) IS NOT NULL FROM task_switches));
+      SELECT setval(pg_get_serial_sequence('idle_events', 'id'), COALESCE((SELECT MAX(id) FROM idle_events), 1), (SELECT MAX(id) IS NOT NULL FROM idle_events));
+      SELECT setval(pg_get_serial_sequence('user_goals', 'id'), COALESCE((SELECT MAX(id) FROM user_goals), 1), (SELECT MAX(id) IS NOT NULL FROM user_goals));
+      SELECT setval(pg_get_serial_sequence('distraction_events', 'id'), COALESCE((SELECT MAX(id) FROM distraction_events), 1), (SELECT MAX(id) IS NOT NULL FROM distraction_events));
+      SELECT setval(pg_get_serial_sequence('daily_reports', 'id'), COALESCE((SELECT MAX(id) FROM daily_reports), 1), (SELECT MAX(id) IS NOT NULL FROM daily_reports));
+      SELECT setval(pg_get_serial_sequence('focus_sessions', 'id'), COALESCE((SELECT MAX(id) FROM focus_sessions), 1), (SELECT MAX(id) IS NOT NULL FROM focus_sessions));
+      SELECT setval(pg_get_serial_sequence('recommendations', 'id'), COALESCE((SELECT MAX(id) FROM recommendations), 1), (SELECT MAX(id) IS NOT NULL FROM recommendations));
     `);
     console.log("✅ PostgreSQL schema initialized and sequence counters synchronized.");
   } catch (error) {
-    console.error("Error creating database tables:", error.message);
+    console.error("❌ Error creating database tables:", error.message);
   }
 };
 

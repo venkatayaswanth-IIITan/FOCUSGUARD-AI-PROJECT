@@ -8,6 +8,7 @@ function Register() {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
+    full_name: "",
     username: "",
     email: "",
     password: "",
@@ -110,6 +111,23 @@ function Register() {
         />
 
         <form onSubmit={handleRegister}>
+
+          <div className="input-group">
+            <label>Full Name</label>
+
+            <div className="input-container">
+              <span className="input-icon">👤</span>
+
+              <input
+                name="full_name"
+                type="text"
+                placeholder="e.g. Yashwanth Pesala"
+                value={form.full_name}
+                onChange={handleChange}
+                required
+              />
+            </div>
+          </div>
 
           <div className="input-group">
             <label>Username</label>

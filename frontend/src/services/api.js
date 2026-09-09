@@ -13,7 +13,11 @@ const getApiBase = () => {
   if (typeof window !== "undefined" && (window.location.port === "5173" || window.location.port === "5174")) {
     return "http://localhost:5000";
   }
-  // When running behind Nginx / Docker / Production, use relative origin
+  // When running on Vercel or public domain without reverse proxy
+  if (typeof window !== "undefined" && (window.location.hostname.includes("vercel.app") || window.location.hostname !== "localhost")) {
+    return "https://focusguard-ai-project.onrender.com";
+  }
+  // When running behind Nginx / Docker / Production local container
   return "";
 };
 
@@ -31,6 +35,9 @@ export const getSocketUrl = () => {
   }
   if (typeof window !== "undefined" && (window.location.port === "5173" || window.location.port === "5174")) {
     return "http://localhost:5000";
+  }
+  if (typeof window !== "undefined" && (window.location.hostname.includes("vercel.app") || window.location.hostname !== "localhost")) {
+    return "https://focusguard-ai-project.onrender.com";
   }
   return typeof window !== "undefined" ? window.location.origin : "http://localhost:5000";
 };

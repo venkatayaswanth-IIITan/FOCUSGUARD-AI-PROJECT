@@ -74,23 +74,24 @@ const register = async (req, res) => {
 
 const login = async (req, res) => {
   try {
-    const { email, username, password } = req.body;
-    const loginInput = (email || username || "").trim();
+    const { email, username, name, full_name, password } = req.body;
+    const loginInput = (email || username || name || full_name || "").trim();
+    const explicitName = (full_name || name || "").trim();
 
     if (!loginInput || !password) {
       return res.status(400).json({
-        message: "Email/Username and password are required",
+        message: "Email/Username/Name and password are required",
       });
     }
 
     const result = await pool.query(
-      "SELECT * FROM users WHERE LOWER(email) = LOWER($1) OR LOWER(username) = LOWER($1)",
+      "SELECT * FROM users WHERE LOWER(email) = LOWER($1) OR LOWER(username) = LOWER($1) OR LOWER(full_name) = LOWER($1)",
       [loginInput]
     );
 
     if (result.rows.length === 0) {
       return res.status(401).json({
-        message: "Invalid email/username or password",
+        message: "Invalid credentials. User not found.",
       });
     }
 
@@ -105,6 +106,16 @@ const login = async (req, res) => {
       return res.status(401).json({
         message: "Invalid email/username or password",
       });
+    }
+
+    let finalFullName = user.full_name || user.username;
+    if (explicitName && explicitName.toLowerCase() !== (user.full_name || "").toLowerCase()) {
+      try {
+        await pool.query("UPDATE users SET full_name = $1 WHERE id = $2", [explicitName, user.id]);
+        finalFullName = explicitName;
+      } catch (err) {
+        console.warn("Could not update full_name on login:", err.message);
+      }
     }
 
     const token = jwt.sign(
@@ -126,7 +137,7 @@ const login = async (req, res) => {
         id: user.id,
         username: user.username,
         email: user.email,
-        full_name: user.full_name || user.username,
+        full_name: finalFullName,
         role: user.role || "Coding & Software Engineering",
       },
     });
