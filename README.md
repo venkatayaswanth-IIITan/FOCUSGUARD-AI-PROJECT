@@ -274,22 +274,134 @@ python main.py
 
 ---
 
-## ❓ Frequently Asked Questions & Answers
-
-### Q1: How is the Focus Score calculated?
-$$\text{Focus Score} = \left(\frac{\text{Productive Time}}{\text{Total Monitored Time}}\right) \times 100 - (\text{Context Switches} \times \text{Penalty})$$
-> *The score starts at 100 and measures the ratio of productive time to total elapsed time. Rapid context switches between apps within a 60-second window deduct penalty points, encouraging sustained deep work.*
-
-### Q2: Does the desktop agent violate user privacy?
-> *No. FocusGuard AI never captures screenshots, keystrokes, webcam video, or clipboard data. It strictly reads OS window headers and process names (e.g., `Code.exe`), ensuring 100% privacy preservation.*
-
-### Q3: Why use RAG instead of standard ChatGPT?
-> *Standard LLMs hallucinate and have no knowledge of our specific 1,057-record dataset or organizational rules. The RAG engine retrieves exact passages from `FocusGuard_RAG_Knowledge_Base.pdf` before generating responses, providing 100% cited, verifiable answers.*
+Here's the complete end-to-end deployment summary:
 
 ---
 
-## 🔒 Security Best Practices
-- Passwords are encrypted using salted `bcrypt` hashes (10 rounds).
-- API authentication uses signed `JSON Web Tokens (JWT)` with 7-day expiration.
-- Database access is isolated via Docker private bridge network (`focusguard_network`).
-- Sensitive secrets (`GROQ_API_KEY`, `POSTGRES_PASSWORD`) are loaded strictly from `.env`.
+## 🚀 FocusGuard AI — Complete Deployment Journey
+
+### 📋 Step 1 — Project Audit
+- Scanned full project structure: `frontend/` (Vite+React), `backend/` (Node.js+Socket.IO), `database/` (PostgreSQL)
+- Confirmed existing `vercel.json`, `api.js`, CORS config in `server.js`, and Render DB URL in `.env`
+- Verified build script: `npm run build` → `vite build` ✅
+
+---
+
+### 🔧 Step 2 — Frontend Build & Test
+```bash
+cd frontend
+npm install          # ✅ All 34 packages up to date
+npm run build        # ✅ 1843 modules → dist/index.html + assets
+```
+
+---
+
+### 📦 Step 3 — Vercel CLI Install & Login
+```bash
+npm install -g vercel    # ✅ 294 packages installed
+vercel login --github    # ✅ Browser auth → venkatayaswanth-iiitan logged in
+```
+Auth URL: `https://vercel.com/oauth/device?user_code=TVGS-DQWG` → Clicked **Allow Access**
+
+---
+
+### 🌐 Step 4 — First Vercel Deploy (Preview)
+```bash
+cd frontend
+vercel deploy --yes --name focusguard-ai \
+  --build-env VITE_API_URL=https://focusguard-ai-project.onrender.com \
+  --build-env VITE_SOCKET_URL=https://focusguard-ai-project.onrender.com
+```
+- ✅ Project created: `venkatayaswanth-iiitans-projects/focusguard-ai`
+- ✅ GitHub repo connected: `venkatayaswanth-IIITan/FOCUSGUARD-AI-PROJECT`
+- ✅ Aliased → `https://focusguard-ai-iota.vercel.app`
+
+---
+
+### ⚙️ Step 5 — Backend Deploy on Render
+Via Render Dashboard:
+| Setting | Value |
+|---------|-------|
+| Service | Web Service |
+| Repo | `venkatayaswanth-IIITan/FOCUSGUARD-AI-PROJECT` |
+| Root Dir | `backend` |
+| Build Cmd | `npm install` |
+| Start Cmd | `node server.js` |
+| Region | Singapore |
+| Plan | Free |
+
+**Environment Variables added on Render:**
+```
+NODE_ENV=production
+PORT=5000
+DATABASE_URL=postgresql://focusguard_user:...@dpg-daeoljqd0e5s739ci690-a...
+DB_HOST=dpg-daeoljqd0e5s739ci690-a.singapore-postgres.render.com
+DB_USER=focusguard_user
+DB_PASSWORD=O4SCUc15Qg591KiBz7pVSJHVnQTNPQLf
+DB_NAME=focusguard_db_0c1p
+DB_PORT=5432
+JWT_SECRET=focusguard_secret_key_production_2026
+GROQ_API_KEY=gsk_TSswBxBs...
+GROQ_API_KEY_FALLBACK=gsk_yn1Ky2...
+CORS_ORIGIN=https://focusguard-ai-iota.vercel.app
+```
+✅ **Backend Live:** `https://focusguard-backend-2hmz.onrender.com`
+✅ **DB schema** auto-created by `initTables()` on startup
+
+---
+
+### 🔗 Step 6 — Fix API URL in Frontend
+Updated [`api.js`](file:///d:/INFOSYS/FocusGuard-AI--Human-Attention-Preservation---Digital-Distraction-Intelligence-Platform-July-2026/frontend/src/services/api.js) with actual Render URL:
+```diff
+- return "https://focusguard-ai-project.onrender.com";
++ return "https://focusguard-backend-2hmz.onrender.com";
+```
+Pushed to GitHub:
+```bash
+git add frontend/src/services/api.js
+git commit -m "fix: update Render backend URL to actual deployed service URL"
+git push origin main   # ✅ f600cc28..465bd67a
+```
+
+---
+
+### 🔄 Step 7 — Update Vercel Env Vars & Final Redeploy
+```bash
+# Remove old placeholder URLs
+vercel env rm VITE_API_URL production --yes
+vercel env rm VITE_SOCKET_URL production --yes
+
+# Add correct Render URLs
+echo "https://focusguard-backend-2hmz.onrender.com" | vercel env add VITE_API_URL production
+echo "https://focusguard-backend-2hmz.onrender.com" | vercel env add VITE_SOCKET_URL production
+
+# Final production deploy
+vercel deploy --prod --yes   # ✅ 1843 modules built, READY
+```
+✅ **Aliased:** `https://focusguard-ai-iota.vercel.app`
+
+---
+
+### ✅ Step 8 — CORS & Live Connection Verified
+- Backend health check: `200 OK` → `{"status":"ok","database":"connected"}`
+- Frontend → Backend CORS: **Zero errors**
+- Register API: User created in PostgreSQL → Auto-redirected to `/login` ✅
+- Socket.IO auto-connects to Render backend ✅
+
+---
+
+### 🔗 Step 9 — GitHub About Section Updated
+Added website link on [github.com/venkatayaswanth-IIITan/FOCUSGUARD-AI-PROJECT](https://github.com/venkatayaswanth-IIITan/FOCUSGUARD-AI-PROJECT):
+> 🔗 `focusguard-ai-iota.vercel.app`
+
+---
+
+## 🎯 Final Live URLs
+
+| Service | URL | Status |
+|---------|-----|--------|
+| 🌐 **Frontend** | [focusguard-ai-iota.vercel.app](https://focusguard-ai-iota.vercel.app) | ✅ Live |
+| ⚙️ **Backend** | [focusguard-backend-2hmz.onrender.com](https://focusguard-backend-2hmz.onrender.com) | ✅ Live |
+| 🏥 **Health** | [/api/health](https://focusguard-backend-2hmz.onrender.com/api/health) | ✅ `200 OK` |
+| 🗄️ **Database** | Render PostgreSQL (Singapore) | ✅ Connected |
+| 📦 **Repo** | [FOCUSGUARD-AI-PROJECT](https://github.com/venkatayaswanth-IIITan/FOCUSGUARD-AI-PROJECT) | ✅ Public |
