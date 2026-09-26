@@ -15,7 +15,7 @@ const getApiBase = () => {
   }
   // When running on Vercel or public domain without reverse proxy
   if (typeof window !== "undefined" && (window.location.hostname.includes("vercel.app") || window.location.hostname !== "localhost")) {
-    return "https://focusguard-ai-project.onrender.com";
+    return "https://focusguard-backend-2hmz.onrender.com";
   }
   // When running behind Nginx / Docker / Production local container
   return "";
@@ -37,7 +37,7 @@ export const getSocketUrl = () => {
     return "http://localhost:5000";
   }
   if (typeof window !== "undefined" && (window.location.hostname.includes("vercel.app") || window.location.hostname !== "localhost")) {
-    return "https://focusguard-ai-project.onrender.com";
+    return "https://focusguard-backend-2hmz.onrender.com";
   }
   return typeof window !== "undefined" ? window.location.origin : "http://localhost:5000";
 };
